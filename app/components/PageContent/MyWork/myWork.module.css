@@ -1,0 +1,10 @@
+.projectContainer {
+	width: 100%;
+	background-color: var(--navy);
+	box-shadow: inset;
+	box-shadow: 0px 0px 25px black inset;
+}
+
+.projectImage {
+	height: 15rem;
+}

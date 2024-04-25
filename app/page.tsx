@@ -1,11 +1,12 @@
-import styles from './page.module.css';
+import style from './page.module.css';
 import Landing from './components/Landing/Landing';
+import PageContent from './components/PageContent/PageContent';
 
 export default function Home() {
 	return (
-		<main className={styles.main}>
+		<main className={style.main}>
 			<Landing />
-			<div className={styles.weavingTest}></div>
+			<PageContent />
 		</main>
 	);
 }
