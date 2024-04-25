@@ -1,0 +1,45 @@
+.main {
+	max-width: 70rem;
+	margin: auto;
+	min-height: 100dvh;
+	padding: 5rem;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: var(--floatingGap);
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.navBar {
+	flex: 0 0 10rem;
+	display: flex;
+	flex-flow: row wrap;
+	gap: var(--floatingGap);
+	align-items: flex-start;
+}
+
+.pageContent {
+	flex: 0 1 100%;
+	padding: 1rem;
+	margin: 0 auto;
+}
+
+.bannerImage {
+	border-radius: 0.8rem;
+	width: 100%;
+	max-height: 15rem;
+	aspect-ratio: 16/9;
+	background-position: center;
+	background-size: cover;
+	margin-bottom: 1rem;
+}
+
+#todosImage {
+	background-image: url("/img/WhiteboardProject.JPG");
+}
+
+#todosLogo {
+	height: 5rem;
+	background-image: url("/img/todosLogo.svg");
+	background-repeat: no-repeat;
+}

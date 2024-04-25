@@ -136,3 +136,8 @@ p {
 	box-sizing: border-box;
 	padding: 0 4rem 2rem 4rem;
 }
+
+a {
+	text-decoration: none;
+	color: inherit;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import LandingNav from './LandingNav/LandingNav';
+import LandingLogo from './LandingLogo/LandingLogo';
 import style from './landing.module.css';
 
 const Landing = () => {
@@ -7,7 +8,7 @@ const Landing = () => {
 		<div className={style.landing}>
 			<div className={style.landingContent}>
 				<div className={style.landingSide}>
-					<div className={style.landingLogo + ' neu neuShallow'}></div>
+					<LandingLogo />
 					<LandingNav />
 				</div>
 				<div className={style.landingText + ' neu neuShallow'}>

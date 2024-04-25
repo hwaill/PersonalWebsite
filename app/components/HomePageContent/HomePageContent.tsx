@@ -1,8 +1,8 @@
 import React from "react";
-import style from "./pageContent.module.css";
+import style from "./homePageContent.module.css";
 import MyWork from "./MyWork/MyWork";
 
-const PageContent = () => {
+const HomePageContent = () => {
 	return (
 		<div className={style.pageContent}>
 			<MyWork />
@@ -10,4 +10,4 @@ const PageContent = () => {
 	);
 };
 
-export default PageContent;
+export default HomePageContent;

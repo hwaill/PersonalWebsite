@@ -1,12 +1,12 @@
 import style from './page.module.css';
 import Landing from './components/Landing/Landing';
-import PageContent from './components/PageContent/PageContent';
+import HomePageContent from './components/HomePageContent/HomePageContent';
 
 export default function Home() {
 	return (
 		<main className={style.main}>
 			<Landing />
-			<PageContent />
+			<HomePageContent />
 		</main>
 	);
 }

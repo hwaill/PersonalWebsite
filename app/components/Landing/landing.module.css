@@ -38,11 +38,15 @@
 }
 
 .landingLogo {
-	width: 100%;
+	flex: 0 0 100%;
 	background-image: url(/img/logoFlat.svg);
 	background-position: center center;
 	background-size: cover;
 	aspect-ratio: 1 / 1;
+}
+
+.landingLogoLink {
+	flex: 0 0 100%;
 }
 
 .tybaltHand {
