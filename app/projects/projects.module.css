@@ -35,8 +35,29 @@
 	margin: 2rem -1rem;
 }
 
+.halfImage {
+	border-radius: 0.8rem;
+	width: calc(50% + 1rem);
+	background-position: center;
+	background-size: cover;
+}
+
+.right {
+	float: right;
+	margin: 0 0 0 1rem;
+}
+
 .bannerImage {
 	margin-top: 0;;
+}
+
+.teamContainer {
+	/* width: calc(100% + 2rem); */
+	width: 100%;
+	margin: 1rem 0rem;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 2rem;
 }
 
 #todosImage {
