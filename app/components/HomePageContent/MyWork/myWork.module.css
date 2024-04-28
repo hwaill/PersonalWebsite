@@ -37,20 +37,20 @@
 
 #whiteboardLogo {
 	height: 5rem;
-	background-image: url("/img/todosLogo.svg");
+	background-image: url("/img/projects/todos/logo.svg");
 	background-repeat: no-repeat;
 }
 
 #whiteboardImage {
-	background-image: url("/img/WhiteboardProject.JPG");
+	background-image: url("/img/projects/todos/banner.JPG");
 }
 
 #macroPadLogo {
 	height: 5rem;
-	background-image: url("/img/macroPadLogo.svg");
+	background-image: url("/img/projects/macropad/logo.svg");
 	background-repeat: no-repeat;
 }
 
 #macroPadImage {
-	background-image: url("/img/MacroPadProject.JPG");
+	background-image: url("/img/projects/macropad/banner.JPG");
 }

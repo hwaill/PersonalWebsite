@@ -9,7 +9,7 @@ const MacroPad = () => {
 				<div className={style.projectImage} id={style.macroPadImage}></div>
 			</div>
 			<div className={style.projectText}>
-				<div id={style.macroPadLogo}></div>
+			<img src="/img/projects/macropad/logo.svg" id={style.whiteboardLogo} />
 				<p>The <em>todos productivity board</em> is a task management tool designed for those who struggle with attention and executive function.</p>
 				<p>At the intersection of analog and digital technologies, <em>todos</em> combines tactile interaction on a familiar interface with the ability to track habit-building progress, trends in mood and much more.</p>
 				<Link href="/projects/macropad/">
