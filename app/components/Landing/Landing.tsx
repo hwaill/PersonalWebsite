@@ -18,7 +18,6 @@ const Landing = () => {
 					</h1>
 					<h4>My name is Henry.</h4>
 					<h4>I like making things that help people.</h4>
-					{/* <h3>Scroll down to see my work.</h3> */}
 				</div>
 			</div>
 		</div>
