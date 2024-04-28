@@ -14,7 +14,9 @@ const Page = () => {
 			<p>Throughout the day, <em>todos</em> translates your digital to-do lists and goals onto its surface, keeping you focused and organized. Users simply place magnets on the board to interact, triggering sensors that record task completion, as well as other metrics such as mood and self-assessments of productivity and sleep. Wifi connection allows for up-to-date information, like weather forecasts, to help users plan their day. With Bluetooth configuration via a custom web portal, the system can be easily customized to adapt perfectly to your workflow and goals.</p>
 			<p>In addition to all of this, a core goal of this project was to create a platform for communication and interaction that can adapt well to environments and use cases of many kinds. A whiteboard is, quite literally, a blank slate. A robotic marker is a versatile communicator and the placement of magnets on a board is a fairly accessible user input system.</p>
 			<p>Below, find the demo video for <em>todos</em>.</p>
-			<video src="https://www.itsshreeyo.com/hwhosting/todosVideo.mp4" controls preload="meta" poster="/img/projects/todos/videoThumbnail.png" type="video/mp4" className={style.videoPlayer}></video>
+			<video controls preload="meta" poster="/img/projects/todos/videoThumbnail.png" className={style.videoPlayer}>
+				<source src="https://www.itsshreeyo.com/hwhosting/todosVideo.mp4" type="video/mp4" />
+			</video>
 			<h3>Why This Matters</h3>
 			<p>Responsibilities like keeping a consistent morning routine, remembering an upcoming event or commitment, or even keeping personal long-term goals front of mind (to name just a few) are often made difficult or impossible by executive dysfunction. The consequences of </p>
 			<p>At the intersection of analog and digital technologies, <em>todos</em> combines tactile interaction on a familiar interface with the ability to track habit-building progress, trends in mood and much more.</p>
