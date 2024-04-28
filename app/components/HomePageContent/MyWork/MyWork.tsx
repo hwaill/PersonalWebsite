@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './myWork.module.css';
-import Whiteboard from './projects/Whiteboard';
+import Whiteboard from './MyWorkSections/Whiteboard';
+import MacroPad from './MyWorkSections/MacroPad';
 
 const MyWork = () => {
 	return (
@@ -10,6 +11,7 @@ const MyWork = () => {
 				<p>ASDFasdf al;sdkjfhlkasjdhf lkasjdhflkjasdhflkjashdflkjhasldkj flkkjasdf lkjashdf lkkjash dflkjh asdlfh</p>
 			</div>
 			<Whiteboard />
+			<MacroPad />
 		</div>
 	);
 };

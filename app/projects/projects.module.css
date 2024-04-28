@@ -1,0 +1,70 @@
+.main {
+	max-width: 70rem;
+	margin: auto;
+	min-height: 100dvh;
+	padding: 5rem;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: var(--floatingGap);
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.navBar {
+	flex: 0 0 10rem;
+	display: flex;
+	flex-flow: row wrap;
+	gap: var(--floatingGap);
+	align-items: flex-start;
+}
+
+.pageContent {
+	flex: 0 1 100%;
+	padding: 1rem 2rem;
+	margin: 0 auto;
+}
+
+.fullImage {
+	border-radius: 0.8rem;
+	width: calc(100% + 2rem);
+	max-height: 15rem;
+	aspect-ratio: 16/9;
+	background-position: center;
+	background-size: cover;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	margin-bottom: 2rem;
+}
+
+#todosImage {
+	background-image: url("/img/WhiteboardProject.JPG");
+}
+
+.bannerDarken {
+	background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5));
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-radius: 0.8rem;
+}
+
+#todosLogo {
+	height: 5rem;
+}
+
+.bannerTitle {
+	height: 8rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.videoPlayer {
+	border-radius: 0.8rem;
+	width: calc(100% + 2rem);
+	aspect-ratio: 16/9;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	display: block;
+}

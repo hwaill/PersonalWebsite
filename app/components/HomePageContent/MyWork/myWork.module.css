@@ -1,5 +1,5 @@
 .projectContainer {
-	margin: auto;
+	margin: 0px auto 3.5rem auto;
 	display: flex;
 	align-items: flex-start;
 	flex-flow: row nowrap;
@@ -43,4 +43,14 @@
 
 #whiteboardImage {
 	background-image: url("/img/WhiteboardProject.JPG");
+}
+
+#macroPadLogo {
+	height: 5rem;
+	background-image: url("/img/macroPadLogo.svg");
+	background-repeat: no-repeat;
+}
+
+#macroPadImage {
+	background-image: url("/img/MacroPadProject.JPG");
 }
