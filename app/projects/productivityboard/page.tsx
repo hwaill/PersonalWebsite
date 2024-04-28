@@ -21,7 +21,7 @@ const Page = () => {
 			</video>
 			<h3>Why This Matters</h3>
 			<p>Responsibilities like keeping a consistent morning routine, remembering an upcoming event or commitment, or even keeping personal long-term goals front of mind (to name just a few) are often made difficult or impossible by executive dysfunction. The consequences of an individual lapse in attention may seem relatively small, but bills not paid, friends not spoken to and showers not taken, for example, can quickly add up to something more overwhelming.</p>
-			<p>Most of our discussion about executive function, while working on this project, has focused on people who suffer from <em>Attention Deficit/Hyperactivity Disorder</em> (ADHD,) but it is important to acknowledge that many other conditions and diagnoses have been linked to executive dysfunction; Alzheimer's disease, epilepsy, head injury and substance abuse are just a few examples.</p>
+			<p>Most of our discussion about executive function, while working on this project, has focused on people who suffer from <em>Attention Deficit/Hyperactivity Disorder</em> (ADHD,) but it is important to acknowledge that many other conditions and diagnoses have been linked to executive dysfunction; Alzheimer&apos;s disease, epilepsy, head injury and substance abuse are just a few examples.</p>
 			<h3>The Team</h3>
 			<div className={style.teamContainer}>
 				<TeamCard imgSrc="/img/projects/todos/henry.jpg" name="Henry Waill" desc="Hardware Design, Software Engineering" />
