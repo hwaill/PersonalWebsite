@@ -16,8 +16,8 @@ const Landing = () => {
 					<h1>
 						Hello<span className="blueText">!</span>
 					</h1>
-					<h4>My name is Henry.</h4>
-					<h4>I like making things that help people.</h4>
+					<h4 className={"subtitle"}>My name is Henry.</h4>
+					<h4 className={"subtitle"}>I like making things that help people.</h4>
 				</div>
 			</div>
 		</div>

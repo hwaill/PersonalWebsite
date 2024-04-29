@@ -37,7 +37,14 @@
 
 .halfImage {
 	border-radius: 0.8rem;
-	width: calc(50% + 1rem);
+	width: 50%;
+	background-position: center;
+	background-size: cover;
+}
+
+.thirdImage {
+	border-radius: 0.8rem;
+	width: 33%;
 	background-position: center;
 	background-size: cover;
 }
@@ -54,7 +61,7 @@
 .teamContainer {
 	/* width: calc(100% + 2rem); */
 	width: 100%;
-	margin: 1rem 0rem;
+	margin: 1rem 0rem 1rem 0rem;
 	display: flex;
 	flex-flow: row nowrap;
 	gap: 2rem;

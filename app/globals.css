@@ -63,6 +63,11 @@ h3 {
 h4 {
 	font-size: 1.5rem;
 	font-weight: 300;
+	margin: 1rem 0;
+}
+
+.subtitle {
+	margin: 0;
 	padding-bottom: 1rem;
 	line-height: 1.2;
 }
@@ -151,5 +156,5 @@ p {
 
 a {
 	text-decoration: none;
-	color: inherit;
+	color: var(--blue);
 }
