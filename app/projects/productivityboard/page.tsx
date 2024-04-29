@@ -35,7 +35,7 @@ const Page = () => {
 			<p>The work that went into this project can primarily be broken down into three main categories: hardware, software and user experience. My contributions were primarily in the hardware and software components; however, I felt like I added a lot to the project in all areas. After all, it is difficult to separate these three categories in practice when everything must work together seemlessly in the final product.</p>
 			<h4>Hardware</h4>
 			<img src="/img/projects/todos/img3.jpg" className={style.thirdImage + " " + style.right} />
-			<p>At the core of this build (besides the whiteboard itself) is a 2-axis <em>Computer Numerical Control</em> (CNC) plotter. CNC devices allow for precise control over motion; in this case, we are moving a dry-erase marker on two axes. For this sort of construction, I turned towards a brand I'm familiar with from some previous projects, <a href="https://openbuilds.com/">Openbuilds</a>.</p>
+			<p>At the core of this build (besides the whiteboard itself) is a 2-axis <em>Computer Numerical Control</em> (CNC) plotter. CNC devices allow for precise control over motion; in this case, we are moving a dry-erase marker on two axes. For this sort of construction, I turned towards a brand I&apos;m familiar with from some previous projects, <a href="https://openbuilds.com/">Openbuilds</a>.</p>
 		</div>
 	)
 }
