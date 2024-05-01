@@ -51,12 +51,12 @@
 
 .right {
 	float: right;
-	margin: 0 0 0 1rem;
+	margin: 0 0 1rem 1rem;
 }
 
 .left {
 	float: left;
-	margin: 0 1rem 0 0;
+	margin: 0 1rem 1rem 0;
 }
 
 .bannerImage {

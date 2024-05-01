@@ -33,7 +33,7 @@ const Page = () => {
 			<p>This project served as the Senior Capstone Project for my degree in <em>Creative Technology and Design</em> at the University of Colorado, Boulder. My teammates, Jason Fontillas and Sydney Calcagno, and I worked together to transform this vision into a reality.</p>
 			<h3>Project Breakdown</h3>
 			<h4>At a glance...</h4>
-			<p>The work that went into this project can primarily be broken down into three main categories: hardware, software and user experience. My contributions were primarily in the hardware and software components; however, I felt like I added a lot to the project in all areas. After all, it is difficult to separate these three categories in practice when everything must work together seemlessly in the final product.</p>
+			<p>The work that went into this project can primarily be broken down into four main categories: hardware, circuitry, software and user experience. My contributions were primarily in the hardware and software components; however, I felt like I added a lot to the project in all areas. After all, it is difficult to separate these three categories in practice when everything must work together seemlessly in the final product.</p>
 			<h4>Hardware</h4>
 			<img src="/img/projects/todos/img3.jpg" className={style.thirdImage + " " + style.right} />
 			<p>At the core of this build (besides the whiteboard itself) is a 2-axis <em>Computer Numerical Control</em> (CNC) plotter. CNC devices allow for precise control over motion; in this case, we are moving a dry-erase marker on two axes. For this sort of construction, I turned towards a brand I&apos;m familiar with from some previous projects, <Link href="https://openbuilds.com/"><em>Openbuilds</em></Link>. <em>Openbuilds</em> has a modular system of parts that works well for designing these sorts of CNC machines; with aluminum extrusions, mounting hardware and linear actuator systems that are all compatible with one another, it was easy to prototype the plotter mechanism. Below is a video of some early testing of the linear actuators, and a more detailed look at the plotter mechanism construction can be found <Link href="productivityboard/mechanism/">here</Link>.</p>
@@ -49,9 +49,12 @@ const Page = () => {
 					<img src="/img/projects/todos/img5.jpg" className={style.collageImage} />
 				</div>
 			</div>
-			<p>A large challenge of the construction was the rigidity...</p>
+			<p>A large challenge of the construction was related to the rigidity of the whiteboard itself. We found that it was very difficult to keep the whiteboard surface flat as the building went on. The weight of all of the moving components, as well as some inherent imbalances in the build, caused some significant warping in the board. I attempted a few fixes, including adhering steel bars to the back. What was most successful was mounting the entire construction to a sheet of thick MDF. This wasn't ideal due to the weight it added, but back-to-back presentations prohibited us from mounting it to a single wall for support.</p>
 			<img src="/img/projects/todos/img6.jpg" className={style.thirdImage + " " + style.left} />
-			<p>blah blah blah about the laser cutting.</p>
+			<p>A final component of the build that improved the overall presentation of the project was the enclosure I fabricated. We understood from the start that the aesthetic of <em>todos</em> should be well-suited for an average home. Despite our pride in our electronics, it was best to hide them. A simple laser-cut box was the easiest solution, but I did my best to make it look presentable; I sanded down burnt edges and tried to be precise, even though this was my first attempt at making an enclosure like this.</p>
+			<h4>Circuitry</h4>
+			<p>The challenge of designing a circuit that could execute all of our initial ideas for the build while maintaining the ability to adapt to later changes was an exciting one. This was not too straightforward, and I had opted to challenge myself to create a printed circuit board (PCB) design to make the final product more elegant. This was my first foray into this sort of design process and I'm happy with what it yielded:</p>
+			<img src="/img/projects/todos/img7.jpg" className={style.fullImage} />
 		</div>
 	)
 }
