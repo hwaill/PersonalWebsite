@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Page = () => {
 	return (
 		<div className={style.pageContent + " neu neuShallow"}>
-			<div className={style.fullImage + " " + style.bannerImage} id={style.todosImage}>
+			<div className={style.bannerImage} id={style.todosImage}>
 				<div className={style.bannerDarken}>
 					<img src="/img/projects/todos/logoWhite.svg" className={style.bannerTitle} />
 				</div>

@@ -1,7 +1,8 @@
 .projectContainer {
+	width: calc(100% - 4rem);
 	margin: 0px auto 3.5rem auto;
 	display: flex;
-	align-items: flex-start;
+	align-items: stretch;
 	flex-flow: row nowrap;
 	max-width: 75rem;
 	gap: var(--floatingGap);
@@ -10,8 +11,7 @@
 }
 
 .projectImageHolder {
-	flex: 0 0 35rem;
-	aspect-ratio: 3/2;
+	flex: 0 0 45%;
 }
 
 .projectImage {
@@ -43,6 +43,7 @@
 
 #whiteboardImage {
 	background-image: url("/img/projects/todos/banner.jpg");
+	background-position-x: 15%;
 }
 
 #macroPadLogo {
@@ -53,4 +54,5 @@
 
 #macroPadImage {
 	background-image: url("/img/projects/macropad/banner.jpg");
+	background-position-x: 54%;
 }
