@@ -65,12 +65,18 @@
 
 .right {
 	float: right;
-	margin: 0 0 2rem 1rem;
+	position: relative;
+	margin: 0 0 0rem 1rem;
 }
 
 .left {
 	float: left;
-	margin: 0 1rem 2rem 0;
+	position: relative;
+	margin: 0 1rem 0rem 0;
+}
+
+.clearFix {
+	clear: both;
 }
 
 .collage {
