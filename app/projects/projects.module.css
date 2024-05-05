@@ -109,6 +109,11 @@
 	background-image: url("/img/projects/todos/banner.jpg");
 }
 
+#macropadImage {
+	background-image: url("/img/projects/macropad/pageBanner.jpg");
+	background-position: center 81%;
+}
+
 .bannerDarken {
 	background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5));
 	width: 100%;
@@ -128,6 +133,10 @@
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
+}
+
+#macropadBannerTitle {
+	height: 2.5rem;
 }
 
 .videoPlayer {
