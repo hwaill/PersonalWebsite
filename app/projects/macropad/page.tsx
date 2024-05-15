@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Page = () => {
 	return (
-		<div className={style.pageContent + " neu neuShallow"}>
+		<>
 			<div className={style.bannerImage} id={style.macropadImage}>
 				<div className={style.bannerDarken}>
 					<img src="/img/projects/macropad/logoWhite.svg" className={style.bannerTitle} id={style.macropadBannerTitle} />
@@ -44,7 +44,7 @@ const Page = () => {
 			<p>When I set out to work on this product, making it easily usable and understandable was a high priority. The primary motivation for this was my desire to give the extra four (<em>JLCPCB</em>&apos;s minimum order quantity is five) macropads to friends and mentors on mine. In terms of software/firmware, I did my best to make everything accessible by utilizing a common custom keyboard firmware called <em>QMK</em>. However, without writing custom configuration software, it is hard to spare the user from some pretty involved setup to be able to tune the functionality. Luckily, the installation of new firmware is quite simple, so I can make changes and send updates as needed. Difficult at scale, of course, but manageable for a few friends.</p>
 			<img src="/img/projects/macropad/img1.jpg" className={style.fullImage} />
 			<p>The unboxing experience was the final aspect of the product that I wanted to put some thought into, and I found an opportunity to hone my sewing skills, which are certainly underdeveloped. I chose to hand-sew some drawstring bags for each <em>Macropad2040</em>, and I chose some fabrics that had sentimental value to me. Inside, I also provided some extra keycaps so that each recipient could further tailor the experience to their preferences.</p>
-		</div>
+		</>
 	)
 }
 

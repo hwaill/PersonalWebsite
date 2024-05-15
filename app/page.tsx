@@ -1,5 +1,5 @@
 import style from './page.module.css';
-import Landing from './components/Landing/Landing';
+import Landing from './components/HomePageContent/Landing/Landing';
 import HomePageContent from './components/HomePageContent/HomePageContent';
 
 export default function Home() {
@@ -9,4 +9,4 @@ export default function Home() {
 			<HomePageContent />
 		</main>
 	);
-}
+};

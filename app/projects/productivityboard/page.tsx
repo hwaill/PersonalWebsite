@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Page = () => {
 	return (
-		<div className={style.pageContent + " neu neuShallow"}>
+		<>
 			<div className={style.bannerImage} id={style.todosImage}>
 				<div className={style.bannerDarken}>
 					<img src="/img/projects/todos/logoWhite.svg" className={style.bannerTitle} />
@@ -66,7 +66,7 @@ const Page = () => {
 			<h4>Software</h4>
 			<p>For this project, the vast majority of my effort was put into developing the software. The circuitry related to the motion of the CNC machine was relatively straightforward, and we used a slightly-modified version of a library called <em>GRBL</em> to translate our somewhat-understandable motion commands into signals the motors could use. At that point, we were still left with a quite-useless jumble of aluminum and wires. The microcontroller that I mentioned was the &quot;brain&quot; of the operation wasn&apos;t doing any thinking on its own.</p>
 			<p>The foundation of <em>todos</em> was in place, and Sydney, Jason and I set out to make it something useful and usable. From creating a framework with which to convert text into cartesian motion, to creating the protocol with which to send information over bluetooth to our custom web portal.... From turning the placement of magnets on the whiteboard&apos;s surface into meaningful information, to programming a reward system that helps users stay motivated to work towards their goals. There is a lot that we brought to life in <em>todos</em>. There is much more that we have yet to implement, too.</p>
-		</div>
+		</>
 	)
 }
 
