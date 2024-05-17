@@ -2,43 +2,27 @@ import React from 'react';
 import style from './myWork.module.css';
 import MyWorkSection from './MyWorkSection';
 
-import prisma from '@/lib/prisma';
-
-export default async function MyWork() {
-	const projects = await prisma.projectSection.findMany({
-		select: {
-			id: true,
-			imgUrl: true,
-			imgStyle: true,
-			logoUrl: true,
-			logoStyle: true,
-			description: true,
-			linkUrl: true
-		},
-		orderBy: {
-			id: "asc"
-		}
-	});
-
+export default function MyWork() {
 	return (
 		<div className={style.myWork}>
 			<div className={"sectionText"}>
 				<h2 className={"coralText"}>My Work</h2>
 				<p>ASDFasdf al;sdkjfhlkasjdhf lkasjdhflkjasdhflkjashdflkjhasldkj flkkjasdf lkjashdf lkkjash dflkjh asdlfh</p>
 			</div>
-			{
-				projects.map((project) => {
-					return <MyWorkSection
-						key={project.id}
-						imgUrl={project.imgUrl}
-						imgStyle={project.imgStyle ? project.imgStyle : "{}"}
-						logoUrl={project.logoUrl}
-						logoStyle={project.logoStyle ? project.logoStyle : "{}"}
-						description={project.description}
-						linkUrl={project.linkUrl}
-					/>
-				})
-			}
+			<MyWorkSection
+				imgUrl='/img/projects/todos/banner.jpg'
+				imgStyle={'{"backgroundPositionX":"15%"}'}
+				logoUrl={'/img/projects/todos/logo.svg'}
+				logoStyle={'{"height":"5rem"}'}
+				description={'<p>The <em>todos productivity board</em> is a task management tool designed for those who struggle with attention and executive function.</p><p>At the intersection of analog and digital technologies, <em>todos</em> combines tactile interaction on a familiar interface with the ability to track habit-building progress, trends in mood and much more.</p>'}
+				linkUrl={'/projects/productivityboard/'} />
+			<MyWorkSection
+				imgUrl='/img/projects/macropad/banner.jpg'
+				imgStyle={'{"backgroundPositionX":"54%"}'}
+				logoUrl={'/img/projects/macropad/logo.svg'}
+				logoStyle={'{"height":"2rem"}'}
+				description={'<p>test</p>'}
+				linkUrl={'/projects/macropad/'} />
 		</div>
 	);
 }

@@ -17,30 +17,35 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model ProjectSection {
-  id Int @id @unique @default(autoincrement())
-  name String
-  imgUrl String
-  imgStyle String?
-  logoUrl String
-  logoStyle String?
-  description String
-  linkUrl String
-}
-
 model HabitDay {
-  id Int @id @unique @default(autoincrement())
-  habits Habit[]
+  date String @id @unique
+  habits HabitOccurence[]
   reports Report[]
 }
 
-model Habit {
+model HabitOccurence {
   id Int @id @default(autoincrement())
-  name String
   complete Boolean @default(false)
 
-  dayId Int
-  day HabitDay @relation(fields: [dayId], references: [id])
+  date String
+  habitDay HabitDay @relation(fields: [date], references: [date])
+
+  typeId Int
+  habitType HabitType @relation(fields: [typeId], references: [id])
+}
+
+model HabitType {
+  id Int @id @unique
+  name String
+  category HabitCategory
+  occurrences HabitOccurence[]
+}
+
+enum HabitCategory {
+  MORNING_ROUTINE
+  EVENING_ROUTINE
+  DAILY_GOALS
+  OTHER_GOALS
 }
 
 model Report {
@@ -48,8 +53,8 @@ model Report {
   type ReportType
   value Int
 
-  dayId Int
-  day HabitDay @relation(fields: [dayId], references: [id])
+  date String
+  habitDay HabitDay @relation(fields: [date], references: [date])
 }
 
 enum ReportType {
