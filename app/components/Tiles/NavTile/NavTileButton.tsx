@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import style from '../tiles.module.css';
 import NavTileButtonIcon from './NavTileButtonIcon';
 
 export default function NavTileButton({
@@ -9,7 +8,7 @@ export default function NavTileButton({
 	icon: string;
 }) {
 	return (
-		<Link className={style.navLink} href={href}>
+		<Link className="navLink" href={href}>
 			<NavTileButtonIcon icon={icon} />
 		</Link>
 	);

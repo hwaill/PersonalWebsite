@@ -9,7 +9,7 @@ export default function TeamCard({
 	desc: string;
 }) {
 	return (
-		<div className={style.card + " neu neuShallow"}>
+		<div className={style.card + " neu"}>
 			<img src={imgSrc} className={style.cardImage} />
 			<div className={style.cardName}>{name}</div>
 			<div className={style.cardDescription}>{desc}</div>

@@ -1,5 +1,3 @@
-import style from '../tiles.module.css';
-
 export default function NavTileButtonIcon({
 	icon,
 }: {
@@ -39,9 +37,9 @@ export default function NavTileButtonIcon({
 	}
 
 	return (
-		<div className={style.navButton + " neu neuShallow neuButton circle"}>
+		<div className="navButton neu neuButton circle">
 			{iconParts.map((object, i) => (
-				<div key={i} className={style.navIcon + ' ' + object.color} style={{ WebkitMaskImage: 'url(' + object.url + ')', maskImage: 'url(' + object.url + ')' }}></div>
+				<div key={i} className={'navIcon ' + object.color} style={{ WebkitMaskImage: 'url(' + object.url + ')', maskImage: 'url(' + object.url + ')' }}></div>
 			))}
 		</div>
 	);

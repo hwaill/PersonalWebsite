@@ -18,8 +18,8 @@
 	border-radius: 0.8rem;
 	width: 100%;
 	height: 100%;
-	background-position: center;
-	background-size: cover;
+	object-position: center;
+	object-fit: cover;
 }
 
 .learnMore {
@@ -33,26 +33,4 @@
 .projectText {
 	padding: 2.5rem 1rem 1rem 0rem;
 	flex-grow: 1;
-}
-
-#whiteboardLogo {
-	height: 5rem;
-	background-image: url("/img/projects/todos/logo.svg");
-	background-repeat: no-repeat;
-}
-
-#whiteboardImage {
-	background-image: url("/img/projects/todos/banner.jpg");
-	background-position-x: 15%;
-}
-
-#macropadLogo {
-	height: 2rem;
-	background-image: url("/img/projects/macropad/logo.svg");
-	background-repeat: no-repeat;
-}
-
-#macropadImage {
-	background-image: url("/img/projects/macropad/banner.jpg");
-	background-position-x: 54%;
 }

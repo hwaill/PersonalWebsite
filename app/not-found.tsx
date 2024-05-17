@@ -1,4 +1,3 @@
-import tileStyle from './components/Tiles/tiles.module.css';
 import { Metadata } from 'next';
 
 import LogoLinkTile from './components/Tiles/LogoTile/LogoLinkTile';
@@ -11,13 +10,13 @@ export const metadata : Metadata = {
 export default function NotFound() {
 	return (
 		<main>
-			<div className={tileStyle.fullPageContainer}>
-			<div className={tileStyle.contentCentered}>
-				<div className={tileStyle.narrowVertical}>
+			<div className="fullScreenContainer">
+			<div className="contentCenteredVert">
+				<div className="narrowFlexColumn">
 					<LogoLinkTile />
 					<NavTile />
 				</div>
-				<div className={tileStyle.landingSquare + ' ' + tileStyle.landingSquareAdaptable + ' neu neuShallow'}>
+				<div className='landingSquare landingSquareAdaptable neu'>
 					<h1>Woah<span className="coralText">!</span></h1>
 					<h4 className={"subtitle"}>I can&apos;t find the page that you&apos;re looking for!</h4>
 					<h6 className={"subtitle"}>Error 404: Not found.</h6>

@@ -1,19 +1,44 @@
 import React from 'react';
 import style from './myWork.module.css';
-import Whiteboard from './MyWorkSections/Whiteboard';
-import MacroPad from './MyWorkSections/MacroPad';
+import MyWorkSection from './MyWorkSection';
 
-const MyWork = () => {
+import prisma from '@/lib/prisma';
+
+export default async function MyWork() {
+	const projects = await prisma.projectSection.findMany({
+		select: {
+			id: true,
+			imgUrl: true,
+			imgStyle: true,
+			logoUrl: true,
+			logoStyle: true,
+			description: true,
+			linkUrl: true
+		},
+		orderBy: {
+			id: "asc"
+		}
+	});
+
 	return (
 		<div className={style.myWork}>
 			<div className={"sectionText"}>
-				<h1 className={"coralText"}>My Work</h1>
+				<h2 className={"coralText"}>My Work</h2>
 				<p>ASDFasdf al;sdkjfhlkasjdhf lkasjdhflkjasdhflkjashdflkjhasldkj flkkjasdf lkjashdf lkkjash dflkjh asdlfh</p>
 			</div>
-			<Whiteboard />
-			<MacroPad />
+			{
+				projects.map((project) => {
+					return <MyWorkSection
+						key={project.id}
+						imgUrl={project.imgUrl}
+						imgStyle={project.imgStyle ? project.imgStyle : "{}"}
+						logoUrl={project.logoUrl}
+						logoStyle={project.logoStyle ? project.logoStyle : "{}"}
+						description={project.description}
+						linkUrl={project.linkUrl}
+					/>
+				})
+			}
 		</div>
 	);
-};
-
-export default MyWork;
+}
