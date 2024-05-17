@@ -54,7 +54,11 @@
 	aspect-ratio: 1 / 1;
 }
 
-.landingSquare > h4 {
+.landingSquareAdaptable {
+	aspect-ratio: auto;
+}
+
+.landingSquare > h4, .landingSquare > h6 {
 	padding-left: 0.4rem;
 }
 
@@ -110,4 +114,18 @@
 .navButton:hover > .navIcon {
 	width: 49%;
 	height: 49%;
+}
+
+/* Tile Backgrounds */
+
+.tybaltHand {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('/img/decoration/TybaltHand.svg');
+	background-position: bottom -5rem right -3.2rem;
+	background-repeat: no-repeat;
 }

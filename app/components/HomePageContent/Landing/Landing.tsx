@@ -1,6 +1,5 @@
 import LogoTile from '../../Tiles/LogoTile/LogoTile';
 import NavTile from '../../Tiles/NavTile/NavTile';
-import style from './landing.module.css';
 import tileStyle from '../../Tiles/tiles.module.css'
 
 export default function Landing() {
@@ -12,7 +11,7 @@ export default function Landing() {
 					<NavTile />
 				</div>
 				<div className={tileStyle.landingSquare + ' neu neuShallow'}>
-					<div className={style.tybaltHand}></div>
+					<div className={tileStyle.tybaltHand}></div>
 					<h1>Hello<span className="blueText">!</span></h1>
 					<h4 className={"subtitle"}>My name is Henry.</h4>
 					<h4 className={"subtitle"}>I like making things that help people.</h4>

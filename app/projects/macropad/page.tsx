@@ -2,6 +2,11 @@ import React from 'react'
 import style from '../projects.module.css'
 import TeamCard from '@/app/components/TeamCard/TeamCard'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+export const metadata : Metadata = {
+	title: "Macropad 2040",
+}
 
 const Page = () => {
 	return (
