@@ -19,7 +19,7 @@ export default function NotFound() {
 				</div>
 				<div className={tileStyle.landingSquare + ' ' + tileStyle.landingSquareAdaptable + ' neu neuShallow'}>
 					<h1>Woah<span className="coralText">!</span></h1>
-					<h4 className={"subtitle"}>I can't find the page that you're looking for!</h4>
+					<h4 className={"subtitle"}>I can&apos;t find the page that you&apos;re looking for!</h4>
 					<h6 className={"subtitle"}>Error 404: Not found.</h6>
 				</div>
 			</div>
