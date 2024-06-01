@@ -45,7 +45,7 @@ export async function POST(Request: NextRequest) {
 		});
 	} else {
 		for(let i = 0; i < requestBody.habits.length; i++) {
-			if(requestBody.updateType == "OTHER" && !requestBody.checked) continue;
+			if(requestBody.updateType == "OTHER" && !requestBody.habits[i].checked) continue;
 			await prisma.habitOccurence.upsert({
 				where: {
 					id: requestBody.date + "_" + requestBody.habits[i].id,
