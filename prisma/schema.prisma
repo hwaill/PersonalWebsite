@@ -24,7 +24,7 @@ model HabitDay {
 }
 
 model HabitOccurence {
-  id Int @id @default(autoincrement())
+  id String @id @unique
   complete Boolean @default(false)
 
   date String
@@ -46,10 +46,11 @@ enum HabitCategory {
   EVENING_ROUTINE
   DAILY_GOALS
   OTHER_GOALS
+  PRODUCTIVE_DOWNTIME
 }
 
 model Report {
-  id Int @id @default(autoincrement())
+  id String @id @unique
   type ReportType
   value Int
 
