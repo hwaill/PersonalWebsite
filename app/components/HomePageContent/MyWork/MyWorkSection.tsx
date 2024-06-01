@@ -20,7 +20,7 @@ export default function MyWorkSection({
 				</div>
 				<div className={style.projectText}>
 					<img src={logoUrl} style={JSON.parse(logoStyle)} />
-					<div dangerouslySetInnerHTML={{__html: description}}></div>
+					<div className={style.description} dangerouslySetInnerHTML={{__html: description}}></div>
 					<Link href={linkUrl}>
 						<div className={style.learnMore + " neu neuButton"}>Learn more</div>
 					</Link>

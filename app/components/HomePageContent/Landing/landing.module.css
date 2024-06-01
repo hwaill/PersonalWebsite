@@ -1,4 +1,5 @@
 .tybaltHand {
+	border-radius: 1.8rem;
 	pointer-events: none;
 	position: absolute;
 	top: 0;
@@ -8,4 +9,30 @@
 	background-image: url('/img/decoration/TybaltHand.svg');
 	background-position: bottom -5rem right -3.2rem;
 	background-repeat: no-repeat;
+}
+
+.tybaltHand2 {
+	border-radius: 1.8rem;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('/img/decoration/TybaltHand2.svg');
+	background-position: bottom 5.3rem right -1.2rem;
+	background-repeat: no-repeat;
+}
+
+.notFoundText {
+	position: absolute;
+	bottom: 0.5rem;
+}
+
+.notFoundText > h1 {
+	margin-bottom: 0px;
+}
+
+.notFoundText > h6 {
+	margin-top: 0px;
 }

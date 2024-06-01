@@ -14,6 +14,13 @@
 	padding: 5rem;
 }
 
+.fullContentContainer {
+	width: 100vw;
+	width: 100cqw;
+	min-height: 100svh;
+	padding: var(--floatingGap);;
+}
+
 .contentCenteredVert {
 	position: absolute;
 	top: 50%;
@@ -38,9 +45,42 @@
 	justify-content: center;
 }
 
+.flexRowReverseNoWrap {
+	display: flex;
+	flex-flow: row-reverse nowrap;
+	gap: var(--floatingGap);
+	align-items: flex-start;
+	justify-content: center;
+}
+
 .mainContentNoWrap {
 	flex: 0 1 100%;
-	padding: 1rem 2rem;
+	padding: 1rem 2rem 2rem 2rem;
+	margin: 0 auto;
+	min-width: 0
+}
+
+.partialWidthImage {
+	flex: 0 1 25rem;
+	aspect-ratio: 1 / 1;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+.partialWidthImage > img {
+	border-radius: 0.8rem;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.partialWidthText {
+	flex: 1 1 4rem;
+}
+
+.lifeContentNoWrap {
+	flex: 0 1 100%;
+	padding: 2rem;
 	margin: 0 auto;
 	min-width: 0
 }
@@ -50,6 +90,15 @@
 	gap: var(--floatingGap);
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.flexBanner {
+	display: flex;
+	gap: var(--floatingGap);
+	flex-flow: row nowrap;
+	height: 10rem;
+	width: 100%;
+	align-items: center;
 }
 
 .landingSquare {
@@ -68,6 +117,10 @@
 	padding-left: 0.4rem;
 }
 
+.shiftUp {
+	margin-top: -4rem;
+}
+
 /* Logo Tile Styles */
 
 .logo {
@@ -79,7 +132,7 @@
 }
 
 .logoLink {
-	flex: 0 0 100%;
+	flex: 0 0 10rem;
 }
 
 /* Nav Tile Styles */
@@ -122,9 +175,13 @@
 	height: 49%;
 }
 
-.sectionText {
+.section {
+	width: calc(100% - 3rem);
 	max-width: 75rem;
 	margin: auto;
+}
+
+.sectionText {
 	box-sizing: border-box;
 	padding: 0 4rem 2rem 4rem;
 }
