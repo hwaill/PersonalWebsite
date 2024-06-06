@@ -11,9 +11,9 @@ export const metadata : Metadata = {
 export default function NotFound() {
 	return (
 		<main>
-			<div className="fullScreenContainer">
-				<div className="contentCenteredVert flexRowStart">
-					<div className="narrowFlexColumn">
+			<div className="landingContainer">
+				<div className="landingContent">
+					<div className="landingNavHolder">
 						<LogoLinkTile />
 						<NavTile />
 					</div>

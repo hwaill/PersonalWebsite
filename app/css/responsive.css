@@ -1,0 +1,132 @@
+@media (max-width: 810px) {
+	.landingNavHolder {
+		flex: 0 0 32rem;
+		flex-flow: column wrap;
+		height: 10rem;
+		align-content: space-evenly;
+	}
+
+	.logo {
+		width: 10rem;
+	}
+
+	.navFlex {
+		width: 14.5rem;
+	}
+}
+
+
+
+
+
+@media (max-width: 600px) {
+	.landingContainer {
+		width: 100vw;
+		width: 100cqw;
+		height: auto;
+		position: relative;
+		margin-inline: 0;
+		padding: 2.5rem;
+		box-sizing: border-box;
+	}
+
+	.landingContent {
+		position:inherit;
+		top: inherit;
+		transform: none;
+		margin: auto;
+		width: 100%;
+		display: block;
+	}
+
+	.landingNavHolder {
+		width: 100%;
+		display: flex;
+		align-content: normal;
+		align-items: flex-start;
+		flex-flow: row nowrap;
+		height: auto;
+	}
+
+	.navFlex {
+		flex: 1 0 0px;
+		padding: 0rem;
+		gap: 0rem;
+		flex-wrap: nowrap;
+		width: auto;
+	}
+	
+	.navLink {
+		flex: 0 0 2.7rem;
+		position: relative;
+		aspect-ratio: 1 / 1;
+		cursor: default;
+	}
+
+	.navButton {
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+	}
+	
+	.navIcon {
+		width: 50%;
+		height: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		mask-size: 100% 100%;
+	}
+	
+	.navButton:hover > .navIcon {
+		width: 49%;
+		height: 49%;
+	}
+
+	.landingSquare {
+		position: relative;
+		padding: 0rem;
+		text-align: left;
+		aspect-ratio: 1 / 1;
+		margin-top: 2rem;
+	}
+
+	.landingSquare > h4, .landingSquare > h6 {
+		padding-left: 0.4rem;
+	}
+
+	.logo {
+		flex: 0 0 7rem;
+		width: auto;
+		height: auto;
+		background-position: -18px center;
+		border-radius: 0;
+		background-repeat: no-repeat;
+	}
+	
+	.logoLink {
+		flex: 0 0 7rem;
+	}
+
+	.logo.neu, .navFlex.neu, .navButton.neu, .landingSquare.neu {
+		box-shadow: none;
+	}
+
+	.shiftUp {
+		margin: 0;
+	}
+
+	.section {
+		width: 100vw;
+		width: 100cqw;
+		position: relative;
+		margin-inline: 0;
+		padding: 2.5rem;
+		box-sizing: border-box;
+	}
+
+	.sectionText {
+		padding: 0;
+	}
+}

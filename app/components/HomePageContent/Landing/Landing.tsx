@@ -4,9 +4,9 @@ import style from './landing.module.css';
 
 export default function Landing() {
 	return (
-		<div className="fullScreenContainer">
-			<div className="contentCenteredVert flexRowStart">
-				<div className="narrowFlexColumn">
+		<div className="landingContainer">
+			<div className="landingContent">
+				<div className="landingNavHolder">
 					<LogoTile />
 					<NavTile />
 				</div>

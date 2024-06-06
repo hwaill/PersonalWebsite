@@ -4,7 +4,7 @@ import NavTile from "../components/Tiles/NavTile/NavTile";
 export default function Life() {
 	return (
 		<main className="fullContentContainer flexRowStartNoWrap">
-			<div className="narrowFlexColumn">
+			<div className="landingNavHolder">
 				<LogoLinkTile />
 				<NavTile />
 			</div>

@@ -7,8 +7,8 @@ export default function ProjectLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<main className="contentContainer flexRowStartNoWrap">
-			<div className="narrowFlexColumn">
+		<main className="projectPageContainer">
+			<div className="landingNavHolder">
 				<LogoLinkTile />
 				<NavTile />
 			</div>
