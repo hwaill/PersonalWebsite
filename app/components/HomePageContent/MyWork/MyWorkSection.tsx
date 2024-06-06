@@ -21,8 +21,8 @@ export default function MyWorkSection({
 				<div className={style.firstText}>
 					<h3>{data.heading}</h3>
 					<div className={style.projectTagsHolder}>
-						{data.tags.map(name => (
-							<div className={style.projectTag + " neu"}>{name}</div>
+						{data.tags.map((name, key) => (
+							<div key={key} className={style.projectTag + " neu"}>{name}</div>
 						))}
 					</div>
 				</div>
