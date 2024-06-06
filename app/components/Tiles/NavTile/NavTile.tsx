@@ -4,11 +4,11 @@ export default function NavTile() {
 	return (
 		<div className="navFlex neu">
 			<NavTileButton href="/projects/" icon="briefcase" />
-			<NavTileButton href="https://www.instagram.com/henrywaill" icon="instagram" />
-			<NavTileButton href="/linkedIn/" icon="linkedIn" />
 			<NavTileButton href="/contact/" icon="mail" />
 			<NavTileButton href="/blog/" icon="writing" />
 			<NavTileButton href="/resume/" icon="gradCap" />
+			<NavTileButton href="https://www.linkedin.com/in/henry-waill-b6228b69/" icon="linkedIn" />
+			<NavTileButton href="https://www.instagram.com/henrywaill" icon="instagram" />
 		</div>
 	);
 };

@@ -3,28 +3,35 @@ import style from './myWork.module.css'
 import Link from 'next/link';
 
 export default function MyWorkSection({
-	imgUrl, imgStyle, logoUrl, logoStyle, description, linkUrl
+	data
 } : {
-	imgUrl: string;
-	imgStyle: string;
-	logoUrl: string;
-	logoStyle: string;
-	description: string;
-	linkUrl: string;
+	data: {
+		heading: string,
+		tags: string[],
+		hook: string,
+		description: string,
+		imgUrl: string,
+		imgStyle: string,
+		linkUrl: string
+	}
 }) {
 	return (
 		<>
 			<div className={style.projectContainer + " neu"}>
-				<div className={style.projectImageHolder}>
-					<img src={imgUrl} className={style.projectImage} style={JSON.parse(imgStyle)}/>
+				<div className={style.firstText}>
+					<h3>{data.heading}</h3>
+					<div className={style.projectTagsHolder}>
+						{data.tags.map(name => (
+							<div className={style.projectTag + " neu"}>{name}</div>
+						))}
+					</div>
 				</div>
-				<div className={style.projectText}>
-					<img src={logoUrl} style={JSON.parse(logoStyle)} />
-					<div className={style.description} dangerouslySetInnerHTML={{__html: description}}></div>
-					<Link href={linkUrl}>
-						<div className={style.learnMore + " neu neuButton"}>Learn more</div>
-					</Link>
+				<img className={style.projectImage} src={data.imgUrl} style={JSON.parse(data.imgStyle)}></img>
+				<div className={style.secondText}>
+					<h5>{data.hook}</h5>
+					<p>{data.description}</p>
 				</div>
+				<div className={style.forceWrap}></div>
 			</div>
 		</>
 	);

@@ -12,9 +12,9 @@ export default function Landing() {
 				</div>
 				<div className="landingSquare neu">
 					<div className={style.tybaltHand}></div>
-					<h1>Hello<span className="blueText">!</span></h1>
-					<h4>My name is Henry.</h4>
-					<h4>I like making things that help people.</h4>
+					<h1 className={"landing"}>Hello<span className="blueText">!</span></h1>
+					<h4 className={"landing"}>My name is Henry.</h4>
+					<h4 className={"landing"}>I like making things that help people.</h4>
 				</div>
 			</div>
 		</div>

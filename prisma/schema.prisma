@@ -21,6 +21,7 @@ model HabitDay {
   date String @id @unique
   habits HabitOccurence[]
   reports Report[]
+  type DayType @default(NORMAL_DAY)
 }
 
 model HabitOccurence {
@@ -64,4 +65,10 @@ enum ReportType {
   ENERGY_REPORT
   SLEEP_REPORT
   PRODUCTIVITY_REPORT
+}
+
+enum DayType {
+  NORMAL_DAY
+  WORK_DAY
+  OUT_OF_TOWN
 }

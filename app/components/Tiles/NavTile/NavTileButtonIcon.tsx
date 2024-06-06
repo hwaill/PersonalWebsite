@@ -19,7 +19,7 @@ export default function NavTileButtonIcon({
 			];
 			break;
 		case 'linkedIn':
-			iconParts = [{ color: 'green', url: '/img/flaticon/fi-brands-linkedin.svg' }];
+			iconParts = [{ color: 'coral', url: '/img/flaticon/fi-brands-linkedin.svg' }];
 			break;
 		case 'gradCap':
 			iconParts = [{ color: 'coral', url: '/img/flaticon/fi-rr-gradCap.svg' }];
@@ -31,7 +31,7 @@ export default function NavTileButtonIcon({
 			];
 			break;
 		case 'briefcase':
-			iconParts = [{ color: 'coral', url: '/img/flaticon/fi-rr-briefcase.svg'}];
+			iconParts = [{ color: 'green', url: '/img/flaticon/fi-rr-briefcase.svg'}];
 			break;
 		default:
 	}

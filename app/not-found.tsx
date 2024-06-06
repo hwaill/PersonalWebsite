@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 import LogoLinkTile from './components/Tiles/LogoTile/LogoLinkTile';
 import NavTile from './components/Tiles/NavTile/NavTile';
-import style from './components/HomePageContent/Landing/landing.module.css'
+import style from './components/HomePageContent/Landing/landing.module.css';
 
 export const metadata : Metadata = {
 	title: "Page not found",
