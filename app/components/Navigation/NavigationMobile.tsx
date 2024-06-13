@@ -21,7 +21,7 @@ export default function NavigationMobile() {
 				animate={isOpen ? 'open' : 'closed'}
 				variants={{
 					open: {
-						height: '100svh'
+						height: '100dvh'
 					},
 					closed: {
 						height: 'auto'
