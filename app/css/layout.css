@@ -1,155 +1,30 @@
-/* Tile Containers */
-
 .landingContainer {
-	width: calc(100vw - 4rem);
-	width: calc(100cqw - 4rem);
-	height: 100svh;
 	position: relative;
-	margin-inline: 2rem;
-	box-sizing: border-box;
+	padding: 4rem max(2rem, 10%);
+	height: max(calc(100svh - 5rem), 600px);
+	overflow-x: hidden;
 }
 
-.landingContent {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	margin: auto;
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	gap: var(--floatingGap);
-	align-items: flex-start;
-	justify-content: center;
+.homePageSection {
+	padding: 2rem max(2rem, 10%);
 }
 
-.landingNavHolder {
-	flex: 0 0 10rem;
-	gap: var(--floatingGap);
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.landingSquare {
-	position: relative;
-	flex: 0 0 32rem;
-	padding: 2.5rem;
-	text-align: left;
-	aspect-ratio: 1 / 1;
-}
-
-.landingSquare > h4, .landingSquare > h6 {
-	padding-left: 0.4rem;
-}
-
-.aboutSection {
-	display: flex;
-	flex-flow: row wrap;
-	gap: 2rem var(--floatingGap);
-	align-items: flex-start;
-	justify-content: center;
-}
-
-.aboutSectionImage {
-	flex: 0 0 25rem;
-	aspect-ratio: 1 / 1;
+.aboutMeImageContainer {
+	margin: 2rem auto 0rem;
+	width: min(100%, 25rem);
+	aspect-ratio: 1;
 	padding: 1rem;
-	box-sizing: border-box;
 }
 
-.aboutSectionImage > img {
-	border-radius: 0.8rem;
+.aboutMeImage {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	border-radius: 0.8rem;
 	display: block;
 }
 
-.aboutSectionText {
-	flex: 1 0 24rem;
-}
-
-.shiftUp {
-	margin-top: -4rem;
-}
-
-.projectPageContainer {
-	max-width: 70rem;
-	margin: auto;
-	min-height: 100dvh;
-	padding: 5rem;
-	display: flex;
-	flex-flow: row nowrap;
-	gap: var(--floatingGap);
-	align-items: flex-start;
-	justify-content: center;
-}
-
-/* Logo Tile Styles */
-
-.logo {
-	flex: 0 0 10rem;
-	height: 10rem;
-	background-image: url(/img/logos/logoFlat.svg);
-	background-position: center center;
-	background-size: cover;
-	aspect-ratio: 1 / 1;
-}
-
-.logoLink {
-	flex: 0 0 10rem;
-}
-
-/* Nav Tile Styles */
-
-.navFlex {
-	flex: 0 0 10rem;
-	padding: 1rem;
-	gap: 1rem;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-content: space-around;
-	display: flex;
-}
-
-.navLink {
-	position: relative;
-	aspect-ratio: 1 / 1;
-	flex: 0 0 3.5rem;
-	cursor: default;
-}
-
-.navButton {
+.separator {
+	height: 2rem;
 	width: 100%;
-	height: 100%;
-	cursor: pointer;
-}
-
-.navIcon {
-	width: 50%;
-	height: 50%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	mask-size: 100% 100%;
-}
-
-.navButton:hover > .navIcon {
-	width: 49%;
-	height: 49%;
-}
-
-.section {
-	width: calc(100% - 3rem);
-	max-width: 75rem;
-	margin: auto;
-}
-
-.sectionText {
-	box-sizing: border-box;
-	padding: 0 4rem 2rem 4rem;
-}
-
-.clearFix {
-	clear: both;
+	background-color: var(--navy);
 }

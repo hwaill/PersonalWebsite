@@ -4,9 +4,8 @@
 	flex-flow: column wrap;
 	height: 22rem;
 	width: 100%;
-	margin: 0px auto 3.5rem auto;
+	margin: 3.5rem auto 0rem auto;
 	max-width: 65rem;
-	padding: 2rem;
 	box-sizing: border-box;
 	align-content: space-between;
 }
@@ -33,9 +32,6 @@
 
 .button {
 	display: inline-block;
-	position:absolute;
-	bottom: 2rem;
-	left: 2rem;
 	font-size: 1.2rem;
 	font-weight: 400;
 	background-color: var(--text);
@@ -93,7 +89,6 @@
 
 @media (max-width: 975px) {
 	.projectContainer {
-		padding: 2rem 1rem;
 		flex-flow: column nowrap;
 		height: auto;
 		min-height: 22rem;
@@ -102,10 +97,6 @@
 
 	.projectImage {
 		order: initial;
-	}
-
-	.button {
-		position:	initial;
 	}
 
 	.firstText, .secondText {
@@ -117,5 +108,13 @@
 	.projectImage {
 		height: auto;
 		aspect-ratio: 3 / 2;
+	}
+}
+
+@media screen and (max-width: 464px) {
+	.projectContainer {
+		border-radius: 0;
+		box-shadow: none;
+		padding: 0;
 	}
 }

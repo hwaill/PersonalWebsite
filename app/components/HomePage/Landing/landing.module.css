@@ -1,13 +1,14 @@
 .tybaltHand {
-	border-radius: 1.8rem;
 	pointer-events: none;
 	position: absolute;
 	top: 0;
-	left: 0;
-	width: 100%;
+	left: 15%;
+	width: 200%;
+	transform: translateX(-25%);
 	height: 100%;
 	background-image: url('/img/decoration/TybaltHand.svg');
-	background-position: bottom -4.5rem right -2.8rem;
+	background-size: 30rem;
+	background-position: bottom center;
 	background-repeat: no-repeat;
 }
 

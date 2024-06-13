@@ -32,7 +32,7 @@ export default function MyWork() {
 		<div className="section">
 			<div className="sectionText">
 				<h2 className="blueText">My work</h2>
-				<p>My interests </p>
+				<p>My interests are varied and </p>
 			</div>
 			{projects.map((object, i) => (
 				<MyWorkSection key={i} data={object} />

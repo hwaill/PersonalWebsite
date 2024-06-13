@@ -1,23 +1,16 @@
 import React from 'react';
 import style from './myWork.module.css'
 import Link from 'next/link';
+import { Project } from '@/app/types';
 
 export default function MyWorkSection({
 	data
 } : {
-	data: {
-		heading: string,
-		tags: string[],
-		hook: string,
-		description: string,
-		imgUrl: string,
-		imgStyle: string,
-		linkUrl: string
-	}
+	data: Project
 }) {
 	return (
 		<>
-			<div className={style.projectContainer + " neu"}>
+			<div className={style.projectContainer}>
 				<div className={style.firstText}>
 					<h3 className={style.heading}>{data.heading}</h3>
 					<div className={style.projectTagsHolder}>

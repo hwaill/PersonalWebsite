@@ -1,0 +1,111 @@
+.navMobile {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100cqw;
+}
+
+.header {
+	padding: 0.5rem 1rem;
+	height: 5rem;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.headerLogo {
+	flex: 0 1 3.4rem;
+	background-image: url(/img/logos/logoFlat.svg);
+	background-position: center center;
+	background-size: cover;
+	aspect-ratio: 1 / 1;
+}
+
+.headerLogo > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	pointer-events: auto;
+}
+
+.navMobileMenu {
+	font-size: 1.6rem;
+}
+
+.navMobileMenuList {
+	position: absolute;
+	top: 6.6rem;
+	left: 1.6rem;
+	list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navSubMenu {
+	list-style-type: none;
+}
+
+.navMobileMenuListItem {
+	margin-bottom: 0.8rem;
+}
+
+.navMobileMenuListSubItem {
+	margin-bottom: 0.6rem;
+	margin-left: 1rem;
+	font-size: 1.2rem;
+}
+
+.navMobileMenuListItem > button {
+	border: none;
+	padding: 0;
+	margin: 0;
+	background: none;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+.activeNavLink {
+	font-weight: 700;
+}
+
+.navMobileMenuListItemLast {
+
+}
+
+.hidden {
+	pointer-events: none;
+}
+
+.hamburger {
+	flex: 0 0 3.4rem;
+	position: relative;
+	aspect-ratio: 1;
+	border: none;
+	padding: 0;
+	margin: 0;
+	background: none;
+	font-size: inherit;
+	font-family: inherit;
+	pointer-events: auto;
+}
+
+.hamburger > svg {
+	position: absolute;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (min-width: 600px) {
+	.navMobile {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 599px) {
+	.navDesktop {
+		display: none;
+	}
+}
