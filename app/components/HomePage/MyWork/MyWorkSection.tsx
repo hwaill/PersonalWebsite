@@ -19,7 +19,7 @@ export default function MyWorkSection({
 						))}
 					</div>
 				</div>
-				<img className={style.projectImage} src={data.imgUrl} style={JSON.parse(data.imgStyle)}></img>
+				<img className={style.projectImage} src={data.imgUrl} style={data.imgStyle ? JSON.parse(data.imgStyle) : ""} alt={data.imgAltText ? data.imgAltText : ""}></img>
 				<div className={style.secondText}>
 					<h5 className={style.hook}>{data.hook}</h5>
 					<p className={style.description}>{data.description}</p>

@@ -1,8 +1,14 @@
 .landingContainer {
 	position: relative;
 	padding: 4rem max(2rem, 10%);
-	height: max(calc(100dvh - 5rem), 600px);
+	height: max(calc(100dvh - var(--mobileHeaderHeight)), 600px);
 	overflow-x: hidden;
+}
+
+@media screen and (min-width: 600px) {
+	.landingContainer {
+		height: max(100dvh, 600px);
+	}
 }
 
 .homePageSection {

@@ -11,7 +11,7 @@ export default function AboutMe() {
 					<p>I also enjoy playing piano, weaving, hiking with my dog and rock climbing.</p>
 				</div>
 				<div className="neu aboutMeImageContainer">
-					<img className="aboutMeImage" src="/img/homepage/aboutMe.jpg"></img>
+					<img className="aboutMeImage" src="/img/homepage/aboutMe.jpg" alt="Close-up headshot of Henry"></img>
 				</div>
 			</div>
 		</div>

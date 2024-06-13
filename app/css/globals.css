@@ -20,29 +20,9 @@
 	--neu-round-dark: #d8d8d8;
 
 	--floatingGap: 3.5rem;
-}
 
-:root[data-theme='dark'] {
-	/* CSS HSL */
-	/* MAIN COLORS */
-	--green: hsla(159, 76%, 54%, 1);
-	--blue: hsla(196, 100%, 44%, 1);
-	--coral: hsla(17, 100%, 68%, 1);
-	--navy: hsla(235, 21%, 21%, 1);
-	--off-white: hsla(0, 0%, 94%, 1);
-
-	--bg: var(--navy);
-	--text: var(--off-white);
-
-	/* Neumorphism Shadows */
-	--neu-shad-light: #30334b;
-	--neu-shad-dark: #242537;
-	--neu-round-light: #2d2f46;
-	--neu-round-dark: #26283b;
-
-	--floatingGap: 3.5rem;
-
-	color-scheme: dark;
+	--mobileHeaderHeight: 4rem;
+	--sidebarWidth: 12rem;
 }
 
 body {

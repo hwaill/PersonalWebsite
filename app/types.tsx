@@ -14,6 +14,14 @@ export type Project = {
 	hook: string;
 	description: string;
 	imgUrl: string;
-	imgStyle: string;
+	imgStyle?: string;
+	imgAltText?: string;
 	linkUrl: string;
+}
+
+export type TeamCardData = {
+	imgSrc: string;
+	imgAltText?: string;
+	name: string;
+	desc: string;
 }

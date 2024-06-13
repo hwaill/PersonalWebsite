@@ -9,6 +9,7 @@ import { AnimatePresence, easeOut, motion, spring, useCycle } from "framer-motio
 
 import style from "./navigation.module.css";
 import { ReactNode, useEffect, useRef, useState } from "react";
+import { MenuItem, MenuItemIcon, MenuItemWithSubMenu } from "./MenuItem";
 
 export default function NavigationMobile() {
 	const pathname = usePathname();
@@ -31,7 +32,7 @@ export default function NavigationMobile() {
 				transition={{
 					ease: easeOut,
 				}}
-				className={style.navMobileContent + " neuHeader"}>
+				className="neuHeader">
 				<div className={ style.header }>
 					<div className={style.headerLogo}><Link href="/"></Link></div>
 					<MenuToggle toggle={toggleOpen}/>
@@ -58,9 +59,14 @@ export default function NavigationMobile() {
 									) : (
 										<MenuItem className={ style.navMobileMenuListItem + (isLastItem ? " " + style.navMobileMenuListItemLast : " ") }>
 											<Link href={ item.url } onClick={() => toggleOpen()} className={ style.navLink }>
-											<span className={pathname.includes(item.url) && !item.ignoreHighlight ? style.activeNavLink : ""}>
-												{ item.title }
-											</span>
+												<div className={style.navButton}>
+													{item.icon && (
+														<MenuItemIcon icon={ item.icon } />
+													)}
+												</div>
+												<span className={pathname.includes(item.url) && !item.ignoreHighlight ? (style.activeNavLink + ' ' + style.navItemLabel): style.navItemLabel}>
+													{ item.title }
+												</span>
 											</Link>
 										</MenuItem>
 									)}
@@ -81,7 +87,7 @@ function MenuToggle({
 }) {
 	return (
 		<button
-			className={style.hamburger}
+			className={style.navItemButton + " " + style.hamburger}
 			onClick={toggle}
 		>
 			<svg width="40" height="40" viewBox="0 0 40 40">
@@ -124,111 +130,3 @@ function Path(props: any) {
 		/>
 	)
 };
-
-function MenuItem({
-	className,
-	children,
-} : {
-	className: string,
-	children: ReactNode,
-}) {
-	return (
-		<motion.li
-			initial={false}
-			variants={{
-				open: {
-					y: 0,
-					opacity: 1,
-					transition: {
-						y: { stiffness: 1000, velocity: -100 },
-					},
-				},
-				closed: {
-					y: 0,
-					opacity: 0,
-					transition: {
-						y: { stiffness: 1000, velocity: -100 },
-					},
-				}
-			}}
-			className={ className }>
-			{children}
-		</motion.li>
-	)
-};
-
-function SubMenuItem({
-	className,
-	children,
-} : {
-	className: string,
-	children: ReactNode,
-}) {
-	return (
-		<motion.li
-			variants={{
-				open: {
-					y: 0,
-					opacity: 1,
-					transition: {
-						y: { stiffness: 1000, velocity: -100 },
-					},
-				},
-				closed: {
-					y: 0,
-					opacity: 0,
-					transition: {
-						y: { stiffness: 1000, velocity: -100 },
-					},
-				}
-			}}
-			className={ className }>
-			{children}
-		</motion.li>
-	)
-};
-
-function MenuItemWithSubMenu({
-	item,
-	toggleOpen,
-	className,
-} : {
-	item: NavItem,
-	toggleOpen: () => void,
-	className: string,
-}) {
-	const pathname = usePathname();
-	const [subMenuOpen, setSubMenuOpen] = useState(false);
-
-	return (
-		<>
-			<MenuItem className={ className }>
-				<button onClick={() => setSubMenuOpen(!subMenuOpen)}>
-					<div className={ style.navLinkWithSub }>
-						<span className={pathname.includes(item.url) && !item.ignoreHighlight ? style.activeNavLink : ""}>
-							{ item.title }
-						</span>
-						<div className={subMenuOpen ? style.rotate180 : ""}>
-
-						</div>
-					</div>
-				</button>
-			</MenuItem>
-			{subMenuOpen && (
-				<div className={style.navSubMenu}>
-					{item.subNavItems?.map((subItem, subIndex) => {
-						return (
-							<SubMenuItem key={subIndex} className={className + " " + style.navMobileMenuListSubItem}>
-								<Link href={ subItem.url } onClick={() => toggleOpen()} className={ style.navLink }>
-									<span className={pathname.includes(subItem.url) && !subItem.ignoreHighlight ? style.activeNavLink : ""}>
-										{ subItem.title }
-									</span>
-								</Link>
-							</SubMenuItem>
-						)
-					})}
-				</div>
-			)}
-		</>
-	)
-}

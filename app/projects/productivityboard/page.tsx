@@ -3,6 +3,7 @@ import style from '../projects.module.css'
 import TeamCard from '@/app/components/TeamCard/TeamCard'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import { PROJECT_TODOS_TEAM_CARD_DATA } from '@/app/constants'
 
 export const metadata : Metadata = {
 	title: "Todos Productivity Board",
@@ -33,9 +34,9 @@ const Page = () => {
 			<div className={style.clearFix}></div>
 			<h3>The Team</h3>
 			<div className={style.teamContainer}>
-				<TeamCard imgSrc="/img/projects/todos/henry.jpg" name="Henry Waill" desc="Hardware Design, Software Engineering" />
-				<TeamCard imgSrc="/img/projects/todos/jason.jpg" name="Jason Fontillas" desc="User Experience Design" />
-				<TeamCard imgSrc="/img/projects/todos/sydney.jpg" name="Sydney Calcagno" desc="User Interface Design" />
+				{PROJECT_TODOS_TEAM_CARD_DATA.map((data, index) => {
+					return <TeamCard key={index} data={data} />
+				})}
 			</div>
 			<p>This project served as the Senior Capstone Project for my degree in <em>Creative Technology and Design</em> at the University of Colorado, Boulder. My teammates, Jason Fontillas and Sydney Calcagno, and I worked together to transform this vision into a reality.</p>
 			<h3>Project Breakdown</h3>

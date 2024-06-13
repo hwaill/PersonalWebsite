@@ -1,18 +1,17 @@
 import React from 'react';
 import style from './teamCard.module.css';
+import { TeamCardData } from '@/app/types';
 
 export default function TeamCard({
-	imgSrc, name, desc
+	data
 } : {
-	imgSrc: string;
-	name: string;
-	desc: string;
+	data: TeamCardData
 }) {
 	return (
 		<div className={style.card + " neu"}>
-			<img src={imgSrc} className={style.cardImage} />
-			<div className={style.cardName}>{name}</div>
-			<div className={style.cardDescription}>{desc}</div>
+			<img src={data.imgSrc} alt={data.imgAltText ? data.imgAltText : ""} className={style.cardImage} />
+			<div className={style.cardName}>{data.name}</div>
+			<div className={style.cardDescription}>{data.desc}</div>
 		</div>
 	);
 };
