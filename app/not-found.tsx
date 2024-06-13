@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
 
-import LogoLinkTile from './components/Tiles/LogoTile/LogoLinkTile';
-import NavTile from './components/Tiles/NavTile/NavTile';
 import style from './components/HomePage/Landing/landing.module.css';
 
 export const metadata : Metadata = {
@@ -13,10 +11,6 @@ export default function NotFound() {
 		<main>
 			<div className="landingContainer">
 				<div className="landingContent">
-					<div className="landingNavHolder">
-						<LogoLinkTile />
-						<NavTile />
-					</div>
 					<div className='landingSquare neu'>
 						<div className={style.tybaltHand2}></div>
 						<div className={style.notFoundText}>
