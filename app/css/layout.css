@@ -5,8 +5,18 @@
 	overflow-x: hidden;
 }
 
+.notFoundContainer {
+	position: relative;
+	height: max(calc(100dvh - var(--mobileHeaderHeight)), 600px);
+	overflow: hidden;
+}
+
 @media screen and (min-width: 600px) {
 	.landingContainer {
+		height: max(100dvh, 600px);
+	}
+
+	.notFoundContainer {
 		height: max(100dvh, 600px);
 	}
 }
@@ -18,13 +28,12 @@
 .aboutMeImageContainer {
 	margin: 2rem auto 0rem;
 	width: min(100%, 25rem);
-	aspect-ratio: 1;
 	padding: 1rem;
 }
 
 .aboutMeImage {
 	width: 100%;
-	height: 100%;
+	aspect-ratio: 1;
 	border-radius: 0.8rem;
 	display: block;
 }

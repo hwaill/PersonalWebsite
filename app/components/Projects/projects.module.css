@@ -1,0 +1,52 @@
+.bannerImage {
+	position: relative;
+	border-radius: 0.8rem;
+	aspect-ratio: 16/9;
+	max-height: 15rem;
+	width: 100%;
+	margin: 0 0rem 2rem 0rem;
+	background-position: center;
+	background-size: cover;
+}
+
+.bannerTitle {
+	max-width: 90%;
+	height: 8rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.bannerDarken {
+	background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5));
+	width: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	border-radius: 0.8rem;
+}
+
+.containerSmall {
+	margin: 1rem 0rem 0rem;
+}
+
+.containerBig {
+	margin: 2rem 0rem 0rem;
+}
+
+.videoPlayer {
+	border-radius: 0.8rem;
+	width: 100%;
+	aspect-ratio: 16/9;
+	display: block;
+}
+
+
+
+
+
+
+.clearFix {
+	clear: both;
+}

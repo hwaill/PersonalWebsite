@@ -19,6 +19,13 @@ export type Project = {
 	linkUrl: string;
 }
 
+export type ProjectOutline = {
+	bannerImgUrl: string;
+	bannerImgStyle?: string;
+	logoImgUrl: string;
+	logoImgStyle?: string;
+}
+
 export type TeamCardData = {
 	imgSrc: string;
 	imgAltText?: string;

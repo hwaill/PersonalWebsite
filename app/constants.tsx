@@ -75,27 +75,3 @@ export const PROJECTS: Project[] = [
 		linkUrl: '/projects/macropad/'
 	},
 ];
-
-
-
-//Specific-to-project data
-export const PROJECT_TODOS_TEAM_CARD_DATA: TeamCardData[] = [
-	{
-		imgSrc: "/img/projects/todos/henry.jpg",
-		imgAltText: "Photo of Henry",
-		name: "Henry Waill",
-		desc: "Hardware Design, Software Engineering"
-	},
-	{
-		imgSrc: "/img/projects/todos/jason.jpg",
-		imgAltText: "Photo of Jason",
-		name: "Jason Fontillas",
-		desc: "User Experience Design"
-	},
-	{
-		imgSrc: "/img/projects/todos/sydney.jpg",
-		imgAltText: "Photo of Sydney",
-		name: "Sydney Calcagno",
-		desc: "User Interface Design"
-	}
-];

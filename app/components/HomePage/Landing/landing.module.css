@@ -13,21 +13,27 @@
 }
 
 .tybaltHand2 {
-	border-radius: 1.8rem;
 	pointer-events: none;
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+	top: 5rem;
+	right: 0;
+	width: min(35rem, max(120%, 30rem));
 	height: 100%;
 	background-image: url('/img/decoration/TybaltHand2.svg');
-	background-position: bottom 5.3rem right -1.2rem;
 	background-repeat: no-repeat;
 }
 
 .notFoundText {
 	position: absolute;
-	bottom: 0.5rem;
+	left: 10%;
+	bottom: 5%;
+}
+
+@media screen and (max-width: 350px) {
+	.notFoundText {
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
 .notFoundText > h1 {
@@ -36,4 +42,5 @@
 
 .notFoundText > h6 {
 	margin-top: 0px;
+	margin-left: 1rem;
 }
