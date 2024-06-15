@@ -1,6 +1,8 @@
+"use client"
+
 import style from "./projects.module.css"
 
-export default function ProjectMainVideo({
+export function ProjectVideoFull({
 	url,
 	type,
 	posterUrl
@@ -11,10 +13,9 @@ export default function ProjectMainVideo({
 }) {
 	return (
 		<>
-			<div className={style.clearFix}></div>
 			<div className={style.containerBig}>
 				<video controls preload="meta" {...(posterUrl ? {poster: posterUrl} : {})} className={style.videoPlayer}>
-					<source src={url} type={type} />
+					<source type={type} src={url} />
 				</video>
 			</div>
 		</>

@@ -85,3 +85,15 @@
 #macropadBannerTitle {
 	height: 2.5rem;
 }
+
+.containerBig {
+	position: relative;
+	margin: 2rem 0rem 0rem;
+}
+
+.videoPlayer {
+	width: 100%;
+	border-radius: 0.8rem;
+	display: block;
+	aspect-ratio: 16/9;
+}

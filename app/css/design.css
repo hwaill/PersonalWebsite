@@ -40,6 +40,6 @@
 
 .neuHeader {
 	background-color: var(--bgTranslucent);
-	backdrop-filter: blur(0.4rem);
+	/* backdrop-filter: blur(0.4rem); */
 	box-shadow:  0px 0px 9px rgba(0, 0, 0, 0.3);
 }

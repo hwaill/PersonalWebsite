@@ -10,7 +10,7 @@
 	--off-white: hsla(0, 0%, 94%, 1);
 
 	--bg: var(--off-white);
-	--bgTranslucent: hsla(0, 0%, 94%, 0.85);
+	--bgTranslucent: hsla(0, 0%, 94%, 0.95);
 	--text: var(--navy);
 
 	/* Neumorphism Shadows */

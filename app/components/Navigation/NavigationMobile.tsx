@@ -5,10 +5,9 @@ import { usePathname } from "next/navigation";
 
 import { NAV_ITEMS } from "@/app/constants";
 import { NavItem } from "@/app/types";
-import { AnimatePresence, easeOut, motion, spring, useCycle } from "framer-motion";
+import { easeOut, motion, useCycle } from "framer-motion";
 
 import style from "./navigation.module.css";
-import { ReactNode, useEffect, useRef, useState } from "react";
 import { MenuItem, MenuItemIcon, MenuItemWithSubMenu } from "./MenuItem";
 
 export default function NavigationMobile() {

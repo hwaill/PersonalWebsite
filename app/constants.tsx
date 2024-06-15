@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
 		imgUrl: '/img/projects/todos/banner.jpg',
 		imgStyle: '{"objectPosition":"15% center"}',
 		imgAltText: 'Photo of Todos Productivty Board in action. Foreground shows front button panel with the Todos logo engraved. The robotic arm can be seen drawing on the whiteboard in the background.',
-		linkUrl: '/projects/productivityboard/'
+		linkUrl: '/projects/todos/'
 	},{
 		heading: 'Macropad 2040',
 		tags: [

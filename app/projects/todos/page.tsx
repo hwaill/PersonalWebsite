@@ -4,10 +4,9 @@ import TeamCard from '@/app/components/Projects/TeamCard/TeamCard'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { ProjectOutline, TeamCardData } from '@/app/types'
-import ProjectBannerImage from '@/app/components/Projects/ProjectBannerImage'
-import ProjectSection from '@/app/components/Projects/ProjectSection'
-import ProjectMainVideo from '@/app/components/Projects/ProjectMainVideo'
-import ProjectSubSection from '@/app/components/Projects/ProjectSubSection'
+import { ProjectImageBanner } from '@/app/components/Projects/ProjectImages'
+import  { ProjectSection, ProjectSubSection } from '@/app/components/Projects/ProjectSections'
+import { ProjectVideoFull } from '@/app/components/Projects/ProjectVideos'
 
 export const metadata : Metadata = {
 	title: "Todos Productivity Board",
@@ -43,14 +42,14 @@ const PROJECT_DATA: ProjectOutline = {
 const Page = () => {
 	return (
 		<>
-			<ProjectBannerImage data={PROJECT_DATA} />
+			<ProjectImageBanner data={PROJECT_DATA} />
 			<ProjectSection heading="Project Overview">
 				<p>Simply put, the <em>todos productivity board</em> is an organization tool designed specifically to help those who struggle with executive dysfunction maintain better control in their day&#x2011;to&#x2011;day life. A familiar whiteboard with an attached robotic dry-erase marker, this device reimagines task management and goal tracking, providing a new path towards structure that removes the distractions inherent in digital systems and lessens the energy costs associated with maintaining paper planners.</p>
 				<img src="/img/projects/todos/img2.jpg" className={style.halfImage + " " + style.right} />
 				<p>Throughout the day, <em>todos</em> translates your digital to&#x2011;do lists and goals onto its surface, keeping you focused and organized. Users simply place magnets on the board to interact, triggering sensors that record task completion, as well as other metrics such as mood and self-assessments of productivity and sleep. Wifi connection allows for up-to-date information, like weather forecasts, to help users plan their day. With Bluetooth configuration via a custom web portal, the system can be easily customized to adapt perfectly to your workflow and goals.</p>
 				<p>In addition to all of this, a core goal of this project was to create a platform for communication and interaction that can adapt well to environments and use cases of many kinds. A whiteboard is, quite literally, a blank slate. A robotic marker is a versatile communicator and the placement of magnets on a board is a fairly accessible user input system.</p>
 				<p>Below, find the demo video for <em>todos</em>.</p>
-				<ProjectMainVideo url="https://www.itsshreeyo.com/hwhosting/todosVideo.mp4" type="video/mp4" posterUrl="/img/projects/todos/videoThumbnail.png" />
+				<ProjectVideoFull url="https://www.itsshreeyo.com/hwhosting/todosVideo.mp4" type="video/mp4" posterUrl="/img/projects/todos/videoThumbnail.png" />
 			</ProjectSection>
 			<ProjectSection heading="Why This Matters">
 				<p>Responsibilities like keeping a consistent morning routine, remembering an upcoming event or commitment, or even keeping personal long-term goals front of mind (to name just a few) are often made difficult or impossible by executive dysfunction. The consequences of an individual lapse in attention may seem relatively small, but bills not paid, friends not spoken to and showers not taken, for example, can quickly add up to something more overwhelming.</p>
@@ -72,7 +71,7 @@ const Page = () => {
 				<ProjectSubSection heading="Hardware">
 					<img src="/img/projects/todos/img3.jpg" className={style.thirdImage + " " + style.right} />
 					<p>At the core of this build (besides the whiteboard itself) is a 2-axis <em>Computer Numerical Control</em> (CNC) plotter. CNC devices allow for precise control over motion; in this case, we are moving a dry-erase marker on two axes. For this sort of construction, I turned towards a brand I&apos;m familiar with from some previous projects, <Link href="https://openbuilds.com/"><em>Openbuilds</em></Link>. <em>Openbuilds</em> has a modular system of parts that works well for designing these sorts of CNC machines; with aluminum extrusions, mounting hardware and linear actuator systems that are all compatible with one another, it was easy to prototype the plotter mechanism. Below is a video of some early testing of the linear actuators, and a more detailed look at the plotter mechanism construction can be found <Link href="productivityboard/mechanism/">here</Link>.</p>
-					<ProjectMainVideo url="/img/projects/todos/vid1.mp4" type="video/mp4" />
+					<ProjectVideoFull url="/img/projects/todos/vid1.mp4" type="video/mp4" />
 					<p>Quite a few other parts required more unique designs, so I opted to design and fabricate custom components to fill those gaps. Shown below are a few examples that I 3D printed; on the left is a servo-powered pen lift mechanism, and on the right is an example of a limit switch mount. Additionally, all of the mounts for the electronics, as well as some other brackets, were printed for the project.</p>
 					<div className={style.collage}>
 						<div className={style.collageMember}>

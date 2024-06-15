@@ -28,25 +28,53 @@
 }
 
 .containerSmall {
+	position: relative;
 	margin: 1rem 0rem 0rem;
 }
 
+.containerSmall:last-child {
+	margin: 1rem 0rem;
+}
+
 .containerBig {
+	position: relative;
 	margin: 2rem 0rem 0rem;
 }
 
-.videoPlayer {
-	border-radius: 0.8rem;
-	width: 100%;
-	aspect-ratio: 16/9;
-	display: block;
+.containerBig:last-child {
+	margin: 2rem 0rem;
 }
 
+.videoPlayer {
+	width: 100%;
+	border-radius: 0.8rem;
+	display: block;
+	aspect-ratio: 16/9;
+}
 
+.projectImage {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 0.8rem;
+}
 
+.projectImageFull {
+	aspect-ratio: 16/9;
+	width: 100%;
+}
 
+.containerBig+.projectParagraph {
+	margin-top: 2rem;
+}
 
+.containerSmall+.projectParagraph {
+	margin-top: 1rem;
+}
 
-.clearFix {
-	clear: both;
+.clearFix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
