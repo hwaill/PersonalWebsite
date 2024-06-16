@@ -11,7 +11,7 @@
 
 .bannerTitle {
 	max-width: 90%;
-	height: 8rem;
+	height: 8em;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -29,20 +29,20 @@
 
 .containerSmall {
 	position: relative;
-	margin: 1rem 0rem 0rem;
+	margin: 1em 0em 0em;
 }
 
 .containerSmall:last-child {
-	margin: 1rem 0rem;
+	margin: 1em 0em;
 }
 
 .containerBig {
 	position: relative;
-	margin: 2rem 0rem 0rem;
+	margin: 2em 0rem 0rem;
 }
 
 .containerBig:last-child {
-	margin: 2rem 0rem;
+	margin: 2em 0em;
 }
 
 .videoPlayer {
@@ -65,12 +65,36 @@
 	width: 100%;
 }
 
+.projectImageHalf {
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 0em;
+	border-radius: 0.8rem;
+	width: 50%;
+	background-position: center;
+	background-size: cover;
+}
+
+.right {
+	float: right;
+	margin-left: 1em;
+}
+
+.left {
+	float: left;
+	margin-right: 1em;
+}
+
+.center {
+	margin: 1em auto 0em auto;
+}
+
 .containerBig+.projectParagraph {
-	margin-top: 2rem;
+	margin-top: 2em;
 }
 
 .containerSmall+.projectParagraph {
-	margin-top: 1rem;
+	margin-top: 1em;
 }
 
 .clearFix::after {

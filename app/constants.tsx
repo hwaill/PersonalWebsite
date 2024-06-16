@@ -1,4 +1,4 @@
-import { NavItem, Project, TeamCardData } from "./types";
+import { NavItem, Project } from "./types";
 
 export const NAV_ITEMS: NavItem[] = [
 	{
@@ -19,16 +19,6 @@ export const NAV_ITEMS: NavItem[] = [
 		]
 	},
 	{
-		title: "Contact Me",
-		url: "/contact",
-		icon: "mail"
-	},
-	{
-		title: "Blog",
-		url: "/blog",
-		icon: "writing"
-	},
-	{
 		title: "My Resume",
 		url: "/resume",
 		icon: "gradCap"
@@ -40,11 +30,22 @@ export const NAV_ITEMS: NavItem[] = [
 		externalLink: true
 	},
 	{
-		title: "Instagram",
-		url: "https://www.instagram.com/henrywaill",
-		icon: "instagram",
-		externalLink: true
+		title: "Contact Me",
+		url: "/contact",
+		icon: "mail2"
 	},
+	{
+		title: "Henry",
+		url: "/henry",
+		icon: "user",
+		subNav: true,
+		subNavItems: [
+			{	title: "Motivations", url: "/henry/motivations"},
+			{ title: "Habits", url: "/henry/habits" },
+			{ title: "Blog", url: "/henry/blog", icon: "writing2" },
+			{ title: "Instagram", url: "https://www.instagram.com/henrywaill", icon: "instagram", externalLink: true}
+		]
+	}
 ];
 
 export const PROJECTS: Project[] = [
@@ -73,5 +74,5 @@ export const PROJECTS: Project[] = [
 		imgStyle: '{"objectPosition":"53% center"}',
 		imgAltText: 'Birdseye image shows the macropad 2040 keypad on a desk surface. It rests on its hand-sewn pouch, and extra keycaps lay scattered next to it.',
 		linkUrl: '/projects/macropad/'
-	},
+	}
 ];

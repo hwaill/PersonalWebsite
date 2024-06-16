@@ -50,5 +50,27 @@ export function ProjectImageFull({
 				<ProjectImage src={src} alt={alt} imgStyle={imgStyle} />
 			</div>
 		</>
-	)
-}
+	);
+};
+
+export function ProjectImageHalf({
+	src,
+	alt,
+	imgStyle,
+	left,
+	right
+}:{
+	src: string,
+	alt?: string,
+	imgStyle?: string,
+	left?: boolean,
+	right?: boolean
+}) {
+	return (
+		<>
+			<div className={(left ? style.left : (right ? style.right : style.center)) + " " + style.projectImageHalf}>
+				<ProjectImage src={src} alt={alt} imgStyle={imgStyle} />
+			</div>
+		</>
+	);
+};

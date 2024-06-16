@@ -6,7 +6,7 @@ export type NavItem = {
 	subNavItems?: NavItem[];
 	externalLink?: boolean;
 	ignoreHighlight?: boolean;
-}
+};
 
 export type Project = {
 	heading: string;
@@ -17,18 +17,18 @@ export type Project = {
 	imgStyle?: string;
 	imgAltText?: string;
 	linkUrl: string;
-}
+};
 
 export type ProjectOutline = {
 	bannerImgUrl: string;
 	bannerImgStyle?: string;
 	logoImgUrl: string;
 	logoImgStyle?: string;
-}
+};
 
 export type TeamCardData = {
 	imgSrc: string;
 	imgAltText?: string;
 	name: string;
 	desc: string;
-}
+};

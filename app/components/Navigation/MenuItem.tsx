@@ -80,7 +80,7 @@ export function MenuItemWithSubMenu({
 	className: string,
 }) {
 	const pathname = usePathname();
-	const [subMenuOpen, setSubMenuOpen] = useState(false);
+	const [subMenuOpen, setSubMenuOpen] = useState(pathname.includes(item.url));
 
 	return (
 		<>
@@ -96,7 +96,7 @@ export function MenuItemWithSubMenu({
 							{ item.title }
 						</span>
 						<div className={style.subMenuArrow}>
-							<img className={subMenuOpen ? style.rotate180 : ""} src="img/flaticon/chevron-double-down.svg" alt="" />
+							<div className={subMenuOpen ? style.rotate180 : ""}></div>
 						</div>
 					</div>
 				</button>
@@ -106,7 +106,7 @@ export function MenuItemWithSubMenu({
 					{item.subNavItems?.map((subItem, subIndex) => {
 						return (
 							<SubMenuItem key={subIndex} className={className + " " + style.navMenuListSubItem + (subIndex == 0 ? " " + style.navMenuListSubItemFirst : "")}>
-								<Link href={ subItem.url } onClick={toggleOpen ? () => toggleOpen() : () => null} className={ style.navLink }>
+								<Link href={ subItem.url } onClick={toggleOpen ? () => toggleOpen() : () => null} className={ style.navLink } {...(subItem.externalLink ? {target: "_blank", rel: "noopener noreferrer"} : {})}>
 									<div className={style.navButton}>
 										{subItem.icon && (
 											<MenuItemIcon icon={ subItem.icon } />
@@ -138,6 +138,13 @@ export function MenuItemIcon({
 		case 'mail':
 			iconParts = [{ color: 'blue', url: '/img/flaticon/fi-rr-envelope.svg' }];
 			break;
+		case 'mail2':
+			iconParts = [
+				{ color: 'coral', url: '/img/flaticon/fi-rr-envelope-dot1.svg' },
+				{ color: 'blue', url: '/img/flaticon/fi-rr-envelope-dot2.svg' },
+				{ color: 'blue', url: '/img/flaticon/fi-rr-envelope-dot3.svg' },
+			];
+			break;
 		case 'instagram':
 			iconParts = [
 				{ color: 'blue', url: '/img/flaticon/fi-brands-insta1.svg' },
@@ -157,8 +164,18 @@ export function MenuItemIcon({
 				{ color: 'green', url: '/img/flaticon/fi-rr-writing2.svg' },
 			];
 			break;
+		case 'writing2':
+			iconParts = [
+				{ color: 'green', url: '/img/flaticon/fi-rr-edit1.svg' },
+				{ color: 'blue', url: '/img/flaticon/fi-rr-edit2.svg' },
+				{ color: 'green', url: '/img/flaticon/fi-rr-edit3.svg' },
+			];
+			break;
 		case 'briefcase':
 			iconParts = [{ color: 'green', url: '/img/flaticon/fi-rr-briefcase.svg'}];
+			break;
+		case 'user':
+			iconParts = [{ color: 'blue', url: '/img/flaticon/fi-rr-user.svg'}];
 			break;
 		default:
 	}

@@ -148,8 +148,12 @@
 	flex: 1 0 0.6em;
 }
 
-.subMenuArrow > img {
+.subMenuArrow > div {
+	mask-image: url("/img/flaticon/chevron-double-down.svg");
+	mask-size: 100% 100%;
+	background-color: var(--navy);
 	display: inline-block;
+	margin-bottom: 0.05em;
 	width: 0.6em;
 	height: 0.6em;
 }
@@ -159,7 +163,7 @@
 }
 
 .navButton {
-	flex: 0 0 1em;
+	flex: 0 0 1.2em;
 	aspect-ratio: 1;
 	position: relative;
 }

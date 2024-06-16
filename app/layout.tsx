@@ -13,18 +13,22 @@ export const viewport: Viewport = {
   initialScale: 1,
 	minimumScale: 1,
   maximumScale: 1,
-  userScalable: false,
-}
+  userScalable: false
+};
 
 export const metadata: Metadata = {
 	title: {
 		default: 'Henry Waill',
 		template: '%s | Henry Waill'
 	},
-	description: 'A personal site.',
+	description: 'A personal site.'
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+	children
+}: {
+	children: React.ReactNode
+}) {
 	return (
 		<html lang="en">
 			<body>
@@ -36,4 +40,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</body>
 		</html>
 	);
-}
+};

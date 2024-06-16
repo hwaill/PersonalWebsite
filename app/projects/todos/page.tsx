@@ -9,8 +9,8 @@ import  { ProjectSection, ProjectSubSection } from '@/app/components/Projects/Pr
 import { ProjectVideoFull } from '@/app/components/Projects/ProjectVideos'
 
 export const metadata : Metadata = {
-	title: "Todos Productivity Board",
-}
+	title: "Todos Productivity Board"
+};
 
 const PROJECT_TODOS_TEAM_CARD_DATA: TeamCardData[] = [
 	{
@@ -39,7 +39,7 @@ const PROJECT_DATA: ProjectOutline = {
 	logoImgStyle: '{"height":"5rem"}'
 }
 
-const Page = () => {
+export default function Page() {
 	return (
 		<>
 			<ProjectImageBanner data={PROJECT_DATA} />
@@ -97,7 +97,5 @@ const Page = () => {
 				</ProjectSubSection>
 			</ProjectSection>
 		</>
-	)
-}
-
-export default Page
+	);
+};
