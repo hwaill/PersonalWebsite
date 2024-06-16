@@ -7,7 +7,7 @@ export const NAV_ITEMS: NavItem[] = [
 		ignoreHighlight: true,
 	},
 	{
-		title: "My work",
+		title: "My Projects",
 		url: "/projects",
 		icon: "briefcase",
 		subNav: true,
@@ -19,7 +19,7 @@ export const NAV_ITEMS: NavItem[] = [
 		]
 	},
 	{
-		title: "Contact me",
+		title: "Contact Me",
 		url: "/contact",
 		icon: "mail"
 	},
@@ -29,7 +29,7 @@ export const NAV_ITEMS: NavItem[] = [
 		icon: "writing"
 	},
 	{
-		title: "My resume",
+		title: "My Resume",
 		url: "/resume",
 		icon: "gradCap"
 	},

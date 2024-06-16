@@ -95,8 +95,8 @@ export function MenuItemWithSubMenu({
 						<span className={pathname.includes(item.url) && !item.ignoreHighlight ? (style.activeNavLink + ' ' + style.navItemLabel): style.navItemLabel}>
 							{ item.title }
 						</span>
-						<div className={subMenuOpen ? style.rotate180 : ""}>
-
+						<div className={style.subMenuArrow}>
+							<img className={subMenuOpen ? style.rotate180 : ""} src="img/flaticon/chevron-double-down.svg" alt="" />
 						</div>
 					</div>
 				</button>

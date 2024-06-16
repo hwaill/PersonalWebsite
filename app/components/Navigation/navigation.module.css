@@ -85,7 +85,7 @@
 	left: 0;
 	list-style-type: none;
   margin: 0;
-  padding: 0 0 0 1.6rem;
+  padding: 0 1.6rem;
 }
 
 .navSidebarMenuList {
@@ -117,6 +117,7 @@
 }
 
 .navItemButton{
+	width: 100%;
 	color: inherit;
 	border: none;
 	padding: 0;
@@ -140,6 +141,21 @@
 
 .navItemLabel {
 	white-space: nowrap;
+}
+
+.subMenuArrow {
+	text-align: right;
+	flex: 1 0 0.6em;
+}
+
+.subMenuArrow > img {
+	display: inline-block;
+	width: 0.6em;
+	height: 0.6em;
+}
+
+.rotate180 {
+	transform: rotate(180deg);
 }
 
 .navButton {

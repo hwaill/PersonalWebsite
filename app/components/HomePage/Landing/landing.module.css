@@ -12,6 +12,12 @@
 	background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 1000px) {
+	.tybaltHand {
+		background-size: 30%;
+	}
+}
+
 .tybaltHand2 {
 	pointer-events: none;
 	position: absolute;

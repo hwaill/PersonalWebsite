@@ -9,7 +9,6 @@ export default function MyWork() {
 	return (
 		<div className="homePageSection">
 			<h2 className="blueText">Featured projects</h2>
-			<p>My interests are varied</p>
 			{PROJECTS.map((object, i) => (
 				<MyWorkSection key={i} data={object} />
 			))}
