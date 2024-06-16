@@ -74,5 +74,17 @@ export const PROJECTS: Project[] = [
 		imgStyle: '{"objectPosition":"53% center"}',
 		imgAltText: 'Birdseye image shows the macropad 2040 keypad on a desk surface. It rests on its hand-sewn pouch, and extra keycaps lay scattered next to it.',
 		linkUrl: '/projects/macropad/'
+	},{
+		heading: 'The Sun Clock',
+		tags: [
+			'wifi-enabled',
+			'laser-cut',
+			'decor and lighting'
+		],
+		hook: 'A faster workflow at your fingertips.',
+		description: 'A customizable desk gadget that extends the functionality of a traditional computer keyboard.',
+		imgUrl: '/img/projects/sunClock/banner.jpg',
+		imgAltText: 'Birdseye image shows the macropad 2040 keypad on a desk surface. It rests on its hand-sewn pouch, and extra keycaps lay scattered next to it.',
+		linkUrl: '/projects/sunclock/'
 	}
 ];
