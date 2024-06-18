@@ -13,7 +13,7 @@
 
 @media screen and (min-width: 600px) {
 	.landingContainer {
-		height: max(100dvh, 600px);
+		height: max(85dvh, 600px);
 	}
 
 	.notFoundContainer {

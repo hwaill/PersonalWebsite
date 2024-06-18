@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { ReactNode, useState } from "react";
 
-
 import style from "./navigation.module.css";
 import { NavItem } from "@/app/types";
 import Link from "next/link";
@@ -10,9 +9,9 @@ import Link from "next/link";
 export function MenuItem({
 	className,
 	children,
-} : {
-	className: string,
-	children: ReactNode,
+}: {
+	className: string;
+	children: ReactNode;
 }) {
 	return (
 		<motion.li
@@ -31,20 +30,21 @@ export function MenuItem({
 					transition: {
 						y: { stiffness: 1000, velocity: -100 },
 					},
-				}
+				},
 			}}
-			className={ className }>
+			className={className}
+		>
 			{children}
 		</motion.li>
-	)
-};
+	);
+}
 
 export function SubMenuItem({
 	className,
 	children,
-} : {
-	className: string,
-	children: ReactNode,
+}: {
+	className: string;
+	children: ReactNode;
 }) {
 	return (
 		<motion.li
@@ -62,38 +62,46 @@ export function SubMenuItem({
 					transition: {
 						y: { stiffness: 1000, velocity: -100 },
 					},
-				}
+				},
 			}}
-			className={ className }>
+			className={className}
+		>
 			{children}
 		</motion.li>
-	)
-};
+	);
+}
 
 export function MenuItemWithSubMenu({
 	item,
 	toggleOpen,
 	className,
-} : {
-	item: NavItem,
-	toggleOpen?: () => void,
-	className: string,
+}: {
+	item: NavItem;
+	toggleOpen?: () => void;
+	className: string;
 }) {
 	const pathname = usePathname();
 	const [subMenuOpen, setSubMenuOpen] = useState(pathname.includes(item.url));
 
 	return (
 		<>
-			<MenuItem className={ className }>
-				<button className={style.navItemButton} onClick={() => setSubMenuOpen(!subMenuOpen)}>
-					<div className={ style.navLinkWithSub }>
+			<MenuItem className={className}>
+				<button
+					className={style.navItemButton}
+					onClick={() => setSubMenuOpen(!subMenuOpen)}
+				>
+					<div className={style.navLinkWithSub}>
 						<div className={style.navButton}>
-							{item.icon && (
-								<MenuItemIcon icon={ item.icon } />
-							)}
+							{item.icon && <MenuItemIcon icon={item.icon} />}
 						</div>
-						<span className={pathname.includes(item.url) && !item.ignoreHighlight ? (style.activeNavLink + ' ' + style.navItemLabel): style.navItemLabel}>
-							{ item.title }
+						<span
+							className={
+								pathname.includes(item.url) && !item.ignoreHighlight
+									? style.activeNavLink + " " + style.navItemLabel
+									: style.navItemLabel
+							}
+						>
+							{item.title}
 						</span>
 						<div className={style.subMenuArrow}>
 							<div className={subMenuOpen ? style.rotate180 : ""}></div>
@@ -105,87 +113,112 @@ export function MenuItemWithSubMenu({
 				<div className={style.navSubMenu}>
 					{item.subNavItems?.map((subItem, subIndex) => {
 						return (
-							<SubMenuItem key={subIndex} className={className + " " + style.navMenuListSubItem + (subIndex == 0 ? " " + style.navMenuListSubItemFirst : "")}>
-								<Link href={ subItem.url } onClick={toggleOpen ? () => toggleOpen() : () => null} className={ style.navLink } {...(subItem.externalLink ? {target: "_blank", rel: "noopener noreferrer"} : {})}>
+							<SubMenuItem
+								key={subIndex}
+								className={
+									className +
+									" " +
+									style.navMenuListSubItem +
+									(subIndex == 0 ? " " + style.navMenuListSubItemFirst : "")
+								}
+							>
+								<Link
+									href={subItem.url}
+									onClick={toggleOpen ? () => toggleOpen() : () => null}
+									className={style.navLink}
+									{...(subItem.externalLink
+										? { target: "_blank", rel: "noopener noreferrer" }
+										: {})}
+								>
 									<div className={style.navButton}>
-										{subItem.icon && (
-											<MenuItemIcon icon={ subItem.icon } />
-										)}
+										{subItem.icon && <MenuItemIcon icon={subItem.icon} />}
 									</div>
-									<span className={pathname.includes(subItem.url) && !subItem.ignoreHighlight ? (style.activeNavLink + ' ' + style.navItemLabel): style.navItemLabel}>
-										{ subItem.title }
+									<span
+										className={
+											pathname.includes(subItem.url) && !subItem.ignoreHighlight
+												? style.activeNavLink + " " + style.navItemLabel
+												: style.navItemLabel
+										}
+									>
+										{subItem.title}
 									</span>
 								</Link>
 							</SubMenuItem>
-						)
+						);
 					})}
 				</div>
 			)}
 		</>
-	)
+	);
 }
 
-export function MenuItemIcon({
-	icon
-} : {
-	icon: string
-}) {
-	var iconParts = [{ color: '', url: '' }];
+export function MenuItemIcon({ icon }: { icon: string }) {
+	var iconParts = [{ color: "", url: "" }];
 	switch (icon) {
-		case 'mailbox':
-			iconParts = [{ color: 'green', url: '/img/flaticon/fi-rr-mail1.svg' }];
+		case "mailbox":
+			iconParts = [{ color: "green", url: "/img/flaticon/fi-rr-mail1.svg" }];
 			break;
-		case 'mail':
-			iconParts = [{ color: 'blue', url: '/img/flaticon/fi-rr-envelope.svg' }];
+		case "mail":
+			iconParts = [{ color: "blue", url: "/img/flaticon/fi-rr-envelope.svg" }];
 			break;
-		case 'mail2':
+		case "mail2":
 			iconParts = [
-				{ color: 'coral', url: '/img/flaticon/fi-rr-envelope-dot1.svg' },
-				{ color: 'blue', url: '/img/flaticon/fi-rr-envelope-dot2.svg' },
-				{ color: 'blue', url: '/img/flaticon/fi-rr-envelope-dot3.svg' },
+				{ color: "coral", url: "/img/flaticon/fi-rr-envelope-dot1.svg" },
+				{ color: "blue", url: "/img/flaticon/fi-rr-envelope-dot2.svg" },
+				{ color: "blue", url: "/img/flaticon/fi-rr-envelope-dot3.svg" },
 			];
 			break;
-		case 'instagram':
+		case "instagram":
 			iconParts = [
-				{ color: 'blue', url: '/img/flaticon/fi-brands-insta1.svg' },
-				{ color: 'green', url: '/img/flaticon/fi-brands-insta2.svg' },
-				{ color: 'coral', url: '/img/flaticon/fi-brands-insta3.svg' },
+				{ color: "blue", url: "/img/flaticon/fi-brands-insta1.svg" },
+				{ color: "green", url: "/img/flaticon/fi-brands-insta2.svg" },
+				{ color: "coral", url: "/img/flaticon/fi-brands-insta3.svg" },
 			];
 			break;
-		case 'linkedIn':
-			iconParts = [{ color: 'coral', url: '/img/flaticon/fi-brands-linkedin.svg' }];
-			break;
-		case 'gradCap':
-			iconParts = [{ color: 'coral', url: '/img/flaticon/fi-rr-gradCap.svg' }];
-			break;
-		case 'writing':
+		case "linkedIn":
 			iconParts = [
-				{ color: 'blue', url: '/img/flaticon/fi-rr-writing1.svg' },
-				{ color: 'green', url: '/img/flaticon/fi-rr-writing2.svg' },
+				{ color: "coral", url: "/img/flaticon/fi-brands-linkedin.svg" },
 			];
 			break;
-		case 'writing2':
+		case "gradCap":
+			iconParts = [{ color: "coral", url: "/img/flaticon/fi-rr-gradCap.svg" }];
+			break;
+		case "writing":
 			iconParts = [
-				{ color: 'green', url: '/img/flaticon/fi-rr-edit1.svg' },
-				{ color: 'blue', url: '/img/flaticon/fi-rr-edit2.svg' },
-				{ color: 'green', url: '/img/flaticon/fi-rr-edit3.svg' },
+				{ color: "blue", url: "/img/flaticon/fi-rr-writing1.svg" },
+				{ color: "green", url: "/img/flaticon/fi-rr-writing2.svg" },
 			];
 			break;
-		case 'briefcase':
-			iconParts = [{ color: 'green', url: '/img/flaticon/fi-rr-briefcase.svg'}];
+		case "writing2":
+			iconParts = [
+				{ color: "green", url: "/img/flaticon/fi-rr-edit1.svg" },
+				{ color: "blue", url: "/img/flaticon/fi-rr-edit2.svg" },
+				{ color: "green", url: "/img/flaticon/fi-rr-edit3.svg" },
+			];
 			break;
-		case 'user':
-			iconParts = [{ color: 'blue', url: '/img/flaticon/fi-rr-user.svg'}];
+		case "briefcase":
+			iconParts = [
+				{ color: "green", url: "/img/flaticon/fi-rr-briefcase.svg" },
+			];
+			break;
+		case "user":
+			iconParts = [{ color: "blue", url: "/img/flaticon/fi-rr-user.svg" }];
 			break;
 		default:
 	}
 
-
 	return (
 		<>
 			{iconParts.map((object, i) => (
-				<div key={i} className={style.navIcon + ' ' + object.color} style={{ WebkitMaskImage: 'url(' + object.url + ')', maskImage: 'url(' + object.url + ')' }}></div>
+				<div
+					key={i}
+					className={style.navIcon + " " + object.color}
+					style={{
+						WebkitMaskImage: "url(" + object.url + ")",
+						maskImage: "url(" + object.url + ")",
+					}}
+				></div>
 			))}
 		</>
-	)
+	);
 }

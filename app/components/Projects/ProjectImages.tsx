@@ -74,3 +74,58 @@ export function ProjectImageHalf({
 		</>
 	);
 };
+
+export function ProjectImageThird({
+	src,
+	alt,
+	imgStyle,
+	left,
+	right
+}:{
+	src: string,
+	alt?: string,
+	imgStyle?: string,
+	left?: boolean,
+	right?: boolean
+}) {
+	return (
+		<>
+			<div className={(left ? style.left : (right ? style.right : style.center)) + " " + style.projectImageThird}>
+				<ProjectImage src={src} alt={alt} imgStyle={imgStyle} />
+			</div>
+		</>
+	);
+};
+
+export function ProjectImageCollage({
+	src1,
+	src2,
+	alt1,
+	alt2,
+	imgStyle1,
+	imgStyle2,
+	weight1,
+	weight2
+}:{
+	src1: string,
+	src2: string,
+	alt1?: string,
+	alt2?: string,
+	imgStyle1?: string,
+	imgStyle2?: string,
+	weight1?: number,
+	weight2?: number
+}) {
+	return (
+		<>
+			<div className={style.projectImageCollageHolder} style={{gridTemplateColumns: `${weight1}fr ${weight2}fr`}}>
+				<div className={style.projectImageCollageFirst}>
+					<ProjectImage src={src1} alt={alt1} imgStyle={imgStyle1} />
+				</div>
+				<div className={style.projectImageCollageSecond}>
+					<ProjectImage src={src2} alt={alt2} imgStyle={imgStyle2} />
+				</div>
+			</div>
+		</>
+	);
+};

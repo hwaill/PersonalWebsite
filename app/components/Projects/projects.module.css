@@ -75,6 +75,16 @@
 	background-size: cover;
 }
 
+.projectImageThird {
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 0em;
+	border-radius: 0.8rem;
+	width: 33%;
+	background-position: center;
+	background-size: cover;
+}
+
 .right {
 	float: right;
 	margin-left: 1em;

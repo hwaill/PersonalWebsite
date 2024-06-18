@@ -1,0 +1,57 @@
+.teamContainer {
+	width: 100%;
+	margin-top: 2em;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	gap: 2rem;
+}
+
+.card {
+	/* text-align: center; */
+	position: relative;
+}
+
+.cardImage {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	background-color: grey;
+	border-radius: 0.8rem;
+}
+
+.cardName {
+	font-family: "brandon-grotesque", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.3em;
+}
+
+.cardDescription {
+	font-size: 1em;
+	font-weight: 300;
+	opacity: 0.8;
+	margin-bottom: 1em;
+}
+
+.cardButton {
+	opacity: 0.85;
+	margin-bottom: 1em;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 400;
+	background-color: var(--text);
+	color: var(--bg);
+	border-radius: 1000vh;
+	padding: 0.13em 0.7em;
+}
+
+.cardButtonIcon {
+	position: relative;
+	margin-left: 0.4rem;
+	top: 0.18rem;
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	mask-size: 100% 100%;
+	background-color: var(--bg);
+}

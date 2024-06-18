@@ -31,4 +31,5 @@ export type TeamCardData = {
 	imgAltText?: string;
 	name: string;
 	desc: string;
+	linkUrl?: string;
 };

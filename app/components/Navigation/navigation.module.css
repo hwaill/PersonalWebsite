@@ -73,12 +73,12 @@
 .navSidebarMenu {
 	height: calc(100dvh - var(--sidebarWidth));
 	font-size: 1.2rem;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .navMobileMenuList {
 	height: calc(100dvh - 6.6rem);
-	overflow-y: scroll;
+	overflow-y: auto;
 	width: 100%;
 	position: absolute;
 	top: 6.6rem;

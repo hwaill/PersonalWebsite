@@ -16,8 +16,23 @@ export function ProjectSection({
 				<div className={style.clearFix}></div>
 			</div>
 		</>
-	)
-}
+	);
+};
+
+export function ProjectSectionContinue({
+	children,
+} : {
+	children: ReactNode
+}) {
+	return (
+		<>
+			<div className={style.containerBig}>
+				{children}
+				<div className={style.clearFix}></div>
+			</div>
+		</>
+	);
+};
 
 export function ProjectSubSection({
 	children,
@@ -33,8 +48,22 @@ export function ProjectSubSection({
 				{children}
 			</div>
 		</>
-	)
-}
+	);
+};
+
+export function ProjectSubSectionContinue({
+	children
+} : {
+	children: ReactNode
+}) {
+	return (
+		<>
+			<div className={style.containerSmall}>
+				{children}
+			</div>
+		</>
+	);
+};
 
 export function ProjectParagraph({
 	children
