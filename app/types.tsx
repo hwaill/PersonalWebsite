@@ -33,3 +33,9 @@ export type TeamCardData = {
 	desc: string;
 	linkUrl?: string;
 };
+
+export type EmailData = {
+	name: string;
+	email: string;
+	message: string;
+};

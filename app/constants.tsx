@@ -53,8 +53,9 @@ export const PROJECTS: Project[] = [
 		heading: 'Todos Productivity Board',
 		tags: [
 			'robotics',
-			'arduino',
-			'custom pcb'
+			'powered by arduino',
+			'custom pcb',
+			'wifi-enabled'
 		],
 		hook: 'A new way to build habits.',
 		description: 'Improve task management for those who struggle with attention and executive function.',
@@ -81,9 +82,10 @@ export const PROJECTS: Project[] = [
 			'laser-cut',
 			'decor and lighting'
 		],
-		hook: 'A faster workflow at your fingertips.',
-		description: 'A customizable desk gadget that extends the functionality of a traditional computer keyboard.',
+		hook: 'Rise and set with the sun.',
+		description: 'Minimalist aesthetic meets internet connectivity. The Sun Clock is functional decor that changes with the sun and the moon.',
 		imgUrl: '/img/projects/sunClock/banner.jpg',
+		imgStyle: '{"objectPosition":"8% center"}',
 		imgAltText: 'Birdseye image shows the macropad 2040 keypad on a desk surface. It rests on its hand-sewn pouch, and extra keycaps lay scattered next to it.',
 		linkUrl: '/projects/sunclock/'
 	}
