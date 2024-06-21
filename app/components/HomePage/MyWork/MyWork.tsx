@@ -1,6 +1,5 @@
 import React from 'react';
-import style from './myWork.module.css';
-import MyWorkSection from './MyWorkSection';
+import ProjectPreview from '../../Projects/ProjectPreviewModules/ProjectPreview';
 import { PROJECTS } from '@/app/constants';
 
 
@@ -8,9 +7,9 @@ import { PROJECTS } from '@/app/constants';
 export default function MyWork() {
 	return (
 		<div className="homePageSection">
-			<h2 className="blueText">Featured projects</h2>
+			<h2 className="blueText">Featured Projects</h2>
 			{PROJECTS.map((object, i) => (
-				<MyWorkSection key={i} data={object} />
+				<ProjectPreview key={i} data={object} />
 			))}
 		</div>
 	);

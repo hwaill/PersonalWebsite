@@ -1,9 +1,9 @@
 import React from 'react';
-import style from './myWork.module.css'
+import style from './projectPreviewModules.module.css'
 import Link from 'next/link';
 import { Project } from '@/app/types';
 
-export default function MyWorkSection({
+export default function ProjectPreview({
 	data
 } : {
 	data: Project

@@ -85,6 +85,16 @@
 	background-size: cover;
 }
 
+.projectImageCollageHolder {
+	display: grid;
+	grid-template-rows: 15em;
+	gap: 1em;
+}
+
+.projectImageCollageFirst, .projectImageCollageSecond {
+	max-height: 100%;
+}
+
 .right {
 	float: right;
 	margin-left: 1em;

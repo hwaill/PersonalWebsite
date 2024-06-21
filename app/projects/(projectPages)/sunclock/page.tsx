@@ -1,5 +1,5 @@
-import { ProjectImageBanner } from '@/app/components/Projects/ProjectImages';
-import { ProjectParagraph, ProjectSection } from '@/app/components/Projects/ProjectSections';
+import { ProjectImageBanner } from '@/app/components/Projects/ProjectPageContent/ProjectImages';
+import { ProjectParagraph, ProjectSection } from '@/app/components/Projects/ProjectPageContent/ProjectSections';
 import { ProjectOutline } from '@/app/types';
 import { Metadata } from 'next'
 import React from 'react'

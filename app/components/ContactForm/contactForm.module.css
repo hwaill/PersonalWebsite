@@ -63,3 +63,10 @@
 .formClearFix {
 	clear: both;
 }
+
+@media screen and (max-width: 450px) {
+	.formContainer {
+		box-shadow: none;
+		padding: 2rem 0;
+	}
+}

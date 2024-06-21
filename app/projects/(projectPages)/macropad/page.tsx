@@ -1,9 +1,9 @@
 import React from 'react'
 import { Metadata } from 'next'
 import { ProjectOutline } from '@/app/types'
-import { ProjectSection, ProjectSubSection, ProjectParagraph }from '@/app/components/Projects/ProjectSections'
-import { ProjectVideoFull } from '@/app/components/Projects/ProjectVideos'
-import { ProjectImageBanner, ProjectImage, ProjectImageFull, ProjectImageHalf } from '@/app/components/Projects/ProjectImages'
+import { ProjectSection, ProjectSubSection, ProjectParagraph }from '@/app/components/Projects/ProjectPageContent/ProjectSections'
+import { ProjectVideoFull } from '@/app/components/Projects/ProjectPageContent/ProjectVideos'
+import { ProjectImageBanner, ProjectImage, ProjectImageFull, ProjectImageHalf } from '@/app/components/Projects/ProjectPageContent/ProjectImages'
 
 export const metadata : Metadata = {
 	title: "Macropad 2040"

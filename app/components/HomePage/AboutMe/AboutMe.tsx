@@ -2,7 +2,7 @@ export default function AboutMe() {
 
 	return (
 		<div className="homePageSection">
-			<h2 className="coralText">About me</h2>
+			<h2 className="coralText">About Me</h2>
 			<div className="aboutMeContent">
 				<div className="aboutMeText">
 					<h3>I hate writing these types of things.</h3>

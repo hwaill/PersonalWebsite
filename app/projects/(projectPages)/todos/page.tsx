@@ -8,15 +8,15 @@ import {
 	ProjectImageHalf,
 	ProjectImageThird,
 	ProjectImageCollage, 
-	ProjectImageFull} from '@/app/components/Projects/ProjectImages'
+	ProjectImageFull} from '@/app/components/Projects/ProjectPageContent/ProjectImages'
 import {
 	ProjectParagraph,
 	ProjectSection,
 	ProjectSectionContinue,
 	ProjectSubSection,
-	ProjectSubSectionContinue } from '@/app/components/Projects/ProjectSections'
-import { ProjectVideoFull } from '@/app/components/Projects/ProjectVideos'
-import ProjectTeam from '@/app/components/Projects/TeamCard/ProjectTeam'
+	ProjectSubSectionContinue } from '@/app/components/Projects/ProjectPageContent/ProjectSections'
+import { ProjectVideoFull } from '@/app/components/Projects/ProjectPageContent/ProjectVideos'
+import ProjectTeam from '@/app/components/Projects/ProjectPageContent/TeamCard/ProjectTeam'
 
 export const metadata : Metadata = {
 	title: "Todos Productivity Board"
@@ -92,8 +92,9 @@ export default function Page() {
 						weight1={1}
 						weight2={2}
 					/>
-					<ProjectImageThird src="/img/projects/todos/img6.jpg" alt="" left={true} />
-					<ProjectParagraph>A final component of the build that improved the overall presentation of the project was the enclosure I fabricated. We understood from the start that the aesthetic of <em>todos</em> should be well-suited for an average home. Despite our pride in our electronics, it was best to hide them. A simple laser-cut box was the easiest solution, but I did my best to make it look presentable; I sanded down burnt edges and tried to be precise, even though this was my first attempt at making an enclosure like this.</ProjectParagraph>
+					<ProjectParagraph>A final component of the build that improved the overall presentation of the project was the enclosure I fabricated. We understood from the start that the aesthetic of <em>todos</em> should be well-suited for an average home.</ProjectParagraph>
+					<ProjectImageThird src="/img/projects/todos/img6.jpg" alt="" right={true} />
+					<ProjectParagraph>Despite our pride in our electronics, it was best to hide them. A simple laser-cut box was the easiest solution, but I did my best to make it look presentable; I sanded down burnt edges and tried to be precise, even though this was my first attempt at making an enclosure like this.</ProjectParagraph>
 				</ProjectSubSectionContinue>
 				<ProjectSubSection heading="Circuitry">
 					<ProjectParagraph>The challenge of designing a circuit that could execute all of our initial ideas for the build while maintaining the ability to adapt to later changes was an exciting one. This was not too straightforward, and I had opted to challenge myself to create a printed circuit board (PCB) design to make the final product more elegant. This was my first foray into this sort of design process and I&apos;m happy with what it yielded:</ProjectParagraph>

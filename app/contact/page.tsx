@@ -8,10 +8,11 @@ function Contact() {
 				<h2 className="blueText">Contact me</h2>
 				<div className="contactMeContent">
 					<div className="contactMeText">
-						<h3>adfdasfasdf</h3>
-						<p>I think I&apos;m a really likable guy! On the rare occasion, I&apos;ve even been told I&apos;m funny and intelligent... but you will learn <em>none of that</em> from the following paragraphs.</p>
-						<p>My name is still Henry! I&apos;m an engineer and designer with a B.S. degree in Creative Technology and Design. I enjoy solving problems through programming, electronics, physical fabrication, web development and graphic design, among many other avenues. I love both learning and creating, both for their own sakes and for the sake of helping to solve all sorts of problems.</p>
-						<p>I also enjoy playing piano, weaving, hiking with my dog and rock climbing.</p>
+						<h3>I&apos;d love to hear from you!</h3>
+						<p>Have any questions? Comments? Concerns? Feel free to send them my way.</p>
+						<p>I am proud of the work I have on display on this site and would love to talk about any and all of it with whomever is interested! I am also always looking to learn and improve, so suggestions are certainly welcome as well.</p>
+						<p>I will respond to all messages as promptly as I can. Thank you for spending time to check out my work.</p>
+						<p>Henry</p>
 					</div>
 					<div className="contactFormContainer">
 						<ContactForm />

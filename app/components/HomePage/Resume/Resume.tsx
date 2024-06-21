@@ -1,7 +1,7 @@
 export default function Resume() {
 	return (
 		<div className="homePageSection">
-			<h2 className="greenText">My resume</h2>
+			<h2 className="greenText">My Resume</h2>
 			<div className="resumeContent">
 				<div className="resumeText">
 					<p>Here you&apos;ll find a difficult-to-read image of my resume that is soon to be replaced. Feel free to download a higher-quality version.</p>
