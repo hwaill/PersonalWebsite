@@ -62,7 +62,8 @@ export const PROJECTS: Project[] = [
 		imgUrl: '/img/projects/todos/banner.jpg',
 		imgStyle: '{"objectPosition":"15% center"}',
 		imgAltText: 'Photo of Todos Productivty Board in action. Foreground shows front button panel with the Todos logo engraved. The robotic arm can be seen drawing on the whiteboard in the background.',
-		linkUrl: '/projects/todos/'
+		linkUrl: '/projects/todos/',
+		featured: true
 	},{
 		heading: 'Macropad 2040',
 		tags: [
@@ -74,7 +75,8 @@ export const PROJECTS: Project[] = [
 		imgUrl: '/img/projects/macropad/banner.jpg',
 		imgStyle: '{"objectPosition":"53% center"}',
 		imgAltText: 'Birdseye image shows the macropad 2040 keypad on a desk surface. It rests on its hand-sewn pouch, and extra keycaps lay scattered next to it.',
-		linkUrl: '/projects/macropad/'
+		linkUrl: '/projects/macropad/',
+		featured: true
 	},{
 		heading: 'The Sun Clock',
 		tags: [
@@ -87,6 +89,51 @@ export const PROJECTS: Project[] = [
 		imgUrl: '/img/projects/sunClock/banner.jpg',
 		imgStyle: '{"objectPosition":"8% center"}',
 		imgAltText: 'Birdseye image shows the macropad 2040 keypad on a desk surface. It rests on its hand-sewn pouch, and extra keycaps lay scattered next to it.',
-		linkUrl: '/projects/sunclock/'
+		linkUrl: '/projects/sunclock/',
+		featured: true
+	},{
+		heading: 'This Website',
+		tags: [
+			'next.js',
+			'mySQL',
+			'responsive'
+		],
+		description: 'A personal website designed to further develop my brand.',
+		imgUrl: '/img/projects/personalwebsite/banner.JPG',
+		linkUrl: '/projects/personalsite/',
+		featured: false
+	},{
+		heading: 'This Website',
+		tags: [
+			'next.js',
+			'mySQL',
+			'responsive'
+		],
+		description: 'A personal website designed to asdfasd fasdf as dfasd fas dfa sdfasdf asd fa sdfurther develop my brand.',
+		imgUrl: '/img/projects/personalwebsite/banner.png',
+		linkUrl: '/projects/personalsite/',
+		featured: false
+	},{
+		heading: 'This Website',
+		tags: [
+			'next.js',
+			'mySQL',
+			'responsive'
+		],
+		description: 'A personal website designed to further develop my brand.',
+		imgUrl: '/img/projects/personalwebsite/banner.png',
+		linkUrl: '/projects/personalsite/',
+		featured: false
+	},{
+		heading: 'This Website',
+		tags: [
+			'next.js',
+			'mySQL',
+			'responsive'
+		],
+		description: 'A personal website designed to further develop my brand.',
+		imgUrl: '/img/projects/personalwebsite/banner.png',
+		linkUrl: '/projects/personalsite/',
+		featured: false
 	}
 ];

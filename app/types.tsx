@@ -11,12 +11,13 @@ export type NavItem = {
 export type Project = {
 	heading: string;
 	tags: string[];
-	hook: string;
+	hook?: string;
 	description: string;
 	imgUrl: string;
 	imgStyle?: string;
 	imgAltText?: string;
 	linkUrl: string;
+	featured: boolean;
 };
 
 export type ProjectOutline = {

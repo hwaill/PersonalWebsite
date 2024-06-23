@@ -118,7 +118,8 @@ export function ProjectImageCollage({
 }) {
 	return (
 		<>
-			<div className={style.projectImageCollageHolder} style={{gridTemplateColumns: `${weight1}fr ${weight2}fr`}}>
+			<div className={style.clearFix}></div>
+			<div className={style.containerBig + " " + style.projectImageCollageHolder} style={{gridTemplateColumns: `${weight1}fr ${weight2}fr`}}>
 				<div className={style.projectImageCollageFirst}>
 					<ProjectImage src={src1} alt={alt1} imgStyle={imgStyle1} />
 				</div>

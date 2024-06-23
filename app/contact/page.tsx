@@ -5,7 +5,7 @@ function Contact() {
 	return (
 		<div className="pageTopMargin">
 			<div className="homePageSection">
-				<h2 className="blueText">Contact me</h2>
+				<h2 className="blueText">Contact Me</h2>
 				<div className="contactMeContent">
 					<div className="contactMeText">
 						<h3>I&apos;d love to hear from you!</h3>

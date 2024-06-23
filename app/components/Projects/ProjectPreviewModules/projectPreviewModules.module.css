@@ -1,11 +1,23 @@
-.projectContainer {
+.otherProjectsContainer {
+	width: 100%;
+	margin-top: 2em;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	gap: 2rem;
+}
+
+.featuredProjectsContainer {
+	margin-bottom: 4.5rem;
+}
+
+.featuredContainer {
 	position: relative;
 	width: 100%;
 	margin: 3.5rem auto 0rem auto;
 	box-sizing: border-box;
 }
 
-.firstText, .secondText {
+.featuredFirstText, .featuredSecondText {
 	max-width: 25rem;
 	margin-bottom: 1.5rem;
 }
@@ -25,6 +37,10 @@
 	margin: 0 0 1rem 0;
 }
 
+.descriptionOther {
+	margin: 0.5rem 0;
+}
+
 .forceWrap {
 	flex-basis: 100%;
 	width: 0;
@@ -35,6 +51,13 @@
 	flex-flow: row wrap;
 	gap: 0.4rem;
 	margin: 0 0 1rem 0;
+}
+
+.projectTagsHolderOther {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 0.4rem;
+	margin: 0 0 0.5rem 0;
 }
 
 .projectTag {
@@ -53,7 +76,7 @@
 	padding: 0 0.8rem 0.1rem 0.8rem;
 }
 
-.projectImageMain {
+.featuredImageMain {
 	width: 100%;
 	max-height: 18rem;
 	aspect-ratio: 8 / 5;
@@ -63,12 +86,25 @@
 	object-fit: cover;
 }
 
-.projectImageSideContainer {
+.otherImage {
+	max-width: 100%;
+	aspect-ratio: 8 / 5;
+	margin-bottom: 0.5rem;
+	border-radius: 0.8rem;
+	object-position: center;
+	object-fit: cover;
+}
+
+.otherText {
+	display: block;
+}
+
+.featuredImageSideContainer {
 	display: none;
 	position: relative;
 }
 
-.projectImageSide {
+.featuredImageSide {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -78,22 +114,22 @@
 }
 
 @media screen and (min-width: 1200px) {
-	.projectImageMain {
+	.featuredImageMain {
 		display: none;
 	}
 
-	.projectContainer {
+	.featuredContainer {
 		display: flex;
 		flex-flow: row nowrap;
 		gap: 2.5rem;
 		margin: 3.5rem auto 4.5rem auto;
 	}
 
-	.mainContent {
+	.featuredContent {
 		flex: 2 0 26rem;
 	}
 	
-	.projectImageSideContainer {
+	.featuredImageSideContainer {
 		display: initial;
 		flex: 0 1 33rem;
 		aspect-ratio: 8 / 5;
