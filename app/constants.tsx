@@ -99,11 +99,11 @@ export const PROJECTS: Project[] = [
 			'responsive'
 		],
 		description: 'A personal website designed to further develop my brand.',
-		imgUrl: '/img/projects/personalwebsite/banner.JPG',
+		imgUrl: '/img/projects/personalwebsite/banner.jpg',
 		linkUrl: '/projects/personalsite/',
 		featured: false
 	},{
-		heading: 'This Website',
+		heading: 'Custom Controller Overlays',
 		tags: [
 			'next.js',
 			'mySQL',

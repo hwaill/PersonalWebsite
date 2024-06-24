@@ -30,7 +30,7 @@ export default function Page() {
 				<ProjectSubSection heading="At a glance...">
 					<ProjectImageHalf src="/img/projects/sunClock/img1.jpg" alt="" right={true} />
 					<ProjectParagraph>This project served as the final project for <em>Object</em>, an undergraduate physical computing class at the University of Colorado, Boulder. The class focused on programming microcontrollers, fabricating enclosures and creating interactive systems to solve problems.</ProjectParagraph>
-					<ProjectParagraph>npm </ProjectParagraph>
+					<ProjectParagraph>The trajectory of this specific project strayed from the initial goal of emphasizing user interaction in favor of a more practical outcome; I wanted something that I would be happy to hang up in my apartment long after the novelty wore off.</ProjectParagraph>
 				</ProjectSubSection>
 				<ProjectSubSection heading="The Construction">
 					<ProjectParagraph>t</ProjectParagraph>
