@@ -51,7 +51,7 @@ export default function ContactForm() {
           Message
         </label>
         <textarea
-          rows={4}
+          rows={6}
           placeholder="Type your message"
           className={style.formTextArea + " neuInset"}
           {...register('message', { required: true })}

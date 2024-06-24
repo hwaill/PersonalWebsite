@@ -38,7 +38,7 @@
 .aboutMeImage {
 	width: 100%;
 	aspect-ratio: 1;
-	border-radius: 0.8rem;
+	border-radius: 0.75rem;
 	display: block;
 }
 
@@ -54,12 +54,12 @@
 }
 
 .resumeButtonContainer {
-	margin-top: 1em;
+	margin-top: 1rem;
 }
 
 .resume {
 	width: 100%;
-	border-radius: 0.8rem;
+	border-radius: 0.75rem;
 	display: block;
 }
 

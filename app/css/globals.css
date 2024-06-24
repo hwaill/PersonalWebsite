@@ -31,6 +31,12 @@
 	}
 }
 
+@media screen and (max-width: 464px) {
+	:root {
+		font-size: 14px;
+	}
+}
+
 body {
 	background-color: var(--bg);
 	color: var(--text);

@@ -107,8 +107,8 @@
 
 @media screen and (max-width: 735px) {
 	.projectImageHalf {
-		margin-top: 2em;
-		margin-bottom: 2em;
+		float: none;
+		margin: 2em 0;
 		width: 100%;
 	}
 	
@@ -119,9 +119,9 @@
 
 @media screen and (max-width: 450px) {
 	.projectImageThird {
+		float: none;
+		margin: 2em 0;
 		width: 100%;
-		margin-top: 2em;
-		margin-bottom: 2em;
 	}
 }
 

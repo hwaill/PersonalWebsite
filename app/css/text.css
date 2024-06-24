@@ -1,75 +1,19 @@
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1;
-	margin: 0 0 1rem 0;
+	line-height: 1.2;
+	margin: 0;
 }
 
-h1, h2, h3 {
-	font-weight: 700;
-}
+h1, h2, h3 { font-weight: 700; }
+h4, h5, h6 { font-weight: 300; }
 
-h4, h5, h6 {
-	font-weight: 300;
-}
-
-h1 {
-	font-size: 7rem;
-}
-
-h2 {
-	font-size: 5.5rem;
-}
-
-h3 {
-	font-size: 2.5rem;
-}
-
-h4 {
-	font-size: 1.8rem;
-}
-
-h5 {
-	font-size: 1.6rem;
-}
-
-h6 {
-	font-size: 1.3rem;
-}
-
-p {
-	font-size: 1.2rem;
-	margin-bottom: 0;
-}
-
-@media screen and (max-width: 464px) {
-	h2 {
-		font-size: 4.2rem;
-	}
-
-	h3 {
-		font-size: 2.2rem;
-	}
-
-	h4 {
-		font-size: 1.6rem;
-	}
-
-	h4.landing {
-		font-size: 1.8rem;
-	}
-
-	h5 {
-		font-size: 1.3rem;
-	}
-
-	h6 {
-		font-size: 1.2rem;
-	}
-
-	p {
-		font-size: 1.1rem;
-	}
-}
+h1 { font-size: 7rem; }
+h2 { font-size: 5rem; }
+h3 { font-size: 2.5rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1rem; }
+p { font-size: 1.25rem; }
 
 a {
 	text-decoration: none;
@@ -80,10 +24,16 @@ p>a {
 	color: var(--blue);
 }
 
+/* 
+ *
+ * SPECIFIC RULES
+ *
+ */
+
 h1.landing {
 	margin-left: -0.5rem;
 }
 
 h4.landing {
-	margin: 0.3rem 0 0.8rem 0;
+	margin: 0 0 0.75rem 0;
 }
