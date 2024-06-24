@@ -28,12 +28,14 @@ export default function Page() {
 			<ProjectVideoFull url="https://www.itsshreeyo.com/hwhosting/todosVideo.mp4" type="video/mp4" posterUrl="/img/projects/todos/videoThumbnail.png" />
 			<ProjectSection heading="Project Breakdown">
 				<ProjectSubSection heading="At a glance...">
-					<ProjectImageHalf src="/img/projects/sunClock/img1.jpg" alt="" right={true} />
+					<ProjectImageHalf src="/img/projects/sunClock/img1.jpg" alt="The Sun Clock is seen hanging on a wall, glowing from behind with a warm, white light." right={true} />
 					<ProjectParagraph>This project served as the final project for <em>Object</em>, an undergraduate physical computing class at the University of Colorado, Boulder. The class focused on programming microcontrollers, fabricating enclosures and creating interactive systems to solve problems.</ProjectParagraph>
 					<ProjectParagraph>The trajectory of this specific project strayed from the initial goal of emphasizing user interaction in favor of a more practical outcome; I wanted something that I would be happy to hang up in my apartment long after the novelty wore off.</ProjectParagraph>
 				</ProjectSubSection>
 				<ProjectSubSection heading="The Construction">
-					<ProjectParagraph>t</ProjectParagraph>
+					<ProjectImageHalf src="/img/projects/sunClock/sketch1.jpg" alt="Inital, rough sketch of the intended design." right={true} />
+					<ProjectParagraph>At the time of writing this, all that is left of the initial sketching phase is the poor-quality pencil drawing seen here. There were a few other designs that were considered, but the the simplicity and smoothness of the shapes felt the most pleasant. The vision for <em>The Sun Clock</em> was to have a flat, sun-shaped silhouette that was backlit by wall-facing LEDs. The desired flat design influenced the choice of materials, plywood. The plywood influenced the choice of manufacturing techniques, laser-cutting.</ProjectParagraph>
+					<ProjectParagraph>With all this in mind (and a vision for the required circuitry, explained below,) modelling began </ProjectParagraph>
 				</ProjectSubSection>
 				<ProjectSubSection heading="The Circuitry">
 					<ProjectParagraph>t</ProjectParagraph>
