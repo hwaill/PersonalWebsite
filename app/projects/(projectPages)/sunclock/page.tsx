@@ -1,8 +1,9 @@
-import { ProjectImageBanner, ProjectImageHalf } from '@/app/components/Projects/ProjectPageContent/ProjectImages';
-import { ProjectParagraph, ProjectSection, ProjectSubSection } from '@/app/components/Projects/ProjectPageContent/ProjectSections';
+import { ProjectImageBanner, ProjectImageCollageTriple, ProjectImageFull, ProjectImageHalf, ProjectImageThird } from '@/app/components/Projects/ProjectPageContent/ProjectImages';
+import { ProjectParagraph, ProjectSection, ProjectSectionContinue, ProjectSubSection, ProjectSubSectionContinue } from '@/app/components/Projects/ProjectPageContent/ProjectSections';
 import { ProjectVideoFull } from '@/app/components/Projects/ProjectPageContent/ProjectVideos';
 import { ProjectOutline } from '@/app/types';
 import { Metadata } from 'next'
+import Link from 'next/link';
 import React from 'react'
 
 export const metadata : Metadata = {
@@ -35,15 +36,35 @@ export default function Page() {
 				<ProjectSubSection heading="The Construction">
 					<ProjectImageHalf src="/img/projects/sunClock/sketch1.jpg" alt="Inital, rough sketch of the intended design." right={true} />
 					<ProjectParagraph>At the time of writing this, all that is left of the initial sketching phase is the poor-quality pencil drawing seen here. There were a few other designs that were considered, but the the simplicity and smoothness of the shapes felt the most pleasant. The vision for <em>The Sun Clock</em> was to have a flat, sun-shaped silhouette that was backlit by wall-facing LEDs. The desired flat design influenced the choice of materials, plywood. The plywood influenced the choice of manufacturing techniques, laser-cutting.</ProjectParagraph>
-					<ProjectParagraph>With all this in mind (and a vision for the required circuitry, explained below,) modelling began </ProjectParagraph>
+					<ProjectImageHalf src="/img/projects/sunClock/render1.png" alt="Render of the final model hanging on a wall." right={true} imgStyle='{"aspectRatio":"8 / 5"}'/>
+					<ProjectParagraph>With all this in mind (and a vision for the required circuitry, explained below,) modelling began. Most of the pieces are made of two layers of plywood in order to easily create channels for running wiring and placing LEDs. The space behind the central circle of the "sun" was used to contain the bulk of the hardware, including the power supply and microcontroller circuit.</ProjectParagraph>
+					<ProjectParagraph>After iterating over the design, the parts were sent to the laser-cutter to begin the the fabrication process.</ProjectParagraph>
 				</ProjectSubSection>
+			</ProjectSection>
+			<ProjectImageCollageTriple
+				src1="/img/projects/sunClock/laserCut1.jpg"
+				src2="/img/projects/sunClock/build1.jpg"
+				src3="/img/projects/sunClock/build2.jpg"
+				alt1="A sheet of plywood is laying in a laser-cutter bed after being cut."
+				weight1={1}
+				weight2={1}
+				weight3={1}
+			/>
+			<ProjectSectionContinue>
 				<ProjectSubSection heading="The Circuitry">
-					<ProjectParagraph>t</ProjectParagraph>
+					<ProjectParagraph>At it&apos;s core, the electronics for this project did not need to be very complicated. A WiFi-enabled microcontroller (in this case, <em>Adafruit</em>'s <Link href="https://www.adafruit.com/product/2821" target="_blank" rel="noopener noreferrer">Feather HUZZAH with ESP8266</Link>) needed to control some addressable LEDs. This particular setup added a few complications...: The number of LEDs in use, as well as the brightness at which I wanted to use them, required more power than the HUZZAH was able to provide. Additionally, the HUZZAH operates at a different voltage than the addressable LEDs prefer. These two considerations needed to be addressed.</ProjectParagraph>
 				</ProjectSubSection>
+			</ProjectSectionContinue>
+			<ProjectImageFull src="/img/projects/sunClock/circuitry2.jpg" alt="The internal circuitry can be see after the center face of the sun is removed." />
+			<ProjectSectionContinue>
+				<ProjectSubSectionContinue>
+					<ProjectParagraph>The above picture shows the final state of the circuitry, and I will soon update this page with a schematic of the circuit for ease of viewing. In summary, <em>The Sun Clock</em> is powered externally from a 5V DC power supply. The lower-voltage logic signals from the Feather HUZZAH are converted to 5V using a <em>Logic Level Shifter</em>. Finally, the buttons and switches on the outside of the enclosure are wired to the microcontroller, and the addressable LEDs are connected in a long chain.</ProjectParagraph>
+					<ProjectParagraph>All of the soldering was done by hand on a protoboard; A custom PCB design would certainly allow for a more compact and organized layout, but a protoboard was sufficient for the first iteration of the product.</ProjectParagraph>
+				</ProjectSubSectionContinue>
 				<ProjectSubSection heading="The Software">
 					<ProjectParagraph>t</ProjectParagraph>
 				</ProjectSubSection>
-			</ProjectSection>
+			</ProjectSectionContinue>
 		</>
 	);
 };

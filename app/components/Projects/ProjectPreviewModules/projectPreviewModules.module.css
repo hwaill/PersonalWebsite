@@ -1,6 +1,6 @@
 .otherProjectsContainer {
 	width: 100%;
-	margin-top: 2em;
+	margin-bottom: 2em;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 	gap: 2rem;
@@ -13,7 +13,7 @@
 .featuredContainer {
 	position: relative;
 	width: 100%;
-	margin: 3.5rem auto 0rem auto;
+	margin: 0rem auto 3.5rem auto;
 	box-sizing: border-box;
 }
 

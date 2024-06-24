@@ -10,10 +10,10 @@ export function ProjectSection({
 }) {
 	return (
 		<>
+			<div className={style.clearFix}></div>
 			<div className={style.containerBig}>
 				<h3>{heading}</h3>
 				{children}
-				<div className={style.clearFix}></div>
 			</div>
 		</>
 	);
@@ -28,7 +28,6 @@ export function ProjectSectionContinue({
 		<>
 			<div className={style.containerBig}>
 				{children}
-				<div className={style.clearFix}></div>
 			</div>
 		</>
 	);
