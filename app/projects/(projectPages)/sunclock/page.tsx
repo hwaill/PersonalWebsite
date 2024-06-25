@@ -1,4 +1,4 @@
-import { ProjectImageBanner, ProjectImageCollageTriple, ProjectImageFull, ProjectImageHalf, ProjectImageThird } from '@/app/components/Projects/ProjectPageContent/ProjectImages';
+import { ProjectImageBanner, ProjectImageCollage, ProjectImageCollageTriple, ProjectImageFull, ProjectImageHalf, ProjectImageThird } from '@/app/components/Projects/ProjectPageContent/ProjectImages';
 import { ProjectParagraph, ProjectSection, ProjectSectionContinue, ProjectSubSection, ProjectSubSectionContinue } from '@/app/components/Projects/ProjectPageContent/ProjectSections';
 import { ProjectVideoFull } from '@/app/components/Projects/ProjectPageContent/ProjectVideos';
 import { ProjectOutline } from '@/app/types';
@@ -24,9 +24,10 @@ export default function Page() {
 			<ProjectSection heading="Project Overview">
 				<ProjectParagraph><em>The Sun Clock</em> is wall decor that changes appearance to display the rising and setting of the sun each day. WiFi connectivity allows for the retrieval of up-to-date sunrise and sunset data to create accurate visual representions of the transitions between day and night, no matter the time zone, latitude or longitude.</ProjectParagraph>
 				<ProjectParagraph>In addition to this core feature, <em>The Sun Clock</em> can display the time of day through an analog-clock-esque display. Alternatively, users can opt to use the device solely for decorative purposes through one of the multiple accent light settings.</ProjectParagraph>
-				<ProjectParagraph>Below, find the demo video for <em>The Sun Clock</em>.</ProjectParagraph>
+				<ProjectParagraph>A demo video for the project is in the works, so check back soon to see!</ProjectParagraph>
+				{/* <ProjectParagraph>Below, find the demo video for <em>The Sun Clock</em>.</ProjectParagraph> */}
 			</ProjectSection>
-			<ProjectVideoFull url="https://www.itsshreeyo.com/hwhosting/todosVideo.mp4" type="video/mp4" posterUrl="/img/projects/todos/videoThumbnail.png" />
+			{/* <ProjectVideoFull url="https://www.itsshreeyo.com/hwhosting/todosVideo.mp4" type="video/mp4" posterUrl="/img/projects/todos/videoThumbnail.png" /> */}
 			<ProjectSection heading="Project Breakdown">
 				<ProjectSubSection heading="At a glance...">
 					<ProjectImageHalf src="/img/projects/sunClock/img1.jpg" alt="The Sun Clock is seen hanging on a wall, glowing from behind with a warm, white light." right={true} />
@@ -41,14 +42,13 @@ export default function Page() {
 					<ProjectParagraph>After iterating over the design, the parts were sent to the laser-cutter to begin the the fabrication process.</ProjectParagraph>
 				</ProjectSubSection>
 			</ProjectSection>
-			<ProjectImageCollageTriple
+			<ProjectImageCollage
 				src1="/img/projects/sunClock/laserCut1.jpg"
 				src2="/img/projects/sunClock/build1.jpg"
-				src3="/img/projects/sunClock/build2.jpg"
 				alt1="A sheet of plywood is laying in a laser-cutter bed after being cut."
+				alt2="The laser-cut pieces, now painted white, are being tested for fit. Many components are shown strewn across the table."
 				weight1={1}
 				weight2={1}
-				weight3={1}
 			/>
 			<ProjectSectionContinue>
 				<ProjectSubSection heading="The Circuitry">
@@ -59,10 +59,11 @@ export default function Page() {
 			<ProjectSectionContinue>
 				<ProjectSubSectionContinue>
 					<ProjectParagraph>The above picture shows the final state of the circuitry, and I will soon update this page with a schematic of the circuit for ease of viewing. In summary, <em>The Sun Clock</em> is powered externally from a 5V DC power supply. The lower-voltage logic signals from the Feather HUZZAH are converted to 5V using a <em>Logic Level Shifter</em>. Finally, the buttons and switches on the outside of the enclosure are wired to the microcontroller, and the addressable LEDs are connected in a long chain.</ProjectParagraph>
-					<ProjectParagraph>All of the soldering was done by hand on a protoboard; A custom PCB design would certainly allow for a more compact and organized layout, but a protoboard was sufficient for the first iteration of the product.</ProjectParagraph>
+					<ProjectImageThird src="/img/projects/sunClock/build2.jpg" alt="The back of the Sun Clock reveals the wiring of LEDs throughout." left={true} />
+					<ProjectParagraph>All of the soldering was done by hand on a protoboard; A custom PCB design would certainly allow for a more compact and organized layout, but a protoboard was sufficient for the first iteration of the product. The main inconvenience of the project was soldering the long chain of LEDs together. Each required six connections, and most needed to be soldered in their final positions, which substantially limited maneuverability. Not all of the cable management was done perfectly, and a priority for a second iteration of the process would be to improve and simplify these connections.</ProjectParagraph>
 				</ProjectSubSectionContinue>
 				<ProjectSubSection heading="The Software">
-					<ProjectParagraph>t</ProjectParagraph>
+					<ProjectParagraph>After ensuring that the single diode I employed to protect my computer from destruction was facing the correct direction, it was time to get working on programming the behavior of the LEDs.</ProjectParagraph>
 				</ProjectSubSection>
 			</ProjectSectionContinue>
 		</>

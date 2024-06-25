@@ -6,6 +6,7 @@ export type NavItem = {
 	subNavItems?: NavItem[];
 	externalLink?: boolean;
 	ignoreHighlight?: boolean;
+	disabled?: boolean;
 };
 
 export type Project = {

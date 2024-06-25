@@ -125,7 +125,7 @@ export function MenuItemWithSubMenu({
 								<Link
 									href={subItem.url}
 									onClick={toggleOpen ? () => toggleOpen() : () => null}
-									className={style.navLink}
+									className={style.navLink + (subItem.disabled ? " " + style.disabled : "")}
 									{...(subItem.externalLink
 										? { target: "_blank", rel: "noopener noreferrer" }
 										: {})}

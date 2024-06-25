@@ -131,6 +131,11 @@
 	font-weight: 700;
 }
 
+.disabled {
+	opacity: .4;
+	pointer-events: none;
+}
+
 .navLink, .navLinkWithSub {
 	width: 100%;
 	display: flex;

@@ -57,7 +57,7 @@ export default function NavigationMobile() {
 										<MenuItemWithSubMenu item={ item } toggleOpen={ toggleOpen } className={ style.navMobileMenuListItem + (isLastItem ? " " + style.navMobileMenuListItemLast : " ") }/>
 									) : (
 										<MenuItem className={ style.navMobileMenuListItem + (isLastItem ? " " + style.navMobileMenuListItemLast : " ") }>
-											<Link href={ item.url } onClick={() => toggleOpen()} className={ style.navLink } {...(item.externalLink ? {target: "_blank", rel: "noopener noreferrer"} : {})}>
+											<Link href={ item.url } onClick={() => toggleOpen()} className={ style.navLink + (item.disabled ? " " + style.disabled : "")} {...(item.externalLink ? {target: "_blank", rel: "noopener noreferrer"} : {})}>
 												<div className={style.navButton}>
 													{item.icon && (
 														<MenuItemIcon icon={ item.icon } />

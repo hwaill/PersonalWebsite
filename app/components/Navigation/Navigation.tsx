@@ -28,7 +28,7 @@ export default function Navigation() {
 									<MenuItemWithSubMenu item={ item } className={ style.navSidebarMenuListItem + (isLastItem ? " " + style.navMobileMenuListItemLast : " ") }/>
 								) : (
 									<MenuItem className={ style.navSidebarMenuListItem + (isLastItem ? " " + style.navSidebarMenuListItemLast : " ") }>
-										<Link href={ item.url } className={ style.navLink } {...(item.externalLink ? {target: "_blank", rel: "noopener noreferrer"} : {})}>
+										<Link href={ item.url } className={ style.navLink + (item.disabled ? " " + style.disabled : "")} {...(item.externalLink ? {target: "_blank", rel: "noopener noreferrer"} : {})}>
 											<div className={style.navButton}>
 												{item.icon && (
 													<MenuItemIcon icon={ item.icon } />
