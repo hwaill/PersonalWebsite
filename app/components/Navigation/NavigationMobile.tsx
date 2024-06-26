@@ -8,7 +8,8 @@ import { NavItem } from "@/app/types";
 import { easeOut, motion, useCycle } from "framer-motion";
 
 import style from "./navigation.module.css";
-import { MenuItem, MenuItemIcon, MenuItemWithSubMenu } from "./MenuItem";
+import { MenuItem, MenuItemWithSubMenu } from "./MenuItem";
+import Icon from "../Icons/Icons";
 
 export default function NavigationMobile() {
 	const pathname = usePathname();
@@ -60,7 +61,7 @@ export default function NavigationMobile() {
 											<Link href={ item.url } onClick={() => toggleOpen()} className={ style.navLink + (item.disabled ? " " + style.disabled : "")} {...(item.externalLink ? {target: "_blank", rel: "noopener noreferrer"} : {})}>
 												<div className={style.navButton}>
 													{item.icon && (
-														<MenuItemIcon icon={ item.icon } />
+														<Icon icon={ item.icon } />
 													)}
 												</div>
 												<span className={pathname.includes(item.url) && !item.ignoreHighlight ? (style.activeNavLink + ' ' + style.navItemLabel): style.navItemLabel}>

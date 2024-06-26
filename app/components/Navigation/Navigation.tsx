@@ -6,7 +6,8 @@ import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/app/constants";
 
 import style from "./navigation.module.css";
-import { MenuItem, MenuItemIcon, MenuItemWithSubMenu } from "./MenuItem";
+import { MenuItem, MenuItemWithSubMenu } from "./MenuItem";
+import Icon from "../Icons/Icons";
 
 export default function Navigation() {
 	const pathname = usePathname();
@@ -31,7 +32,7 @@ export default function Navigation() {
 										<Link href={ item.url } className={ style.navLink + (item.disabled ? " " + style.disabled : "")} {...(item.externalLink ? {target: "_blank", rel: "noopener noreferrer"} : {})}>
 											<div className={style.navButton}>
 												{item.icon && (
-													<MenuItemIcon icon={ item.icon } />
+													<Icon icon={ item.icon } />
 												)}
 											</div>
 											<span className={pathname.includes(item.url) && !item.ignoreHighlight ? (style.activeNavLink + ' ' + style.navItemLabel): style.navItemLabel}>

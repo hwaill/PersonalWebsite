@@ -1,0 +1,258 @@
+/* Overall Layout */
+.resumeContainer {
+	width: 100%;
+	padding: 2rem;
+	margin: 2.5rem auto 0rem;
+	display: flex;
+	gap: 2.5rem;
+	flex-flow: row nowrap;
+	min-height: 40rem;
+}
+
+.sidebarContainer {
+	flex: 0 0 9rem;
+}
+
+.contentContainer {
+
+}
+
+.contentMain {
+
+}
+
+.contentRight {
+
+}
+
+/* Sidebar Layout */
+.logo {
+	background-image: url(/img/logos/logoFlat.svg);
+	background-position: center center;
+	background-size: cover;
+	aspect-ratio: 1 / 1;
+}
+
+
+.name {
+	text-align: center;
+	font-size: 1.89rem;
+}
+
+.tagline {
+	text-align: center;
+}
+
+.smallScreenOnly {
+	display: none;
+}
+
+.infoList {
+	padding: 0;
+}
+
+.infoItem {
+	list-style: none;
+	margin-bottom: 0.5rem;
+}
+
+.infoItemLink {
+	border: solid var(--navy) 2px;
+	display: block;
+	box-sizing: content-box;
+	border-radius: 0.75rem;
+	margin: 0 -0.5rem;
+	padding: 0 0.5rem;
+}
+
+.download {
+	background-color: var(--navy);
+	color: var(--off-white);
+	border-radius: 0.75rem;
+	margin: 0 -0.5rem;
+	padding: 0 0.5rem;
+	height: 2rem;
+	text-align: center;
+}
+
+.infoItemFlex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row nowrap;
+	height: calc(2rem - 4px);
+}
+
+.infoItemFlexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row nowrap;
+	height: 2rem;
+}
+
+.infoItemIcon {
+	position: relative;
+	flex: 0 0 1.5rem;
+	aspect-ratio: 1;
+	box-sizing: border-box;
+}
+
+.infoItemInline {
+	list-style: none;
+	display: inline-block;
+	margin-left: 1rem;
+}
+
+.infoItemInline:first-child {
+	margin-left: 0;
+}
+
+.infoItemInlineContainer {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.contentRight {
+	padding-top: 2rem;
+	flex: 1 0 1px;
+}
+
+.section {
+	margin-bottom: 0.5rem;
+}
+
+.sectionHeader {
+	margin-left: 3.5rem;
+	margin-bottom: 0.5rem;
+	font-weight: 700;
+}
+
+.sideBarRight {
+
+}
+
+.experienceContainer {
+	margin-bottom: 0.25rem;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
+	gap: 1rem;
+}
+
+.experienceLogo {
+	flex: 0 0 2.5rem;
+	aspect-ratio: 1;
+}
+
+.experienceLogo>img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.experienceContent {
+	flex: 1 0 0;
+}
+
+.experienceHeading {
+	line-height: 1.1;
+	margin-bottom: 0.25rem;
+}
+
+.experiencePosition {
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin-right: 0.5rem;
+}
+
+.experienceOrg {
+	opacity: 0.75;
+}
+
+.experienceLocation {
+	opacity: 0.75;
+	font-style: italic;
+}
+
+.experienceDate {
+	margin-top: -0.25rem;
+	opacity: 0.75;
+	font-size: 0.9rem;
+	margin-bottom: 0.25rem;
+}
+
+.experienceDescription {
+	font-size: 0.9rem;
+	margin: 0;
+	padding-left: 1rem;
+	padding-right: 2rem;
+}
+
+.experienceDescriptionItem {
+	list-style: none;
+	margin-bottom: 0.25rem;
+}
+
+@media screen and (max-width: 1000px) {
+	.smallScreenOnly {
+		display: initial;
+	}
+
+	.largeScreenOnly {
+		display: none;
+	}
+
+	/* Overall Layout */
+	.resumeContainer {
+		gap: 1rem;
+		flex-flow: row wrap;
+	}
+
+	.sidebarContainer {
+		flex: 0 0 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		flex: 0 1 9rem;
+	}
+
+	.nameContainer {
+		flex: 0 0 9rem;
+	}
+
+	.name {
+		margin-bottom: 0;
+	}
+
+	.name, .tagline {
+		text-align: right;
+	}
+
+	.download {
+		margin: 1rem 0 0 0;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.resumeContainer {
+		padding: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	.experienceDescription {
+		padding-right: 0;
+	}
+
+	.experienceLogo {
+		flex: 0 0 2rem;
+	}
+
+	.sectionHeader {
+		margin-left: 3rem;
+	}
+}

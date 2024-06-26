@@ -64,6 +64,14 @@ body {
   background-color: var(--coral);
 }
 
+.navy {
+	background-color: var(--navy);
+}
+
+.white {
+	background-color: var(--off-white);
+}
+
 .coralText {
 	color: var(--coral);
 }

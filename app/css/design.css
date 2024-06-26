@@ -52,7 +52,7 @@
 	font-weight: 400;
 	background-color: var(--text);
 	color: var(--bg);
-	border-radius: 1000vh;
+	border-radius: 0.75rem;
 	padding: 0.5rem 1rem calc(0.5rem + 0.1em) 1rem;
 }
 
@@ -62,7 +62,7 @@
 	font-weight: 400;
 	background-color: var(--text);
 	color: var(--bg);
-	border-radius: 1000vh;
+	border-radius: 0.75rem;
 	padding: 0.25rem 0.75rem calc(0.25rem + 0.1em) 0.75rem;
 }
 

@@ -1,0 +1,9 @@
+.icon {
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	mask-size: 100% 100%;
+}
