@@ -39,7 +39,7 @@ export default function Page() {
 					<ProjectParagraph>At the time of writing this, all that is left of the initial sketching phase is the poor-quality pencil drawing seen here. There were a few other designs that were considered, but the the simplicity and smoothness of the shapes felt the most pleasant. The vision for <em>The Sun Clock</em> was to have a flat, sun-shaped silhouette that was backlit by wall-facing LEDs. The desired flat design influenced the choice of materials, plywood. The plywood influenced the choice of manufacturing techniques, laser-cutting.</ProjectParagraph>
 					<ProjectImageHalf src="/img/projects/sunClock/render1.png" alt="Render of the final model hanging on a wall." right={true} imgStyle='{"aspectRatio":"8 / 5"}'/>
 					<ProjectParagraph>With all this in mind (and a vision for the required circuitry, explained below,) modelling began. Most of the pieces are made of two layers of plywood in order to easily create channels for running wiring and placing LEDs. The space behind the central circle of the &quot;sun&quot; was used to contain the bulk of the hardware, including the power supply and microcontroller circuit.</ProjectParagraph>
-					<ProjectParagraph>After iterating over the design, the parts were sent to the laser-cutter to begin the the fabrication process.</ProjectParagraph>
+					<ProjectParagraph>After iterating over the design, the parts were sent to the laser-cutter to begin the the fabrication process. From there, all that was needed was some sanding, some painting and some gluing together to finish constructing the piece.</ProjectParagraph>
 				</ProjectSubSection>
 			</ProjectSection>
 			<ProjectImageCollage
@@ -63,7 +63,9 @@ export default function Page() {
 					<ProjectParagraph>All of the soldering was done by hand on a protoboard; A custom PCB design would certainly allow for a more compact and organized layout, but a protoboard was sufficient for the first iteration of the product. The main inconvenience of the project was soldering the long chain of LEDs together. Each required six connections, and most needed to be soldered in their final positions, which substantially limited maneuverability. Not all of the cable management was done perfectly, and a priority for a second iteration of the process would be to improve and simplify these connections.</ProjectParagraph>
 				</ProjectSubSectionContinue>
 				<ProjectSubSection heading="The Software">
+					<ProjectImageHalf src="/img/projects/sunClock/img3.jpg" right={true} alt="The Sun Clock in party mode is backlight with rainbow colors." />
 					<ProjectParagraph>After ensuring that the single diode I employed to protect my computer from destruction was facing the correct direction, it was time to get working on programming the behavior of the LEDs.</ProjectParagraph>
+					<ProjectParagraph>This process was enjoyable and allowed for a lot of creative expression. After successfully retrieving sunrise and sunset times from a weather API, I was left to be an animator! Mapping the chain of LEDs to its position in space made room for trigonometry to shine, and Perlin noise did a lot of heavy lifting as well.</ProjectParagraph>
 				</ProjectSubSection>
 			</ProjectSectionContinue>
 		</>
