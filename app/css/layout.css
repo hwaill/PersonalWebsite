@@ -22,7 +22,15 @@
 }
 
 .homePageSection {
-	padding: 2rem max(2rem, 10%);
+	padding: 2rem 4rem;
+	max-width: 72rem;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+	.homePageSection {
+		padding: 2rem;
+	}
 }
 
 .pageTopMargin {
