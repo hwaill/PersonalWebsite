@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Open_Sans } from 'next/font/google';
 import './css/main.css';
 import Navigation from './components/Navigation/Navigation';
@@ -38,6 +39,7 @@ export default function RootLayout({
 					{children}
 				</ContentWrapper>
 			</body>
+			<GoogleAnalytics gaId='G-0T2H3H83B4' />
 		</html>
 	);
 };
