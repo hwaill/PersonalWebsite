@@ -89,7 +89,7 @@ export const SIDEBAR_ITEMS : SidebarItem[] = [
 export const RESUME_SECTIONS: ResumeSection[] = [{
 	heading: "Education",
 	items: [{
-		org: "The Univerisity of Colorado Boulder",
+		org: "The University of Colorado Boulder",
 		position: "Bachelor of Science Degree",
 		location: "Boulder, CO",
 		date: "May 2024",
@@ -103,7 +103,7 @@ export const RESUME_SECTIONS: ResumeSection[] = [{
 }, {
 	heading: "Work Experience",
 	items: [{
-		org: "The Univerisity of Colorado Boulder",
+		org: "The University of Colorado Boulder",
 		position: "Learning Assistant",
 		location: "Boulder, CO",
 		date: "Spring 2021, Fall 2023",
