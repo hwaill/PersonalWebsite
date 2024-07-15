@@ -134,7 +134,7 @@ export const PROJECTS: Project[] = [
 			'wearable technology'
 		],
 		description: 'An ongoing exploration into the world of weaving, both experimental and traditional.',
-		imgUrl: '/img/projects/textiles/banner.JPG',
+		imgUrl: '/img/projects/textiles/banner.jpg',
 		linkUrl: '/projects/textiles/',
 		featured: false,
 		disabled: true
@@ -145,7 +145,7 @@ export const PROJECTS: Project[] = [
 			'powered by arduino'
 		],
 		description: 'A first attempt at designing a CNC plotter from the ground up.',
-		imgUrl: '/img/projects/drawingmachine/banner.JPG',
+		imgUrl: '/img/projects/drawingmachine/banner.jpg',
 		linkUrl: '/projects/drawingmachine/',
 		featured: false,
 		disabled: true
