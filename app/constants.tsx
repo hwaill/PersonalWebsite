@@ -101,50 +101,65 @@ export const PROJECTS: Project[] = [
 		description: 'A personal website designed to further develop my brand.',
 		imgUrl: '/img/projects/personalwebsite/banner.jpg',
 		linkUrl: '/projects/personalsite/',
-		featured: false
+		featured: false,
+		disabled: true
 	},{
-		heading: 'Custom Controller Overlays',
+		heading: 'Controller Overlays',
 		tags: [
-			'next.js',
-			'mySQL',
-			'responsive'
+			'graphic design',
+			'animation',
+			'entrepreneurship'
 		],
-		description: 'A personal website designed to asdfasd fasdf as dfasd fas dfa sdfasdf asd fa sdfurther develop my brand.',
+		description: 'Designing custom, interactive graphics for streamers that honor their brands.',
 		imgUrl: '/img/projects/controlleroverlays/banner.png',
-		linkUrl: '/projects/personalsite/',
-		featured: false
+		linkUrl: '/projects/controlleroverlays/',
+		featured: false,
+		disabled: true
 	},{
-		heading: 'This Website',
+		heading: 'BusToShow Announcements',
 		tags: [
-			'next.js',
-			'mySQL',
-			'responsive'
+			'established brand',
+			'graphic design',
+			'marketing'
 		],
-		description: 'A personal website designed to further develop my brand.',
-		imgUrl: '/img/projects/personalwebsite/banner.png',
-		linkUrl: '/projects/personalsite/',
-		featured: false
+		description: 'Working with a nonprofit to develop new marketing material.',
+		imgUrl: '/img/projects/bustoshow/banner.png',
+		linkUrl: '/projects/bustoshow/',
+		featured: false,
+		disabled: true
 	},{
-		heading: 'Experimental Textiles',
+		heading: 'Experiments with Textiles',
 		tags: [
-			'next.js',
-			'mySQL',
-			'responsive'
+			'weaving',
+			'wearable technology'
 		],
-		description: 'A personal website designed to further develop my brand.',
-		imgUrl: '/img/projects/personalwebsite/banner.png',
-		linkUrl: '/projects/personalsite/',
-		featured: false
+		description: 'An ongoing exploration into the world of weaving, both experimental and traditional.',
+		imgUrl: '/img/projects/textiles/banner.JPG',
+		linkUrl: '/projects/textiles/',
+		featured: false,
+		disabled: true
 	},{
 		heading: 'Drawing Machine V1',
 		tags: [
-			'next.js',
-			'mySQL',
-			'responsive'
+			'robotics',
+			'powered by arduino'
 		],
-		description: 'A personal website designed to further develop my brand.',
-		imgUrl: '/img/projects/personalwebsite/banner.png',
-		linkUrl: '/projects/personalsite/',
-		featured: false
+		description: 'A first attempt at designing a CNC plotter from the ground up.',
+		imgUrl: '/img/projects/drawingmachine/banner.JPG',
+		linkUrl: '/projects/drawingmachine/',
+		featured: false,
+		disabled: true
+	},{
+		heading: 'Experiments with Generative Art',
+		tags: [
+			'Processing',
+			'p5.js',
+			'creative'
+		],
+		description: 'A personal endeavor to emulate nature through code.',
+		imgUrl: '/img/projects/generativeart/banner.png',
+		linkUrl: '/projects/generativeart/',
+		featured: false,
+		disabled: true
 	}
 ];

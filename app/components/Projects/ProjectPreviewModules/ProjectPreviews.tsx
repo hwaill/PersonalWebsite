@@ -38,18 +38,24 @@ export function ProjectPreviewOther({
 }) {
 	return (
 		<>
-			<div className={style.otherContainer}>
+			<div className={style.otherContainer + " neu"}>
 				<img className={style.otherImage} src={data.imgUrl} style={data.imgStyle ? JSON.parse(data.imgStyle) : {}} alt={data.imgAltText ? data.imgAltText : ""}></img>
 				<div className={style.otherText}>
 					<h4 className={style.heading}>{data.heading}</h4>
 					<div className={style.projectTagsHolderOther}>
 						{data.tags.map((name, key) => (
-							<div key={key} className={style.projectTag}>{name}</div>
+							<div key={key} className={style.projectTagOther}>{name}</div>
 						))}
 					</div>
 					{data.hook && <h5 className={style.hook}>{data.hook}</h5>}
 					<p className={style.descriptionOther}>{data.description}</p>
-					<div><Link href={data.linkUrl} className="buttonSmall">Explore <div className="buttonIcon" style={{ WebkitMaskImage: 'url(/img/flaticon/arrow-right.svg)', maskImage: 'url(/img/flaticon/arrow-right.svg)' }}></div></Link></div>
+					<div className={style.buttonHolder}>
+						{data.disabled ? (
+							<div className={"buttonSmall " + style.disabled}>Coming soon...</div>
+						) : (
+							<Link href={data.linkUrl} className="buttonSmall">Explore <div className="buttonIcon" style={{ WebkitMaskImage: 'url(/img/flaticon/arrow-right.svg)', maskImage: 'url(/img/flaticon/arrow-right.svg)' }}></div></Link>
+						)}
+					</div>
 				</div>
 			</div>
 		</>

@@ -19,6 +19,7 @@ export type Project = {
 	imgAltText?: string;
 	linkUrl: string;
 	featured: boolean;
+	disabled?: boolean;
 };
 
 export type ProjectOutline = {
