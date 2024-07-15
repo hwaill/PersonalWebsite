@@ -110,7 +110,7 @@ export const PROJECTS: Project[] = [
 			'responsive'
 		],
 		description: 'A personal website designed to asdfasd fasdf as dfasd fas dfa sdfasdf asd fa sdfurther develop my brand.',
-		imgUrl: '/img/projects/personalwebsite/banner.png',
+		imgUrl: '/img/projects/controlleroverlays/banner.png',
 		linkUrl: '/projects/personalsite/',
 		featured: false
 	},{
@@ -125,7 +125,18 @@ export const PROJECTS: Project[] = [
 		linkUrl: '/projects/personalsite/',
 		featured: false
 	},{
-		heading: 'This Website',
+		heading: 'Experimental Textiles',
+		tags: [
+			'next.js',
+			'mySQL',
+			'responsive'
+		],
+		description: 'A personal website designed to further develop my brand.',
+		imgUrl: '/img/projects/personalwebsite/banner.png',
+		linkUrl: '/projects/personalsite/',
+		featured: false
+	},{
+		heading: 'Drawing Machine V1',
 		tags: [
 			'next.js',
 			'mySQL',
