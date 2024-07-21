@@ -128,6 +128,43 @@
 	object-fit: cover;
 }
 
+.seeMoreImageSideContainer {
+	display: none;
+}
+
+.seeMoreImageMainContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	gap: 1rem;
+}
+
+.seeMoreImageSideContainer > div {
+	flex: 1 1 40%;
+	border-radius: 0.75rem;
+	aspect-ratio: 7 / 4;
+}
+
+.seeMoreImageSideContainer > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 0.75rem;
+}
+
+.seeMoreImageMainContainer > div {
+	flex: 1 0 1px;
+	border-radius: 0.75rem;
+	aspect-ratio: 7 / 4;
+}
+
+.seeMoreImageMainContainer > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 0.75rem;
+}
+
 .buttonHolder {
 	position: absolute;
 	bottom: 1rem;
@@ -155,9 +192,21 @@
 	}
 	
 	.featuredImageSideContainer {
-		display: initial;
+		display: flex;
 		flex: 0 1 33rem;
 		aspect-ratio: 8 / 5;
+	}
+
+	.seeMoreImageSideContainer {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		gap: 1rem;
+		flex: 0 1 33rem;
+	}
+
+	.seeMoreImageMainContainer {
+		display: none;
 	}
 }
 
@@ -170,5 +219,9 @@
 	
 	.buttonHolder {
 		bottom: 0;
+	}
+
+	#extraSeeMoreImageMain {
+		display: none;
 	}
 }

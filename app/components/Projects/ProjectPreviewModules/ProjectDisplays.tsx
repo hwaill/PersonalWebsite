@@ -1,14 +1,19 @@
 import { PROJECTS } from "@/app/constants";
-import { ProjectPreviewFeatured, ProjectPreviewOther } from "./ProjectPreviews";
+import { ProjectPreviewFeatured, ProjectPreviewOther, ProjectPreviewSeeMore } from "./ProjectPreviews";
 
 import style from "./projectPreviewModules.module.css"
 
-export function ProjectDisplayFeatured() {
+export function ProjectDisplayFeatured({
+	seeMore
+} : {
+	seeMore?: boolean
+}) {
 	return (
 		<div className={style.featuredProjectsContainer}>
 			{PROJECTS.map((object, i) => (
 				object.featured && <ProjectPreviewFeatured key={i} data={object} />
 			))}
+			{seeMore && <ProjectPreviewSeeMore />}
 		</div>
 	);
 };

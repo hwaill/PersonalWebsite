@@ -21,10 +21,35 @@ export function ProjectPreviewFeatured({
 					<img className={style.featuredImageMain} src={data.imgUrl} style={data.imgStyle ? JSON.parse(data.imgStyle) : {}} alt={data.imgAltText ? data.imgAltText : ""}></img>
 					{data.hook && <h5 className={style.hook}>{data.hook}</h5>}
 					<p className={style.description}>{data.description}</p>
-					<div><Link href={data.linkUrl} className="button">Explore <div className="buttonIcon" style={{ WebkitMaskImage: 'url(/img/flaticon/arrow-right.svg)', maskImage: 'url(/img/flaticon/arrow-right.svg)' }}></div></Link></div>
+					<div><Link href={data.linkUrl} className="button">Explore<div className="buttonIcon" style={{ WebkitMaskImage: 'url(/img/flaticon/arrow-right.svg)', maskImage: 'url(/img/flaticon/arrow-right.svg)' }}></div></Link></div>
 				</div>
 				<div className={style.featuredImageSideContainer}>
 					<img className={style.featuredImageSide} src={data.imgUrl} style={data.imgStyle ? JSON.parse(data.imgStyle) : {}} alt={data.imgAltText ? data.imgAltText : ""}></img>
+				</div>
+			</div>
+		</>
+	);
+};
+
+export function ProjectPreviewSeeMore() {
+	return (
+		<>
+			<div className={style.featuredContainer}>
+				<div className={style.featuredContent}>
+					<h4 className={style.heading}>Take a look at some others!</h4>
+					<div className={style.seeMoreImageMainContainer}>
+						<div><img src='/img/projects/controlleroverlays/banner.png' alt="" className={style.seeMoreImageMain} /></div>
+						<div id={style.extraSeeMoreImageMain}><img src='/img/projects/personalwebsite/banner.jpg' alt="" className={style.seeMoreImageMain} /></div>
+						<div><img src='/img/projects/generativeart/banner.png' alt="" className={style.seeMoreImageMain} /></div>
+					</div>
+					<p className={style.description}>There are more projects, big and small, to be found on the Projects page!</p>
+					<div><Link href="/projects/" className="buttonSmall">See all projects<div className="buttonIcon" style={{ WebkitMaskImage: 'url(/img/flaticon/arrow-right.svg)', maskImage: 'url(/img/flaticon/arrow-right.svg)' }}></div></Link></div>
+				</div>
+				<div className={style.seeMoreImageSideContainer}>
+					<div><img src='/img/projects/controlleroverlays/banner.png' alt="" className={style.seeMoreImageSide} /></div>
+					<div><img src='/img/projects/personalwebsite/banner.jpg' alt="" className={style.seeMoreImageSide} /></div>
+					<div><img src='/img/projects/generativeart/banner.png' alt="" className={style.seeMoreImageSide} /></div>
+					<div><img src='/img/projects/drawingmachine/banner.jpg' alt="" className={style.seeMoreImageSide} /></div>
 				</div>
 			</div>
 		</>

@@ -5,7 +5,7 @@ export default function MyWork() {
 	return (
 		<div className="homePageSection">
 			<h2 className="blueText">Featured Projects</h2>
-			<ProjectDisplayFeatured />
+			<ProjectDisplayFeatured seeMore={true} />
 		</div>
 	);
 }
