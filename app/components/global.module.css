@@ -1,0 +1,6 @@
+.neu {
+	border-radius: 1.75rem;
+	background-color: var(--bg);
+	box-shadow:  5px 5px 9px var(--neu-shad-dark),
+             -5px -5px 9px var(--neu-shad-light);
+}

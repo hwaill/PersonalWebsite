@@ -1,14 +1,16 @@
 import Link from "next/link";
-import style from "./resume.module.css"
 import Icon from "../../Icons/Icons";
 import { Experience, RESUME_SECTIONS, SIDEBAR_ITEMS, SidebarItem, Skill, SKILL_SECTION_CONTENT, SKILL_TYPE, SkillCategory, SkillsSection, SkillsSectionSubSection, URL_TYPES } from "./ResumeContent";
+
+import globalStyle from "../../global.module.css"
+import style from "./resume.module.css"
 
 export default function Resume() {
 	return (
 		<div className="homePageSection">
 			<h2 className="greenText">My Resume</h2>
 			<p>Here it is! Feast thine eyes upon this! This representation of my resume is still under construction, so feel free to download a PDF copy below.</p>
-			<div className={style.resumeContainer + " neu"}>
+			<div className={style.resumeContainer + " " + globalStyle.neu}>
 				<ResumeSidebar />
 				<div className={style.contentContainer}>
 					<ResumeMainContent />

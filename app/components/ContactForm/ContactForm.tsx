@@ -6,6 +6,7 @@ import { sendEmail } from '@/utils/sendEmail'
 import { EmailData } from '@/app/types'
 
 import style from "./contactForm.module.css"
+import globalStyle from "../global.module.css"
 
 
 
@@ -19,7 +20,7 @@ export default function ContactForm() {
 	}
 
 	return (
-    <form className={style.formContainer + " neu"} onSubmit={handleSubmit(onSubmit)}>
+    <form className={style.formContainer + " " + globalStyle.neu} onSubmit={handleSubmit(onSubmit)}>
 			<h3 className={style.formHeading}>Contact Form</h3>
       <div className={style.formSection}>
         <label htmlFor="name" className={style.formLabel}>Full Name</label>
