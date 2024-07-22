@@ -16,7 +16,7 @@ export default function Navigation() {
 	return (
 		<nav className = { style.navSidebar + " neuHeader" }>
 			<div className={ style.navSidebarHeader }>
-				<div className={style.navSidebarLogo}><Link href="/"></Link></div>
+				<div className={style.navSidebarLogo}><Link aria-label="Click logo to return home" href="/"></Link></div>
 			</div>
 			<div className = { style.navSidebarMenu } >
 				<ul className = { style.navSidebarMenuList }>

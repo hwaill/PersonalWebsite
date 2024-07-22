@@ -35,16 +35,8 @@ export const enum SKILL_TYPE {
 
 export type Skill = {
 	name: string;
+	description?: string;
 	type: SKILL_TYPE;
-	numberValue?: number;
-	wordValue?: string;
-	phraseValue?: string;
-}
-
-export type SkillSubCategory = {
-	name: string;
-	skills?: Skill[];
-	type?: SKILL_TYPE;
 	numberValue?: number;
 	wordValue?: string;
 	phraseValue?: string;
@@ -52,7 +44,7 @@ export type SkillSubCategory = {
 
 export type SkillCategory = {
 	name: string;
-	subCategories?: SkillSubCategory[];
+	subCategories?: SkillCategory[];
 	skills?: Skill[];
 	type?: SKILL_TYPE;
 	numberValue?: number;
@@ -62,6 +54,11 @@ export type SkillCategory = {
 
 export type SkillsSection = {
 	heading: string;
+	categories?: SkillCategory[];
+	subSections?: SkillsSectionSubSection[];
+}
+
+export type SkillsSectionSubSection = {
 	categories?: SkillCategory[];
 }
 
@@ -151,42 +148,99 @@ export const RESUME_SECTIONS: ResumeSection[] = [{
 	}]
 }];
 
+// Technical Skills: Soldering, 3D Printing, Laser Cutting, Intermediate PCB Design
+// Design Skills: User Interface Design, Graphic Design (Digital and Print), 3D Modelling
+
 export const SKILL_SECTION_CONTENT : SkillsSection = {
 	heading: "Additional Information",
-	categories: [{
-		name: "Hard Skills",
-		subCategories: []
-	},
-	{
-		name: "Soft Skills",
-		subCategories: []
-	},
-	{
-		name: "Languages",
-		skills: [{
-			name: "Spanish",
-			type: SKILL_TYPE.WORD_SCALE,
-			wordValue: "Conversational"
-		}]
-	},
-	{
-		name: "Interests",
-		skills: [{
-			name: "Piano and Music Production",
-			type: SKILL_TYPE.NO_VALUE
+	subSections: [{
+		categories: [{
+			name: "Computer Skills",
+			skills: [{
+				name: "Web Development",
+				type: SKILL_TYPE.NUMBER_SCALE,
+				numberValue: 4,
+				description: "HTML, CSS/SASS, JavaScript, React, NextJS, MySQL"
+			},{
+				name: "Programming",
+				type: SKILL_TYPE.NUMBER_SCALE,
+				numberValue: 3,
+				description: "Java C++"
+			},{
+				name: "Adobe Creative Suite",
+				type: SKILL_TYPE.NUMBER_SCALE,
+				numberValue: 5,
+				description: "Photoshop, Illustrator, After Effects, Premiere Pro"
+			},{
+				name: "Computer-Aided Design (CAD)",
+				type: SKILL_TYPE.NUMBER_SCALE,
+				numberValue: 4,
+				description: "KiCad, OnShape, Rhino3D"
+			}]
 		},{
-			name: "Rock Climbing",
-			type: SKILL_TYPE.NO_VALUE
+			name: "Technical Skills",
+			skills: [{
+				name: "Soldering",
+				type: SKILL_TYPE.NUMBER_SCALE,
+				numberValue: 4
+			},{
+				name: "3D Printing",
+				type: SKILL_TYPE.NUMBER_SCALE,
+				numberValue: 4
+			},{
+				name: "Laser Cutting",
+				type: SKILL_TYPE.NUMBER_SCALE,
+				numberValue: 4
+			},{
+				name: "PCB Design",
+				type: SKILL_TYPE.NUMBER_SCALE,
+				numberValue: 3
+			}]
 		},{
-			name: "Weaving",
-			type: SKILL_TYPE.NO_VALUE
-		}, {
-			name: "Mathematics",
-			type: SKILL_TYPE.NO_VALUE
+			name: "Design Skills",
+			skills: [{
+				name: "User Interface Design",
+				type: SKILL_TYPE.NUMBER_SCALE,
+				numberValue: 3
+			},{
+				name: "Graphic Design",
+				type: SKILL_TYPE.NUMBER_SCALE,
+				numberValue: 4,
+				description: "Digital and print media"
+			},{
+				name: "3D Modelling",
+				type: SKILL_TYPE.NUMBER_SCALE,
+				numberValue: 3
+			}]
 		}]
 	},{
-		name: "Work Eligibility",
-		type: SKILL_TYPE.PHRASE,
-		phraseValue: "Eligible to work in the U.S. with no restrictions."
+		categories: [{
+			name: "Languages",
+			skills: [{
+				name: "Spanish",
+				type: SKILL_TYPE.WORD_SCALE,
+				wordValue: "Conversational"
+			}]
+		},
+		{
+			name: "Interests",
+			skills: [{
+				name: "Piano and Music Production",
+				type: SKILL_TYPE.NO_VALUE
+			},{
+				name: "Rock Climbing",
+				type: SKILL_TYPE.NO_VALUE
+			},{
+				name: "Weaving",
+				type: SKILL_TYPE.NO_VALUE
+			}, {
+				name: "Mathematics",
+				type: SKILL_TYPE.NO_VALUE
+			}]
+		},{
+			name: "Work Eligibility",
+			type: SKILL_TYPE.PHRASE,
+			phraseValue: "Eligible to work in the U.S. with no restrictions."
+		}]
 	}]
 }

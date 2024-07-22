@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutMe() {
 
 	return (
@@ -11,7 +13,15 @@ export default function AboutMe() {
 					<p>I also enjoy playing piano, weaving, hiking with my dog and rock climbing.</p>
 				</div>
 				<div className="neu aboutMeImageContainer">
-					<img className="aboutMeImage" src="/img/homepage/aboutMe.jpg" alt="Close-up headshot of Henry"></img>
+					<div className="aboutMeImageHolder">
+						<Image 
+							className="aboutMeImage"
+							src="/img/homepage/aboutMe.jpg"
+      				alt="Close-up headshot of Henry"
+							fill={true}
+      				sizes="375px"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

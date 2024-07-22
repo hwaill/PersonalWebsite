@@ -1,7 +1,7 @@
 import Link from "next/link";
 import style from "./resume.module.css"
 import Icon from "../../Icons/Icons";
-import { Experience, RESUME_SECTIONS, SIDEBAR_ITEMS, SidebarItem, URL_TYPES } from "./ResumeContent";
+import { Experience, RESUME_SECTIONS, SIDEBAR_ITEMS, SidebarItem, Skill, SKILL_SECTION_CONTENT, SKILL_TYPE, SkillCategory, SkillsSection, SkillsSectionSubSection, URL_TYPES } from "./ResumeContent";
 
 export default function Resume() {
 	return (
@@ -12,7 +12,7 @@ export default function Resume() {
 				<ResumeSidebar />
 				<div className={style.contentContainer}>
 					<ResumeMainContent />
-					<ResumeSkills />
+					<ResumeSkills data={SKILL_SECTION_CONTENT}/>
 				</div>
 			</div>
 		</div>
@@ -122,10 +122,137 @@ export function ExperienceItem({
 	);
 };
 
-export function ResumeSkills() {
+export function ResumeSkills({
+	data
+} : {
+	data: SkillsSection
+}) {
 	return (
-		<div className={style.sideBarRight}>
-			<div className={style.section}></div>
+		<div className={style.section}>
+			<h4 className={style.sectionHeader}>{data.heading}</h4>
+			<div className={style.skillSectionContent}>
+				{data.categories?.map((category, index) => (
+					<SkillSectionCategory key={index} category={category} />
+				))}
+				{data.subSections?.map((subSection, index) => (
+					<SkillSectionSubSection key={index} id={index} subSection={subSection} />
+				))}
+			</div>
 		</div>
+	)
+}
+
+export function SkillSectionSubSection({
+	subSection,
+	id
+} : {
+	subSection: SkillsSectionSubSection,
+	id: number
+}) {
+	return (
+		<div id={style["skillSubSection" + id]} className={style.skillSectionSubSectionContent}>
+			{subSection.categories?.map((category, index) => (
+				<SkillSectionCategory key={index} category={category} />
+			))}
+		</div>
+	)
+}
+
+export function SkillSectionCategory({
+	category
+} : {
+	category: SkillCategory
+}) {
+	return (
+		<>
+			<div className={style.skillHeading}>
+				{category.name}
+			</div>
+			<div className={style.skillValue + " " + style.skillChild}>
+				{category.type != undefined &&
+					<SkillSectionValue
+						type={category.type}
+						numberValue={category.numberValue}
+						wordValue={category.wordValue}
+						phraseValue={category.phraseValue}
+					/>
+				}
+			</div>
+			{category.skills && 
+				<div className={style.skillChild}>
+					{category.skills.map((skill, index) => (
+						<SkillSectionSkill key={index} skill={skill} />
+					))}
+				</div>
+			}
+			{category.subCategories &&
+				<div className={style.skillChild}>
+					{category.subCategories.map((subCategory, index) => (
+						<SkillSectionCategory key={index} category={subCategory} />
+					))}
+			</div>
+			}
+		</>
+	)
+}
+
+export function SkillSectionSkill({
+	skill
+} : {
+	skill: Skill
+}) {
+	return (
+		<>
+			<div className={style.skillValueContainer}>
+				<div>
+					{skill.name}
+				</div>
+				{skill.type != SKILL_TYPE.NO_VALUE &&
+					<div>
+						<SkillSectionValue type={skill.type} numberValue={skill.numberValue} wordValue={skill.wordValue} phraseValue={skill.phraseValue} />
+					</div>
+				}
+			</div>
+			{skill.description != undefined &&
+				<div className={style.skillChild + " " + style.skillDescription}>{skill.description}</div>
+			}
+		</>
+	)
+}
+
+export function SkillSectionValue({
+	type,
+	numberValue,
+	wordValue,
+	phraseValue
+} : {
+	type?: SKILL_TYPE;
+	numberValue?: number;
+	wordValue?: string;
+	phraseValue?: string;
+}) {
+	return (
+		<>
+			{type == SKILL_TYPE.NO_VALUE && 
+				<></>
+			}
+			{type == SKILL_TYPE.NUMBER_SCALE && 
+				<>
+					{new Array(5).fill(0).map((_, key) => {
+						if(numberValue != undefined && numberValue - 1 >= key) {
+							return <div key={key} className={style.skillValueCircle + " " + style.filled}></div>
+						} else {
+							return <div key={key} className={style.skillValueCircle}></div>
+						}
+					})}
+				</>
+			}
+			{type == SKILL_TYPE.WORD_SCALE && 
+				<span className={style.skillValueWord}>{wordValue}</span>
+			}
+			{type == SKILL_TYPE.PHRASE && 
+				<span className={style.skillValuePhrase}>{phraseValue}</span>
+			}
+		</>
 	)
 }

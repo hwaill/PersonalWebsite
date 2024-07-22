@@ -2,6 +2,7 @@ import React from 'react';
 import style from './projectPreviewModules.module.css'
 import Link from 'next/link';
 import { Project } from '@/app/types';
+import Image from 'next/image';
 
 export function ProjectPreviewFeatured({
 	data
@@ -18,13 +19,29 @@ export function ProjectPreviewFeatured({
 							<div key={key} className={style.projectTag}>{name}</div>
 						))}
 					</div>
-					<img className={style.featuredImageMain} src={data.imgUrl} style={data.imgStyle ? JSON.parse(data.imgStyle) : {}} alt={data.imgAltText ? data.imgAltText : ""}></img>
+					<div className={style.featuredImageMainContainer}>
+						<Image
+							className={style.featuredImageMain}
+							fill={true}
+							sizes="(max-width: 600) 550px, (max-width: 1000) 685px, 875px"
+							src={data.imgUrl}
+							style={data.imgStyle ? JSON.parse(data.imgStyle) : {}}
+							alt={data.imgAltText ? data.imgAltText : ""}
+						/>
+					</div>
 					{data.hook && <h5 className={style.hook}>{data.hook}</h5>}
 					<p className={style.description}>{data.description}</p>
 					<div><Link href={data.linkUrl} className="button">Explore<div className="buttonIcon" style={{ WebkitMaskImage: 'url(/img/flaticon/arrow-right.svg)', maskImage: 'url(/img/flaticon/arrow-right.svg)' }}></div></Link></div>
 				</div>
 				<div className={style.featuredImageSideContainer}>
-					<img className={style.featuredImageSide} src={data.imgUrl} style={data.imgStyle ? JSON.parse(data.imgStyle) : {}} alt={data.imgAltText ? data.imgAltText : ""}></img>
+					<Image
+						className={style.featuredImageSide}
+						fill={true}
+						sizes="575px"
+						src={data.imgUrl}
+						style={data.imgStyle ? JSON.parse(data.imgStyle) : {}}
+						alt={data.imgAltText ? data.imgAltText : ""}
+					/>
 				</div>
 			</div>
 		</>

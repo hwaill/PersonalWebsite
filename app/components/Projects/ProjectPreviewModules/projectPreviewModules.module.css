@@ -91,11 +91,15 @@
 	padding: 0 0.75rem 0.1rem 0.75rem;
 }
 
-.featuredImageMain {
+.featuredImageMainContainer {
 	width: 100%;
+	position: relative;
 	max-height: 18rem;
 	aspect-ratio: 8 / 5;
 	margin-bottom: 0.5rem;
+}
+
+.featuredImageMain {
 	border-radius: 0.75rem;
 	object-position: center;
 	object-fit: cover;
@@ -120,9 +124,6 @@
 }
 
 .featuredImageSide {
-	position: absolute;
-	width: 100%;
-	height: 100%;
 	border-radius: 0.75rem;
 	object-position: center;
 	object-fit: cover;
@@ -176,7 +177,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-	.featuredImageMain {
+	.featuredImageMainContainer {
 		display: none;
 	}
 
@@ -192,7 +193,7 @@
 	}
 	
 	.featuredImageSideContainer {
-		display: flex;
+		display: initial;
 		flex: 0 1 33rem;
 		aspect-ratio: 8 / 5;
 	}

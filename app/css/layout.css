@@ -43,11 +43,15 @@
 	padding: 1rem;
 }
 
-.aboutMeImage {
+.aboutMeImageHolder {
 	width: 100%;
 	aspect-ratio: 1;
-	border-radius: 0.75rem;
 	display: block;
+	position: relative;
+}
+
+.aboutMeImage {
+	border-radius: 0.75rem;
 }
 
 .contactFormContainer {

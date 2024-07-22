@@ -12,9 +12,7 @@ export const viewport: Viewport = {
 	height: 'device-height',
   width: 'device-width',
   initialScale: 1,
-	minimumScale: 1,
-  maximumScale: 1,
-  userScalable: false
+	minimumScale: 1
 };
 
 export const metadata: Metadata = {

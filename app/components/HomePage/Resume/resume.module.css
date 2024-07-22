@@ -13,26 +13,15 @@
 	flex: 0 0 9rem;
 }
 
-.contentContainer {
-
-}
-
-.contentMain {
-
-}
-
-.contentRight {
-
-}
-
 /* Sidebar Layout */
 .logo {
-	background-image: url(/img/logos/logoFlat.svg);
+	background-image: url(/img/logos/logoFlatTight.svg);
 	background-position: center center;
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
 	aspect-ratio: 1 / 1;
+	margin-bottom: 1rem;
 }
-
 
 .name {
 	text-align: center;
@@ -128,10 +117,6 @@
 	font-weight: 700;
 }
 
-.sideBarRight {
-
-}
-
 .experienceContainer {
 	margin-bottom: 0.25rem;
 	display: flex;
@@ -194,6 +179,77 @@
 	margin-bottom: 0.25rem;
 }
 
+.skillSectionContent {
+	margin-left: 3.5rem;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100% - 3.5rem);
+	gap: 1.5rem;
+}
+
+.skillSectionSubSectionContent {
+	flex: 1 1 content;
+}
+
+#skillSubSection0 {
+	flex-basis: 300px;
+}
+
+#skillSubSection1 {
+	flex-basis: 150px;
+}
+
+.skillChild {
+	margin-left: 1rem;
+	font-size: 0.9rem;
+	margin-bottom: 0.25rem;
+}
+
+.skillHeading {
+	line-height: 1.1;
+	margin-bottom: 0.25rem;
+	font-weight: 700;
+}
+
+.skillValueContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.skillValue {
+	font-size: 0.9rem;
+}
+
+.skillDescription {
+	font-size: 0.8rem;
+}
+
+.skillValueWord {
+	font-size: 0.875rem;
+	background-color: var(--text);
+	color: var(--bg);
+	border-radius: 1000vh;
+	padding: 0 0.75rem 0.1rem 0.75rem;
+	margin-left: 0.25rem;
+}
+
+.skillValueCircle {
+	margin-left: 0.25rem;
+	width: 0.75rem;
+	height: 0.75rem;
+	box-sizing: border-box;
+	border-radius: 50%;
+	display: inline-block;
+	border: 2px solid var(--navy);
+	position: relative;
+	top: 0.1rem;
+}
+
+.filled {
+	background-color: var(--navy);
+}
+
 @media screen and (max-width: 1000px) {
 	.smallScreenOnly {
 		display: initial;
@@ -213,11 +269,13 @@
 		flex: 0 0 100%;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-end;
 	}
 
 	.logo {
-		flex: 0 1 9rem;
+		flex: 0 1 8rem;
+		background-position: left center;
+		margin-bottom: 0;
 	}
 
 	.nameContainer {

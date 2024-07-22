@@ -34,7 +34,7 @@ export default function NavigationMobile() {
 				}}
 				className="neuHeader">
 				<div className={ style.header }>
-					<div className={style.headerLogo}><Link href="/"></Link></div>
+					<div className={style.headerLogo}><Link aria-label="Click logo to return home" href="/"></Link></div>
 					<MenuToggle toggle={toggleOpen}/>
 				</div>
 				<div className = { style.navMobileMenu } >
