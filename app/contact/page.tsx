@@ -1,5 +1,11 @@
 import React from 'react'
 import ContactForm from '../components/ContactForm/ContactForm'
+import { Metadata } from 'next';
+
+export const metadata : Metadata = {
+	title: "Contact Me",
+	description: "Reach out to me with any questions and comments. I'd be happy to chat!"
+};
 
 function Contact() {
 	return (

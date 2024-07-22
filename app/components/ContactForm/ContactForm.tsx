@@ -26,6 +26,7 @@ export default function ContactForm() {
         <input type="text"
           placeholder="Full Name"
           className={style.formInput + " neuInset"}
+          id="name"
           {...register('name', { required: true })}
         />
       </div>
@@ -40,6 +41,7 @@ export default function ContactForm() {
           type="email"
           placeholder="example@domain.com"
           className={style.formInput + " neuInset"}
+          id="email"
           {...register('email', { required: true })}
         />
       </div>
@@ -54,6 +56,7 @@ export default function ContactForm() {
           rows={6}
           placeholder="Type your message"
           className={style.formTextArea + " neuInset"}
+          id="message"
           {...register('message', { required: true })}
         ></textarea>
       </div>
