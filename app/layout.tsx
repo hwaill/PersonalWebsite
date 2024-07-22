@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 		default: 'Henry Waill',
 		template: '%s | Henry Waill'
 	},
-	description: 'A personal site.'
+	description: 'This is the personal website and portfolio of Henry Waill, Creative Technologist.'
 };
 
 export default function RootLayout({
