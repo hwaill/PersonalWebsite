@@ -1,4 +1,5 @@
 import React from 'react';
+import globalStyle from "../../global.module.css"
 import style from './projectPreviewModules.module.css'
 import Link from 'next/link';
 import { Project } from '@/app/types';
@@ -80,7 +81,7 @@ export function ProjectPreviewOther({
 }) {
 	return (
 		<>
-			<div className={style.otherContainer + " neu"}>
+			<div className={style.otherContainer + " " + globalStyle.neu}>
 				<img className={style.otherImage} src={data.imgUrl} style={data.imgStyle ? JSON.parse(data.imgStyle) : {}} alt={data.imgAltText ? data.imgAltText : ""}></img>
 				<div className={style.otherText}>
 					<h4 className={style.heading}>{data.heading}</h4>
