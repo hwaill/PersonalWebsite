@@ -3,7 +3,7 @@ import { ProjectDisplayFeatured } from '../../Projects/ProjectPreviewModules/Pro
 
 export default function MyWork() {
 	return (
-		<div className="homePageSection">
+		<div className="sectionContent">
 			<h2 className="blueText">Featured Projects</h2>
 			<ProjectDisplayFeatured seeMore={true} />
 		</div>

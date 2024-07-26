@@ -1,22 +1,38 @@
-.formContainer {
-	padding: 2rem;
+.contactFormContainer {
+	margin: 2rem auto;
+	max-width: 30rem;
 }
 
-.formHeading {
-	/* margin-bottom: 1rem; */
+@media screen and (min-width: 1350px) {
+	.contactMeContent {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: flex-start;
+		gap: 3rem;
+	}
+
+	.contactMeText {
+		flex: 1 0 0px;
+	}
+
+	.contactFormContainer {
+		flex: 0 0 30rem;
+		width: auto;
+		margin: 0;
+	}
 }
 
-.formSection {
+.contactFormSection {
 	margin-bottom: 1rem;
 }
 
-.formLabel {
+.contactFormLabel {
 	display: block;
 	font-weight: 700;
 	margin-left: 0.75rem;
 }
 
-.formInput {
+.contactFormInput {
 	font-family: inherit;
 	font-size: 1rem;
 	width: 100%;
@@ -27,7 +43,7 @@
 	box-sizing: border-box;
 }
 
-.formTextArea {
+.contactFormTextArea {
 	font-family: inherit;
 	width: 100%;
 	border-radius: 0.75rem;
@@ -38,39 +54,32 @@
 	resize: none;
 }
 
-.formSubmitContainer {
+.contactFormSubmitContainer {
 	float: right;
 }
 
-.formStatus {
+.contactFormStatus {
 	font-style: italic;
 	opacity: 0.7;
 	display: inline-block;
 	margin-right: 1rem;
 }
 
-.formButton {
+.contactFormButton {
 	font-size: 1rem;
 	font-weight: 400;
 	display: inline-block;
 	background-color: var(--text);
 	color: var(--bg);
-	border-radius: 1000rem;
+	border-radius: 0.75rem;
 	padding: 0.25rem 0.75rem;
 	cursor: pointer;
 }
 
-.formInput:focus, .formTextArea:focus {
+.contactFormInput:focus, .contactFormTextArea:focus {
 	border: solid var(--blue) 2px;
 }
 
-.formClearFix {
+.contactFormClearFix {
 	clear: both;
-}
-
-@media screen and (max-width: 450px) {
-	.formContainer {
-		box-shadow: none;
-		padding: 2rem 0;
-	}
 }

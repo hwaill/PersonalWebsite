@@ -1,16 +1,16 @@
 import Link from "next/link";
 import Icon from "../../Icons/Icons";
-import { Experience, RESUME_SECTIONS, SIDEBAR_ITEMS, SidebarItem, Skill, SKILL_SECTION_CONTENT, SKILL_TYPE, SkillCategory, SkillsSection, SkillsSectionSubSection, URL_TYPES } from "./ResumeContent";
+import { ResumeExperience, ResumeSidebarItem, ResumeSkill, RESUME_SKILL_TYPE, ResumeSkillCategory, ResumeSkillsSection, ResumeSkillsSectionSubSection, RESUME_SIDEBAR_URL_TYPES } from "@/app/types";
+import { RESUME_SECTIONS, SIDEBAR_ITEMS, SKILL_SECTION_CONTENT } from "@/app/constants/constants_resumeContent";
 
-import globalStyle from "../../global.module.css"
 import style from "./resume.module.css"
 
 export default function Resume() {
 	return (
-		<div className="homePageSection">
+		<div className="sectionContent">
 			<h2 className="greenText">My Resume</h2>
 			<p>Here it is! Feast thine eyes upon this! This representation of my resume is still under construction, so feel free to download a PDF copy below.</p>
-			<div className={style.resumeContainer + " " + globalStyle.neu}>
+			<div className={style.resumeContainer + " neuLargeScreen neuDoublePadding"}>
 				<ResumeSidebar />
 				<div className={style.contentContainer}>
 					<ResumeMainContent />
@@ -42,7 +42,7 @@ export function ResumeSidebar() {
 export function InfoSection({
 	items
 } : {
-	items: SidebarItem[]
+	items: ResumeSidebarItem[]
 }) {
 	return (
 		<div className={style.infoContainer + " " + style.largeScreenOnly}>
@@ -50,7 +50,7 @@ export function InfoSection({
 				{items.map((item, index) => (
 					<li key={index} className={style.infoItem}>
 							{item.url ? (
-								<Link className={style.infoItemLink} href={item.url} {...(item.urlType == URL_TYPES.EXTERNAL ? {target: "_blank", rel: "noopener noreferrer"} : {})}>
+								<Link className={style.infoItemLink} href={item.url} {...(item.urlType == RESUME_SIDEBAR_URL_TYPES.EXTERNAL ? {target: "_blank", rel: "noopener noreferrer"} : {})}>
 									<div className={style.infoItemFlex}>
 										<div className={style.infoItemIcon}>
 											<Icon icon={item.icon}/>
@@ -98,7 +98,7 @@ export function ResumeMainContent() {
 export function ExperienceItem({
 	data
 } : {
-	data: Experience
+	data: ResumeExperience
 }) {
 	return (
 		<div className={style.experienceContainer}>
@@ -127,7 +127,7 @@ export function ExperienceItem({
 export function ResumeSkills({
 	data
 } : {
-	data: SkillsSection
+	data: ResumeSkillsSection
 }) {
 	return (
 		<div className={style.section}>
@@ -148,7 +148,7 @@ export function SkillSectionSubSection({
 	subSection,
 	id
 } : {
-	subSection: SkillsSectionSubSection,
+	subSection: ResumeSkillsSectionSubSection,
 	id: number
 }) {
 	return (
@@ -163,7 +163,7 @@ export function SkillSectionSubSection({
 export function SkillSectionCategory({
 	category
 } : {
-	category: SkillCategory
+	category: ResumeSkillCategory
 }) {
 	return (
 		<>
@@ -201,7 +201,7 @@ export function SkillSectionCategory({
 export function SkillSectionSkill({
 	skill
 } : {
-	skill: Skill
+	skill: ResumeSkill
 }) {
 	return (
 		<>
@@ -209,7 +209,7 @@ export function SkillSectionSkill({
 				<div>
 					{skill.name}
 				</div>
-				{skill.type != SKILL_TYPE.NO_VALUE &&
+				{skill.type != RESUME_SKILL_TYPE.NO_VALUE &&
 					<div>
 						<SkillSectionValue type={skill.type} numberValue={skill.numberValue} wordValue={skill.wordValue} phraseValue={skill.phraseValue} />
 					</div>
@@ -228,17 +228,17 @@ export function SkillSectionValue({
 	wordValue,
 	phraseValue
 } : {
-	type?: SKILL_TYPE;
+	type?: RESUME_SKILL_TYPE;
 	numberValue?: number;
 	wordValue?: string;
 	phraseValue?: string;
 }) {
 	return (
 		<>
-			{type == SKILL_TYPE.NO_VALUE && 
+			{type == RESUME_SKILL_TYPE.NO_VALUE && 
 				<></>
 			}
-			{type == SKILL_TYPE.NUMBER_SCALE && 
+			{type == RESUME_SKILL_TYPE.NUMBER_SCALE && 
 				<>
 					{new Array(5).fill(0).map((_, key) => {
 						if(numberValue != undefined && numberValue - 1 >= key) {
@@ -249,10 +249,10 @@ export function SkillSectionValue({
 					})}
 				</>
 			}
-			{type == SKILL_TYPE.WORD_SCALE && 
+			{type == RESUME_SKILL_TYPE.WORD_SCALE && 
 				<span className={style.skillValueWord}>{wordValue}</span>
 			}
-			{type == SKILL_TYPE.PHRASE && 
+			{type == RESUME_SKILL_TYPE.PHRASE && 
 				<span className={style.skillValuePhrase}>{phraseValue}</span>
 			}
 		</>

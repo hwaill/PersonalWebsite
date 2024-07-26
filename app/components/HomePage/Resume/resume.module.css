@@ -1,7 +1,6 @@
 /* Overall Layout */
 .resumeContainer {
 	width: 100%;
-	padding: 2rem;
 	margin: 2.5rem auto 0rem;
 	display: flex;
 	gap: 2.5rem;
@@ -296,13 +295,7 @@
 	}
 }
 
-@media screen and (max-width: 500px) {
-	.resumeContainer {
-		padding: 0;
-		border-radius: 0;
-		box-shadow: none;
-	}
-
+@media screen and (max-width: 450px) {
 	.experienceDescription {
 		padding-right: 0;
 	}

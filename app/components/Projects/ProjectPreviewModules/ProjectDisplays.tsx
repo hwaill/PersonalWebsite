@@ -1,4 +1,4 @@
-import { PROJECTS } from "@/app/constants";
+import { PROJECTS } from "@/app/constants/constants";
 import { ProjectPreviewFeatured, ProjectPreviewOther, ProjectPreviewSeeMore } from "./ProjectPreviews";
 
 import style from "./projectPreviewModules.module.css"

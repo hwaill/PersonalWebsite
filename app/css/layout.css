@@ -1,133 +1,41 @@
-.landingContainer {
-	position: relative;
-	padding: 4rem max(2rem, 10%);
-	height: max(calc(100dvh - var(--mobileHeaderHeight)), 600px);
-	overflow-x: hidden;
+/* CONTENT WRAPPERS */
+
+.pageContentWrapper {
+	position: absolute;
+	top: 0;
+	left: var(--sidebarWidth);
+	right: 0;
 }
 
-.notFoundContainer {
-	position: relative;
-	height: max(calc(100dvh - var(--mobileHeaderHeight)), 600px);
-	overflow: hidden;
-}
-
-@media screen and (min-width: 600px) {
-	.landingContainer {
-		height: max(85dvh, 600px);
-	}
-
-	.notFoundContainer {
-		height: max(100dvh, 600px);
+@media screen and (max-width: 599px) {
+	.pageContentWrapper {
+		position: absolute;
+		top: var(--mobileHeaderHeight);
+		left: 0;
+		width: 100vw;
 	}
 }
 
-.homePageSection {
+.projectContentWrapper {
+	max-width: 45rem;
+	padding: 2rem;
+	margin: 0 auto;
+}
+
+.sectionContent {
 	padding: 2rem 4rem;
 	max-width: 72rem;
 	margin: 0 auto;
 }
 
 @media screen and (max-width: 800px) {
-	.homePageSection {
+	.sectionContent {
 		padding: 2rem;
 	}
 }
 
 .pageTopMargin {
 	margin-top: 2rem;
-}
-
-.aboutMeImageContainer {
-	margin: 2rem auto 0rem;
-	width: min(100%, 25rem);
-	padding: 1rem;
-}
-
-.aboutMeImageHolder {
-	width: 100%;
-	aspect-ratio: 1;
-	display: block;
-	position: relative;
-}
-
-.aboutMeImage {
-	border-radius: 0.75rem;
-}
-
-.contactFormContainer {
-	margin: 2rem auto;
-	max-width: 30rem;
-}
-
-.resumeImageContainer {
-	max-width: 40rem;
-	margin: 2rem auto 0rem;
-	padding: 1rem;
-}
-
-.resumeButtonContainer {
-	margin-bottom: 2rem;
-}
-
-.resume {
-	width: 100%;
-	border-radius: 0.75rem;
-	display: block;
-}
-
-@media screen and (min-width: 1350px) {
-	.aboutMeContent {
-		display: flex;
-		flex-flow: row nowrap;
-		align-items: flex-start;
-		gap: 3rem;
-	}
-
-	.contactMeContent {
-		display: flex;
-		flex-flow: row nowrap;
-		align-items: flex-start;
-		gap: 3rem;
-	}
-
-	.contactMeText {
-		flex: 1 0 0px;
-	}
-
-	.contactFormContainer {
-		flex: 0 0 30rem;
-		width: auto;
-		margin: 0;
-	}
-
-	.aboutMeText {
-		flex: 1 0 0px;
-	}
-
-	.aboutMeImageContainer {
-		flex: 0 0 25rem;
-		width: auto;
-		margin: 0;
-	}
-}
-
-@media screen and (min-width: 1350px) {
-	.resumeContent {
-		display: flex;
-		flex-flow: row nowrap;
-		align-items: flex-start;
-		gap: 3rem;
-	}
-
-	.resumeText {
-		flex: 1 0 0px;
-	}
-
-	.resumeImageContainer {
-		flex: 0 0 30rem;
-		width: auto;
-		margin: 0;
-	}
 }
 
 .separator {

@@ -4,7 +4,7 @@ import { Open_Sans } from 'next/font/google';
 import './css/main.css';
 import Navigation from './components/Navigation/Navigation';
 import NavigationMobile from './components/Navigation/NavigationMobile';
-import ContentWrapper from './components/Wrappers/ContentWrapper';
+import PageContentWrapper from './components/Wrappers/PageContentWrapper';
 
 const openSans = Open_Sans({ subsets: ['latin'] });
 
@@ -35,9 +35,9 @@ export default function RootLayout({
 			<body>
 				<Navigation />
 				<NavigationMobile />
-				<ContentWrapper>
+				<PageContentWrapper>
 					{children}
-				</ContentWrapper>
+				</PageContentWrapper>
 			</body>
 			<GoogleAnalytics gaId='G-0T2H3H83B4' />
 		</html>

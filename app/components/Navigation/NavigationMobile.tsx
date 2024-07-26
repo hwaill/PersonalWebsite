@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { NAV_ITEMS } from "@/app/constants";
+import { NAV_ITEMS } from "@/app/constants/constants";
 import { NavItem } from "@/app/types";
 import { easeOut, motion, useCycle } from "framer-motion";
 

@@ -1,3 +1,26 @@
+.landingContainer {
+	position: relative;
+	padding: 4rem max(2rem, 10%);
+	height: max(calc(100dvh - var(--mobileHeaderHeight)), 600px);
+	overflow-x: hidden;
+}
+
+.notFoundContainer {
+	position: relative;
+	height: max(calc(100dvh - var(--mobileHeaderHeight)), 600px);
+	overflow: hidden;
+}
+
+@media screen and (min-width: 600px) {
+	.landingContainer {
+		height: max(85dvh, 600px);
+	}
+
+	.notFoundContainer {
+		height: max(100dvh, 600px);
+	}
+}
+
 .tybaltHand {
 	pointer-events: none;
 	position: absolute;

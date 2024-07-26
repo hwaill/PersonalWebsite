@@ -1,4 +1,4 @@
-import ProjectWrapper from "../../components/Wrappers/ProjectWrapper";
+import ProjectContentWrapper from "../../components/Wrappers/ProjectContentWrapper";
 
 export default function ProjectLayout({
 	children
@@ -6,8 +6,8 @@ export default function ProjectLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<ProjectWrapper>
+		<ProjectContentWrapper>
 			{children}
-		</ProjectWrapper>
+		</ProjectContentWrapper>
 	);
 };

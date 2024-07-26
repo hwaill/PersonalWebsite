@@ -5,8 +5,7 @@ import { useForm } from 'react-hook-form'
 import { sendEmail } from '@/utils/sendEmail'
 import { EmailData } from '@/app/types'
 
-import style from "./contactForm.module.css"
-import globalStyle from "../global.module.css"
+import style from "./contact.module.css"
 
 
 
@@ -20,56 +19,56 @@ export default function ContactForm() {
 	}
 
 	return (
-    <form className={style.formContainer + " " + globalStyle.neu} onSubmit={handleSubmit(onSubmit)}>
-			<h3 className={style.formHeading}>Contact Form</h3>
-      <div className={style.formSection}>
-        <label htmlFor="name" className={style.formLabel}>Full Name</label>
+    <form className={style.contactFormContainer + " neuLargeScreen neuDoublePadding"} onSubmit={handleSubmit(onSubmit)}>
+			<h3>Contact Form</h3>
+      <div className={style.contactFormSection}>
+        <label htmlFor="name" className={style.contactFormLabel}>Full Name</label>
         <input type="text"
           placeholder="Full Name"
-          className={style.formInput + " neuInset"}
+          className={style.contactFormInput + " neuInset"}
           id="name"
           {...register('name', { required: true })}
         />
       </div>
-      <div className={style.formSection}>
+      <div className={style.contactFormSection}>
         <label
           htmlFor="email"
-          className={style.formLabel}
+          className={style.contactFormLabel}
         >
           Email Address
         </label>
         <input
           type="email"
           placeholder="example@domain.com"
-          className={style.formInput + " neuInset"}
+          className={style.contactFormInput + " neuInset"}
           id="email"
           {...register('email', { required: true })}
         />
       </div>
-      <div className={style.formSection}>
+      <div className={style.contactFormSection}>
         <label
           htmlFor="message"
-          className={style.formLabel}
+          className={style.contactFormLabel}
         >
           Message
         </label>
         <textarea
           rows={6}
           placeholder="Type your message"
-          className={style.formTextArea + " neuInset"}
+          className={style.contactFormTextArea + " neuInset"}
           id="message"
           {...register('message', { required: true })}
         ></textarea>
       </div>
-      <div className={style.formSubmitContainer}>
-        <div className={style.formStatus}>
+      <div className={style.contactFormSubmitContainer}>
+        <div className={style.contactFormStatus}>
           {formState == "ready" ? "" : (formState == "waiting" ? "Sending message..." : responseState)}
         </div>
-        <button className={style.formButton} style={formState == "ready" ? {} : {"opacity":"0.5","pointerEvents":"none"}}>
+        <button className={style.contactFormButton} style={formState == "ready" ? {} : {"opacity":"0.5","pointerEvents":"none"}}>
           Submit
         </button>
       </div>
-			<div className={style.formClearFix}></div>
+			<div className={style.contactFormClearFix}></div>
     </form>
   );
 }

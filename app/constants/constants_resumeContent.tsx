@@ -1,70 +1,8 @@
-/* TYPES */
-
-export enum URL_TYPES {
-	EXTERNAL,
-	LOCAL
-};
-
-export type SidebarItem = {
-	icon: string;
-	text: string;
-	url?: string;
-	urlType?: URL_TYPES;
-};
-
-export type Experience = {
-	org: string;
-	position: string;
-	location: string;
-	date: string;
-	descriptions?: string[];
-	logoUrl?: string;
-};
-
-export type ResumeSection = {
-	heading: string;
-	items: Experience[];
-};
-
-export const enum SKILL_TYPE {
-	NUMBER_SCALE,
-	WORD_SCALE,
-	PHRASE,
-	NO_VALUE
-}
-
-export type Skill = {
-	name: string;
-	description?: string;
-	type: SKILL_TYPE;
-	numberValue?: number;
-	wordValue?: string;
-	phraseValue?: string;
-}
-
-export type SkillCategory = {
-	name: string;
-	subCategories?: SkillCategory[];
-	skills?: Skill[];
-	type?: SKILL_TYPE;
-	numberValue?: number;
-	wordValue?: string;
-	phraseValue?: string;
-}
-
-export type SkillsSection = {
-	heading: string;
-	categories?: SkillCategory[];
-	subSections?: SkillsSectionSubSection[];
-}
-
-export type SkillsSectionSubSection = {
-	categories?: SkillCategory[];
-}
-
 /* EDITABLE CONTENT */
 
-export const SIDEBAR_ITEMS : SidebarItem[] = [
+import { RESUME_SIDEBAR_URL_TYPES, RESUME_SKILL_TYPE, ResumeSection, ResumeSidebarItem, ResumeSkillsSection } from "../types";
+
+export const SIDEBAR_ITEMS : ResumeSidebarItem[] = [
 	{
 		icon: "location",
 		text: "Denver, CO"
@@ -73,13 +11,13 @@ export const SIDEBAR_ITEMS : SidebarItem[] = [
 		icon: "linkedInNavy",
 		text: "linkedIn",
 		url: "https://www.linkedin.com/in/henry-waill-b6228b69/",
-		urlType: URL_TYPES.EXTERNAL
+		urlType: RESUME_SIDEBAR_URL_TYPES.EXTERNAL
 	},
 	{
 		icon: "contactNavy",
 		text: "Contact Me",
 		url: "/contact/",
-		urlType: URL_TYPES.LOCAL
+		urlType: RESUME_SIDEBAR_URL_TYPES.LOCAL
 	}
 ]
 
@@ -151,29 +89,29 @@ export const RESUME_SECTIONS: ResumeSection[] = [{
 // Technical Skills: Soldering, 3D Printing, Laser Cutting, Intermediate PCB Design
 // Design Skills: User Interface Design, Graphic Design (Digital and Print), 3D Modelling
 
-export const SKILL_SECTION_CONTENT : SkillsSection = {
+export const SKILL_SECTION_CONTENT : ResumeSkillsSection = {
 	heading: "Additional Information",
 	subSections: [{
 		categories: [{
 			name: "Computer Skills",
 			skills: [{
 				name: "Web Development",
-				type: SKILL_TYPE.NUMBER_SCALE,
+				type: RESUME_SKILL_TYPE.NUMBER_SCALE,
 				numberValue: 4,
 				description: "HTML, CSS/SASS, JavaScript, React, NextJS, MySQL"
 			},{
 				name: "Programming",
-				type: SKILL_TYPE.NUMBER_SCALE,
+				type: RESUME_SKILL_TYPE.NUMBER_SCALE,
 				numberValue: 3,
 				description: "Java C++"
 			},{
 				name: "Adobe Creative Suite",
-				type: SKILL_TYPE.NUMBER_SCALE,
+				type: RESUME_SKILL_TYPE.NUMBER_SCALE,
 				numberValue: 5,
 				description: "Photoshop, Illustrator, After Effects, Premiere Pro"
 			},{
 				name: "Computer-Aided Design (CAD)",
-				type: SKILL_TYPE.NUMBER_SCALE,
+				type: RESUME_SKILL_TYPE.NUMBER_SCALE,
 				numberValue: 4,
 				description: "KiCad, OnShape, Rhino3D"
 			}]
@@ -181,35 +119,35 @@ export const SKILL_SECTION_CONTENT : SkillsSection = {
 			name: "Technical Skills",
 			skills: [{
 				name: "Soldering",
-				type: SKILL_TYPE.NUMBER_SCALE,
+				type: RESUME_SKILL_TYPE.NUMBER_SCALE,
 				numberValue: 4
 			},{
 				name: "3D Printing",
-				type: SKILL_TYPE.NUMBER_SCALE,
+				type: RESUME_SKILL_TYPE.NUMBER_SCALE,
 				numberValue: 4
 			},{
 				name: "Laser Cutting",
-				type: SKILL_TYPE.NUMBER_SCALE,
+				type: RESUME_SKILL_TYPE.NUMBER_SCALE,
 				numberValue: 4
 			},{
 				name: "PCB Design",
-				type: SKILL_TYPE.NUMBER_SCALE,
+				type: RESUME_SKILL_TYPE.NUMBER_SCALE,
 				numberValue: 3
 			}]
 		},{
 			name: "Design Skills",
 			skills: [{
 				name: "User Interface Design",
-				type: SKILL_TYPE.NUMBER_SCALE,
+				type: RESUME_SKILL_TYPE.NUMBER_SCALE,
 				numberValue: 3
 			},{
 				name: "Graphic Design",
-				type: SKILL_TYPE.NUMBER_SCALE,
+				type: RESUME_SKILL_TYPE.NUMBER_SCALE,
 				numberValue: 4,
 				description: "Digital and print media"
 			},{
 				name: "3D Modelling",
-				type: SKILL_TYPE.NUMBER_SCALE,
+				type: RESUME_SKILL_TYPE.NUMBER_SCALE,
 				numberValue: 3
 			}]
 		}]
@@ -218,7 +156,7 @@ export const SKILL_SECTION_CONTENT : SkillsSection = {
 			name: "Languages",
 			skills: [{
 				name: "Spanish",
-				type: SKILL_TYPE.WORD_SCALE,
+				type: RESUME_SKILL_TYPE.WORD_SCALE,
 				wordValue: "Conversational"
 			}]
 		},
@@ -226,20 +164,20 @@ export const SKILL_SECTION_CONTENT : SkillsSection = {
 			name: "Interests",
 			skills: [{
 				name: "Piano and Music Production",
-				type: SKILL_TYPE.NO_VALUE
+				type: RESUME_SKILL_TYPE.NO_VALUE
 			},{
 				name: "Rock Climbing",
-				type: SKILL_TYPE.NO_VALUE
+				type: RESUME_SKILL_TYPE.NO_VALUE
 			},{
 				name: "Weaving",
-				type: SKILL_TYPE.NO_VALUE
+				type: RESUME_SKILL_TYPE.NO_VALUE
 			}, {
 				name: "Mathematics",
-				type: SKILL_TYPE.NO_VALUE
+				type: RESUME_SKILL_TYPE.NO_VALUE
 			}]
 		},{
 			name: "Work Eligibility",
-			type: SKILL_TYPE.PHRASE,
+			type: RESUME_SKILL_TYPE.PHRASE,
 			phraseValue: "Eligible to work in the U.S. with no restrictions."
 		}]
 	}]
