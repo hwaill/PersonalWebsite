@@ -8,7 +8,7 @@ import {
 	ProjectImageHalf,
 	ProjectImageThird,
 	ProjectImageCollage, 
-	ProjectImageFull} from '@/app/components/Projects/ProjectPageContent/ProjectImages'
+	ProjectImageFull } from '@/app/components/Projects/ProjectPageContent/ProjectImages'
 import {
 	ProjectParagraph,
 	ProjectSection,
@@ -103,7 +103,7 @@ export default function Page() {
 			<ProjectImageFull src="/img/projects/todos/img7.jpg" alt="" />
 			<ProjectSectionContinue>
 				<ProjectSubSectionContinue>
-					<ProjectParagraph>The green circuit board shown above is my own design. A detailed walkthrough of the circuit can be found <Link href="todos/circuit/">here</Link>, but I&apos;ll give a brief rundown. To generate the movement we needed from the plotter, we have two stepper motors (one each for the x and y axes.) Additionally, there is a servo motor to lift and lower the marker (and another for a theoretical eraser.) We used one microcontroller to process motion commands and send signals to those motors, and another microcontroller to act as the &quot;brain&quot; of <em>todos</em>, which sends commands to the first. Add in a microSD card reader for storing data, seven buttons on the front panel and 57 magnet sensors on the back and a potential wiring disaster starts to form.</ProjectParagraph>
+					<ProjectParagraph>The green circuit board shown above is my own design. A detailed walkthrough of the circuit can be found <Link href="todos/circuitry/">here</Link>, but I&apos;ll give a brief rundown. To generate the movement we needed from the plotter, we have two stepper motors (one each for the x and y axes.) Additionally, there is a servo motor to lift and lower the marker (and another for a theoretical eraser.) We used one microcontroller to process motion commands and send signals to those motors, and another microcontroller to act as the &quot;brain&quot; of <em>todos</em>, which sends commands to the first. Add in a microSD card reader for storing data, seven buttons on the front panel and 57 magnet sensors on the back and a potential wiring disaster starts to form.</ProjectParagraph>
 					<ProjectParagraph>That leaves out quite a few details, but the justification for the custom PCB becomes clear when working on a system with so many moving parts and required connections. We didn&apos;t run into many hiccups or unforeseen difficulties with the circuitry... I am not so naive to think that my skill had anything to do with it, but I did as much research as I could in planning the design and we got lucky!</ProjectParagraph>
 				</ProjectSubSectionContinue>
 				<ProjectSubSection heading="Software">

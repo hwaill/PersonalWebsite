@@ -3,13 +3,13 @@ import { Metadata } from 'next'
 import { ProjectOutline } from '@/app/types'
 import { ProjectSection, ProjectSubSection, ProjectParagraph }from '@/app/components/Projects/ProjectPageContent/ProjectSections'
 import { ProjectVideoFull } from '@/app/components/Projects/ProjectPageContent/ProjectVideos'
-import { ProjectImageBanner, ProjectImage, ProjectImageFull, ProjectImageHalf } from '@/app/components/Projects/ProjectPageContent/ProjectImages'
+import { ProjectImageBanner, ProjectImageFull, ProjectImageHalf } from '@/app/components/Projects/ProjectPageContent/ProjectImages'
 
 export const metadata : Metadata = {
 	title: "Macropad 2040"
 };
 
-const PROJECT_DATA: ProjectOutline = {
+const PROJECT_DATA : ProjectOutline = {
 	bannerImgUrl: "/img/projects/macropad/banner2.jpg",
 	bannerImgStyle: '{"backgroundPosition":"center 81%"}',
 	logoImgUrl: "/img/projects/macropad/logoWhite.svg",

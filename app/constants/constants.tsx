@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
 		],
 		hook: 'Rise and set with the sun.',
 		description: 'Minimalist aesthetic meets internet connectivity. The Sun Clock is functional decor that changes with the sun and the moon.',
-		imgUrl: '/img/projects/sunClock/banner.jpg',
+		imgUrl: '/img/projects/sunclock/banner.jpg',
 		imgStyle: '{"objectPosition":"8% center"}',
 		imgAltText: 'Birdseye image shows the macropad 2040 keypad on a desk surface. It rests on its hand-sewn pouch, and extra keycaps lay scattered next to it.',
 		linkUrl: '/projects/sunclock/',
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
 			'responsive'
 		],
 		description: 'A personal website designed to further develop my brand.',
-		imgUrl: '/img/projects/personalwebsite/banner.jpg',
+		imgUrl: '/img/projects/personalsite/banner.jpg',
 		linkUrl: '/projects/personalsite/',
 		featured: false,
 		disabled: true
