@@ -56,7 +56,7 @@ export function ProjectPreviewSeeMore() {
 					<h4 className={style.heading}>Take a look at some others!</h4>
 					<div className={style.seeMoreImageMainContainer}>
 						<div><img src='/img/projects/controlleroverlays/banner.png' alt="" className={style.seeMoreImageMain} /></div>
-						<div id={style.extraSeeMoreImageMain}><img src='/img/projects/personalwebsite/banner.jpg' alt="" className={style.seeMoreImageMain} /></div>
+						<div id={style.extraSeeMoreImageMain}><img src='/img/projects/personalsite/banner.jpg' alt="" className={style.seeMoreImageMain} /></div>
 						<div><img src='/img/projects/generativeart/banner.png' alt="" className={style.seeMoreImageMain} /></div>
 					</div>
 					<p className={style.description}>There are more projects, big and small, to be found on the Projects page!</p>
@@ -64,7 +64,7 @@ export function ProjectPreviewSeeMore() {
 				</div>
 				<div className={style.seeMoreImageSideContainer}>
 					<div><img src='/img/projects/controlleroverlays/banner.png' alt="" className={style.seeMoreImageSide} /></div>
-					<div><img src='/img/projects/personalwebsite/banner.jpg' alt="" className={style.seeMoreImageSide} /></div>
+					<div><img src='/img/projects/personalsite/banner.jpg' alt="" className={style.seeMoreImageSide} /></div>
 					<div><img src='/img/projects/generativeart/banner.png' alt="" className={style.seeMoreImageSide} /></div>
 					<div><img src='/img/projects/drawingmachine/banner.jpg' alt="" className={style.seeMoreImageSide} /></div>
 				</div>
