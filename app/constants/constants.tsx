@@ -86,9 +86,9 @@ export const PROJECTS: Project[] = [
 		],
 		hook: 'Rise and set with the sun.',
 		description: 'Minimalist aesthetic meets internet connectivity. The Sun Clock is functional decor that changes with the sun and the moon.',
-		imgUrl: '/img/projects/sunclock/banner.jpg',
+		imgUrl: '/img/projects/thesunclock/banner.jpg',
 		imgStyle: '{"objectPosition":"8% center"}',
-		imgAltText: 'Birdseye image shows the macropad 2040 keypad on a desk surface. It rests on its hand-sewn pouch, and extra keycaps lay scattered next to it.',
+		imgAltText: 'The Sun Clock is shown glowing with sunrise colors on a white wall.',
 		linkUrl: '/projects/sunclock/',
 		featured: true
 	},{
