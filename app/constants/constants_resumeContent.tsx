@@ -9,7 +9,7 @@ export const SIDEBAR_ITEMS : ResumeSidebarItem[] = [
 	},
 	{
 		icon: "linkedInNavy",
-		text: "linkedIn",
+		text: "LinkedIn",
 		url: "https://www.linkedin.com/in/henry-waill-b6228b69/",
 		urlType: RESUME_SIDEBAR_URL_TYPES.EXTERNAL
 	},
@@ -49,7 +49,7 @@ export const RESUME_SECTIONS: ResumeSection[] = [{
 		]
 	},{
 		org: "The Corner",
-		position: "Shift Manager, Cashier",
+		position: "Assistant Manager, Cashier",
 		location: "Boulder, CO",
 		date: "July 2021–Present",
 		logoUrl: "/img/homepage/resume/logoCorner.svg",

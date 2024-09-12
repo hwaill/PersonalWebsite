@@ -7,8 +7,6 @@ import { EmailData } from '@/app/types'
 
 import style from "./contact.module.css"
 
-
-
 export default function ContactForm() {
 	const [formState, setFormState] = useState("ready");
 	const [responseState, setResponseState] = useState("");

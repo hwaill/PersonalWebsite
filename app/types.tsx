@@ -43,6 +43,18 @@ export type EmailData = {
 	message: string;
 };
 
+export enum HABIT_DASHBOARD_VIEWS {
+	DAY_VIEW,
+	WEEK_VIEW,
+	MONTH_VIEW,
+	YEAR_VIEW,
+	CUSTOM_DATE_VIEW
+};
+
+export type HabitDashboardParameters = {
+	view: HABIT_DASHBOARD_VIEWS;
+}
+
 
 
 // Types related to resume content
