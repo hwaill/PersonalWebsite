@@ -206,11 +206,11 @@ export function SkillSectionSkill({
 	return (
 		<>
 			<div className={style.skillValueContainer}>
-				<div>
+				<div className={style.skillValueLabel}>
 					{skill.name}
 				</div>
 				{skill.type != RESUME_SKILL_TYPE.NO_VALUE &&
-					<div>
+					<div {...(skill.type == RESUME_SKILL_TYPE.NUMBER_SCALE ? {className : style.skillValueNumberScale} : {})}>
 						<SkillSectionValue type={skill.type} numberValue={skill.numberValue} wordValue={skill.wordValue} phraseValue={skill.phraseValue} />
 					</div>
 				}
