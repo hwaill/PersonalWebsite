@@ -1,6 +1,8 @@
 import { convertDateToPrismaID, convertDateToString, convertPrismaIDToString } from "../HabitDashboardHelperFunctions";
 
 import style from '../../../henry/habits/dashboard/habitsDashboard.module.css'
+
+import React from "react";
 import { PrismaClient, ReportType } from "@prisma/client";
 
 const prisma = new PrismaClient();
@@ -130,14 +132,14 @@ function DayHabitsInIdRange({
 		<>
 			{habits.map((value, index) => {
 				return (
-					<div key={index}>
+					<>
 						{value.typeId <= maxId && value.typeId >= minId && 
 							<div className={style.dayHabit}>
 								<div {...(value.complete == true ? {className : style.dayHabitChecked} : {className : style.dayHabitUnchecked})}></div>
 								<div className={style.dayHabitLabel}>{value.habitType.name}</div>
 							</div>
 						}
-					</div>
+					</>
 				)
 			})}
 		</>
@@ -174,13 +176,13 @@ function DayOtherActivities({
 		<>
 			{habits.map((value, index) => {
 				return (
-					<div key={index}>
+					<>
 						{value.typeId <= maxId && value.typeId >= minId && 
 							<div className={style.dayOtherGoal}>
 								<div className={style.dayOtherGoalLabel}>{value.habitType.name}</div>
 							</div>
 						}
-					</div>
+					</>
 				)
 			})}
 		</>

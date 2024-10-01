@@ -1,6 +1,8 @@
 import { convertDateToPrismaID, convertPrismaIDToString } from "../HabitDashboardHelperFunctions";
 
 import style from '../../../henry/habits/dashboard/habitsDashboard.module.css'
+
+import React from "react";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();

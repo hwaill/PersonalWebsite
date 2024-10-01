@@ -19,7 +19,7 @@ export default async function Habits() {
 	var weekAgoDateString = weekAgoDate.getFullYear() + "-" + (weekAgoDate.getMonth() + 1).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + "-" + weekAgoDate.getDate().toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
 
 	var dashboardParams: HabitDashboardParameters = {
-		view: "1",
+		view: "0",
 		startingDate: weekAgoDateString,
 		endingDate: currentDateString
 	}
