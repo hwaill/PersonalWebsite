@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 import style from "./habitsDashboard.module.css"
 
@@ -19,7 +19,11 @@ export default async function Habits({
 	return (
 		<div className="pageTopMargin">
 			<div className={style.dashboardLayout}>
-				<div className={style.dashboardContent}><HabitDashboard searchParams={searchParams}/></div>
+				<div className={style.dashboardContent}>
+					<Suspense>
+						<HabitDashboard searchParams={searchParams}/>
+					</Suspense>
+				</div>
 			</div>
 		</div>
 	)

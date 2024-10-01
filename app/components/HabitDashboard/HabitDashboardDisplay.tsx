@@ -1,5 +1,5 @@
 import { HabitDashboardParameters } from '@/app/types'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 import style from '../../henry/habits/dashboard/habitsDashboard.module.css'
 import { Prisma, PrismaClient } from '@prisma/client';
@@ -26,11 +26,13 @@ export default async function HabitDashboardDisplay({
 	const endingDate = Array.isArray(endingDateSearch) ? endingDateSearch[0] : endingDateSearch;
 
 	return (
-		<div className={style.dashboardDisplay}>
-			{view == DASHBOARD_DAY && <HabitDashboardViewDay view={view} startingDate={startingDate} endingDate={endingDate}/>}
-			{view == DASHBOARD_WEEK && <HabitDashboardViewWeek view={view} startingDate={startingDate} endingDate={endingDate}/>}
-			{view == DASHBOARD_MONTH && <HabitDashboardViewMonth view={view} startingDate={startingDate} endingDate={endingDate}/>}
-			{view == DASHBOARD_CUSTOM && <HabitDashboardViewCustom view={view} startingDate={startingDate} endingDate={endingDate}/>}
-		</div>
+		<Suspense>
+			<div className={style.dashboardDisplay}>
+				{view == DASHBOARD_DAY && <HabitDashboardViewDay view={view} startingDate={startingDate} endingDate={endingDate}/>}
+				{view == DASHBOARD_WEEK && <HabitDashboardViewWeek view={view} startingDate={startingDate} endingDate={endingDate}/>}
+				{view == DASHBOARD_MONTH && <HabitDashboardViewMonth view={view} startingDate={startingDate} endingDate={endingDate}/>}
+				{view == DASHBOARD_CUSTOM && <HabitDashboardViewCustom view={view} startingDate={startingDate} endingDate={endingDate}/>}
+			</div>
+		</Suspense>
 	)
 }
