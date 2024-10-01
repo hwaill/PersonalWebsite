@@ -53,6 +53,8 @@
 
 .button {
 	display: inline-block;
+	border: none;
+	font-family: inherit;
 	font-size: 1.25rem;
 	font-weight: 400;
 	background-color: var(--text);
@@ -63,6 +65,8 @@
 
 .buttonSmall {
 	display: inline-block;
+	border: none;
+	font-family: inherit;
 	font-size: 1rem;
 	font-weight: 400;
 	background-color: var(--text);

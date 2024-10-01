@@ -67,6 +67,8 @@
 
 .contactFormButton {
 	font-size: 1rem;
+	border: none;
+	font-family: inherit;
 	font-weight: 400;
 	display: inline-block;
 	background-color: var(--text);

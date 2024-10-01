@@ -1,0 +1,276 @@
+.dashboardLayout {
+	margin: 0 2rem;
+}
+
+.dashboardTextIndent {
+	margin-left: 2rem;
+}
+
+.dashboardContent {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	gap: 2rem;
+	align-items: flex-start;
+}
+
+.dashboardConfig {
+	flex: 0 0 10rem;
+}
+
+.dashboardConfigForm {
+
+}
+
+.dashboardConfigViewLabel {
+	font-size: 0.9rem;
+	display: inline-block;
+	margin: 0 0 0.125rem;
+	width: 100%;
+	position: relative;
+	border-radius: 0.5rem;
+	padding: 0.25rem 0.5rem;
+}
+
+.dashboardConfigViewLabel:hover {
+	background-color: var(--navy);
+	color: var(--off-white);
+	cursor: pointer;
+}
+
+.dashboardConfigViewLabel:has(> .dashboardConfigInput[type="radio"]:checked) {
+	background-color: var(--navy);
+	color: var(--off-white);
+	cursor: default;
+}
+
+.dashboardConfigInput[type="radio"] {
+  appearance: none;
+  background-color: none;
+  margin: 0;
+}
+
+.dashboardConfigLabel {
+	display: inline-block;
+	margin-bottom: 0.25rem;
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+.dashboardConfigDate {
+	border: none;
+	margin: 0 0 0.5rem;
+	width: 100%;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.75rem;
+	font-family: inherit;
+	color: var(--navy);
+}
+
+.dashboardConfigDateLabel {
+	margin-left: 0.75rem;
+	margin-bottom: 0.125rem;
+	display: block;
+	font-size: 0.7rem;
+}
+
+.dashboardConfigSubmit {
+	cursor: pointer;
+	float: right;
+	margin-top: 1rem;
+	font-size: 0.9rem;
+	border-radius: 0.5rem;
+}
+
+.dashboardConfigClearFix {
+	clear: both;
+}
+
+@media screen and (max-width: 950px) {
+	.dashboardContent {
+		flex-flow: row wrap;
+	}
+
+	.dashboardConfig {
+		flex: 1;
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 1rem;
+	}
+
+	.dashboardConfigForm {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 1rem;
+	}
+
+	.dashboardConfigViewSelect {
+		flex: 0 1 10rem;
+	}
+
+	.dashboardConfigOptionSelect {
+		flex: 0 1 10rem;
+	}
+
+	.dashboardConfigButtonContainer {
+		flex: 1 0 4rem;
+		position: relative;
+	}
+
+	.dashboardConfigSubmit {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		margin-top: 0;
+	}
+
+	.dashboardConfigClearFix {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.dashboardConfig {
+		gap: 0;
+		flex-flow: row wrap;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.dashboardConfigForm {
+		display: block;
+	}
+
+	.dashboardConfigSubmit {
+		position: relative;
+		bottom: auto;
+		right: auto;
+		margin-top: 1rem;
+	}
+
+	.dashboardConfigButtonContainer {
+		flex: 1 0 100%;
+	}
+}
+
+.dashboardDisplay {
+	flex: 1 1 40rem;
+}
+
+.dayContainer {
+	
+}
+
+.dayCategoryContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+	.dayCategoryContainer {
+		flex-flow: row wrap;
+	}
+}
+
+.dayOtherContainer {
+	margin-bottom: 0.5rem;
+}
+
+.dayCategory {
+	flex: 0 1 12rem;
+	overflow: hidden;
+}
+
+.dayHabit {
+	display: flex;
+	gap: 0.5rem;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.dayHabitChecked {
+	box-sizing: border-box;
+	aspect-ratio: 1;
+	background-color: var(--navy);
+	border-radius: 50%;
+	flex: 0 0 1rem;
+}
+
+.dayHabitUnchecked {
+	box-sizing: border-box;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	border: 2px solid var(--navy);
+	flex: 0 0 1rem;
+}
+
+.dayHabitLabel {
+	flex: 0 1 100%;
+  white-space: nowrap;
+  overflow: hidden;
+	min-width: 0;
+	text-wrap: nowrap;
+	text-overflow: ellipsis;
+}
+
+.dayOtherGoal {
+	padding: 0.25rem 0.5rem;
+	margin-right: 0.5rem;
+	margin-bottom: 0.5rem;
+	border-radius: 0.5rem;
+	display: inline-block;
+	background-color: var(--navy);
+	color: var(--off-white);
+}
+
+.dayReports {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.dayReportContainer {
+	display: flex;
+	gap: 0.5rem;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.dayReportLabel {
+	flex: 0 0 8rem;
+}
+
+.dayReportNone {
+	opacity: 0.5;
+}
+
+.dayReportCircles {
+	flex: 0 0 10rem;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.dayReportCircleEmpty {
+	box-sizing: border-box;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	border: 2px solid var(--navy);
+	flex: 0 0 1rem;
+}
+
+.dayReportCircleFull {
+	box-sizing: border-box;
+	aspect-ratio: 1;
+	background-color: var(--navy);
+	border-radius: 50%;
+	flex: 0 0 1rem;
+}
+
+.noHabits, .noData {
+	font-style: italic;
+	opacity: 0.5;
+}
+

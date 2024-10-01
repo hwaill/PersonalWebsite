@@ -1,32 +1,24 @@
-"use client"
-
-import { HABIT_DASHBOARD_VIEWS, HabitDashboardParameters } from '@/app/types'
+import { HabitDashboardParameters } from '@/app/types'
 import React from 'react'
+
+import style from '../../henry/habits/dashboard/habitsDashboard.module.css'
+
+import HabitDashboardDisplay from './HabitDashboardDisplay'
 import HabitDashboardForm from './HabitDashboardForm'
 
-function updateDashboard(data: HabitDashboardParameters) {
+export const dynamic = "force-dynamic";
 
-}
-
-export default function HabitDashboard() {
-	var initialValues: HabitDashboardParameters = {
-		view: HABIT_DASHBOARD_VIEWS.WEEK_VIEW
-	}
-	// const days = await prisma.habitDay.findMany({
-	// 	where: {
-	// 		date: {
-	// 			gte: "2024_06_07",
-	// 			lte: "2024_06_14"
-	// 		}
-	// 	}
-	// });
-
-	// console.log(days);
-	
+export default function HabitDashboard({
+	searchParams
+} : {
+	searchParams?: { [key: string]: string | string[] | undefined }
+}) {
 	return (
 		<>
-			<div>HabitDashboard</div>
-			<HabitDashboardForm initialValues={initialValues} update={updateDashboard}/>
+			<div className={style.dashboardConfig + " neu"}>
+				<HabitDashboardForm />
+			</div>
+			<HabitDashboardDisplay searchParams={searchParams}/>
 		</>
 	)
 }

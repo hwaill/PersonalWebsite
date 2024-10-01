@@ -11,12 +11,15 @@ export const metadata : Metadata = {
 	title: "Habits Dashboard",
 }
 
-export default async function Habits() {
+export default async function Habits({
+	searchParams
+} : {
+	searchParams?: { [key: string]: string | string[] | undefined }
+}) {
 	return (
 		<div className="pageTopMargin">
-			<div className="sectionContent">
-				<h2 className="blueText">Habit Dashboard</h2>
-				<HabitDashboard />
+			<div className={style.dashboardLayout}>
+				<div className={style.dashboardContent}><HabitDashboard searchParams={searchParams}/></div>
 			</div>
 		</div>
 	)
