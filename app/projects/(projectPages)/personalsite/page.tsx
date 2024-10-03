@@ -20,7 +20,7 @@ export default function Page() {
 		<>
 			<ProjectImageBanner data={PROJECT_DATA} />
 			<ProjectSection heading="Project Overview">
-				<ProjectParagraph>Well... you're looking at it! This personal website serves as a place for me to express myself and show off some of my work to the world! It&apos;s also a convenient opportunity for me to experiment with web development and design. What you&apos;re seeing here is the seventh iteration of this project. I like it... at least for the time being.</ProjectParagraph>
+				<ProjectParagraph>Well... you&apos;re looking at it! This personal website serves as a place for me to express myself and show off some of my work to the world! It&apos;s also a convenient opportunity for me to experiment with web development and design. What you&apos;re seeing here is the seventh iteration of this project. I like it... at least for the time being.</ProjectParagraph>
 				<ProjectParagraph>I have spent <em>many</em> hours staring at this thing, and I&apos;ve certainly become blind to many ugly design decisions, bugs and misspellings that have made their homes here. I welcome feedback in all shapes and forms; feel free to <Link href="/contact">let me know</Link> about any issues!</ProjectParagraph>
 			</ProjectSection>
 		</>
