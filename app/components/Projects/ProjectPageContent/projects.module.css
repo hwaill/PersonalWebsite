@@ -18,6 +18,16 @@
 	transform: translateX(-50%) translateY(-50%);
 }
 
+.bannerTitleText {
+	color: var(--off-white);
+	text-wrap: nowrap;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	font-size: 4rem;
+}
+
 .bannerDarken {
 	background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5));
 	width: 100%;

@@ -6,24 +6,13 @@ import style from "./habits.module.css"
 import Image from 'next/image'
 import Link from 'next/link'
 import { HabitDashboardParameters } from '@/app/types'
+import HabitSmartButton from '@/app/components/HabitDashboard/HabitSmartButton'
 
 export const metadata : Metadata = {
 	title: "Habits",
 }
 
-export default async function Habits() {
-	const currentDate = new Date();
-	const weekAgoDate = new Date();
-	weekAgoDate.setDate(currentDate.getDate() - 7);
-	var currentDateString = currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + "-" + currentDate.getDate().toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
-	var weekAgoDateString = weekAgoDate.getFullYear() + "-" + (weekAgoDate.getMonth() + 1).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + "-" + weekAgoDate.getDate().toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
-
-	var dashboardParams: HabitDashboardParameters = {
-		view: "0",
-		startingDate: weekAgoDateString,
-		endingDate: currentDateString
-	}
-
+export default function Habits() {
 	return (
 		<div className="pageTopMargin">
 			<div className="sectionContent">
@@ -42,7 +31,7 @@ export default async function Habits() {
 						<p>I&apos;ve found that, for me, making a habit tracking system that focuses on simple physical interactions is the most effective. I had always struggled with apps and other digital reminders that soon became easy-to-ignore background noise, and I found success in something as simple as a magnet on a refrigerator.</p>
 						<p>Along with simplicity, I needed accountability. For building habits, that&apos;s always been my brother, Elias. I call him to remind him to take his creatine. He calls me to make sure I write content for this website. It&apos;s somewhat effective.</p>
 						<p>That refrigerator has since been replaced by <Link href="/projects/todos/">todos productivity board</Link> and its ability to upload my triumphs and failures directly to the internet. Elias is still working hard, but I figure that the most powerful force of accountability is the fear that I&apos;ll embarrass myself in front of all the possible employers that I&apos;m encouraging to visit this very page. So, go ahead! Take a look at my habit tracking journey.</p>
-						<Link className="button" href={`/henry/habits/dashboard?view=${dashboardParams.view}&startingDate=${dashboardParams.startingDate}&endingDate=${dashboardParams.endingDate}`}>Hold me accountable<div className="buttonIcon" style={{ WebkitMaskImage: 'url(/img/flaticon/arrow-right.svg)', maskImage: 'url(/img/flaticon/arrow-right.svg)' }}></div></Link>
+						<HabitSmartButton />
 					</div>
 				</div>
 			</div>

@@ -25,8 +25,9 @@ export type Project = {
 export type ProjectOutline = {
 	bannerImgUrl: string;
 	bannerImgStyle?: string;
-	logoImgUrl: string;
+	logoImgUrl?: string;
 	logoImgStyle?: string;
+	logoText?: string;
 };
 
 export type TeamCardData = {
