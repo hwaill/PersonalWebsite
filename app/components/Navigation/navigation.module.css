@@ -43,21 +43,12 @@
 
 .navSidebarHeader {
 	width: 100%;
-	aspect-ratio: 1;
+	padding: 2.75rem 3rem 1rem 3rem;
 	position: relative;
 }
 
 .navSidebarLogo {
-	position: absolute;
-	width: 80%;
-	height: 80%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-image: url(/img/logos/logoFlat.svg);
-	background-position: center center;
-	background-size: cover;
-	aspect-ratio: 1 / 1;
+	position: relative;
 }
 
 .navSidebarLogo > a {
@@ -141,6 +132,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
+	font-weight: 300;
 	gap: 0.75rem;
 }
 
@@ -168,7 +160,7 @@
 }
 
 .navButton {
-	flex: 0 0 1.25em;
+	flex: 0 0 1.25rem;
 	aspect-ratio: 1;
 	position: relative;
 }

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import { NAV_ITEMS } from "@/app/constants/constants";
@@ -16,7 +17,9 @@ export default function Navigation() {
 	return (
 		<nav className = { style.navSidebar + " neuHeader" }>
 			<div className={ style.navSidebarHeader }>
-				<div className={style.navSidebarLogo}><Link aria-label="Click logo to return home" href="/"></Link></div>
+				<Link aria-label="Click logo to return home" href="/">
+					<img className={ style.navSidebarLogo } src="../img/logos/logoFlatTight.svg" alt="HW Logo"></img>
+				</Link>
 			</div>
 			<div className = { style.navSidebarMenu } >
 				<ul className = { style.navSidebarMenuList }>
