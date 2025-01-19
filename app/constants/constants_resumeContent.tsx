@@ -32,12 +32,33 @@ export const RESUME_SECTIONS: ResumeSection[] = [{
 		descriptions: [
 			"College of Engineering & Applied Science",
 			"Major: Creative Technology and Design, Minor: Music",
-			"Major GPA: 3:578, Overall GPA: 3.404"
+			"Major GPA: 3.578, Overall GPA: 3.404"
 		]
 	}]
 }, {
 	heading: "Work Experience",
 	items: [{
+		org: "Bison Peak Logistics",
+		position: "Amazon Delivery Associate",
+		location: "Englewood, CO",
+		date: "October 2024–Present",
+		logoUrl: "/img/homepage/resume/logoBisonPeak.svg",
+		descriptions: [
+			"Efficiently organized and managed daily delivery routes, optimizing time and resources to ensure timely and accurate package delivery.",
+			"Maintained a high level of customer satisfaction by providing professional, friendly service and addressing delivery concerns promptly.",
+			"Adhered to safety protocols and company policies while operating vehicles and handling packages to minimize risk and ensure compliance."
+		]
+	},{
+		org: "Nexplore",
+		position: "Afterschool STEM Instructor",
+		location: "Denver, CO",
+		date: "September 2024–February 2025",
+		logoUrl: "/img/homepage/resume/logoNexplore.svg",
+		descriptions: [
+			"Developed and delivered engaging STEM lessons and activities to students, fostering critical thinking and problem-solving skills in both English and Spanish.",
+			"Provided individualized support to a diverse group of students, ensuring understanding and participation across varying skill levels."
+		]
+	},{
 		org: "The University of Colorado Boulder",
 		position: "Learning Assistant",
 		location: "Boulder, CO",
@@ -51,7 +72,7 @@ export const RESUME_SECTIONS: ResumeSection[] = [{
 		org: "The Corner",
 		position: "Assistant Manager, Cashier",
 		location: "Boulder, CO",
-		date: "July 2021–Present",
+		date: "July 2021–August 2024",
 		logoUrl: "/img/homepage/resume/logoCorner.svg",
 		descriptions: [
 			"Oversee front and back-of-house operations in a popular, high-volume restaurant.",

@@ -8,7 +8,7 @@
 }
 
 .featuredProjectsContainer {
-	margin-bottom: 4.5rem;
+	
 }
 
 .otherContainer {
@@ -21,6 +21,10 @@
 	width: 100%;
 	margin: 0rem auto 3.5rem auto;
 	box-sizing: border-box;
+}
+
+.featuredContainer:last-child {
+	margin: 0rem auto;
 }
 
 .featuredFirstText, .featuredSecondText {

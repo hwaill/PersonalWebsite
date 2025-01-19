@@ -71,6 +71,7 @@ export type ResumeExperience = {
 	date: string;
 	descriptions?: string[];
 	logoUrl?: string;
+	logo2Url?: string;
 };
 
 export type ResumeSection = {

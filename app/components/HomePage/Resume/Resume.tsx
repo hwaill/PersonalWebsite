@@ -28,7 +28,7 @@ export function ResumeSidebar() {
 			<div className={style.nameContainer}>
 				<h3 className={style.name}>Henry Waill</h3>
 				<h6 className={style.tagline}>Creative Technologist</h6>
-				<a className={style.smallScreenOnly} href="assets/HenryWaill_2024_06_10_Resume.pdf" download>
+				<a className={style.smallScreenOnly} href="assets/2025_01_19_HenryWaill_Resume.pdf" download>
 					<div className={style.download}>
 						<div className={style.infoItemFlexCenter}>Download Resume</div>
 					</div>
@@ -69,7 +69,7 @@ export function InfoSection({
 						</li>
 				))}
 				<li className={style.infoItem}>
-					<a href="assets/HenryWaill_2024_06_10_Resume.pdf" download>
+					<a href="assets/2025_01_19_HenryWaill_Resume.pdf" download>
 						<div className={style.download}>
 							<div className={style.infoItemFlexCenter}>Download Resume</div>
 						</div>

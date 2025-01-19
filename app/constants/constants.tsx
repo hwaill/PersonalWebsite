@@ -40,7 +40,7 @@ export const NAV_ITEMS: NavItem[] = [
 		icon: "user",
 		subNav: true,
 		subNavItems: [
-			{	title: "Motivations", url: "/henry/motivations", disabled: true},
+			{	title: "My Story", url: "/henry/mystory", disabled: true},
 			{ title: "Habits", url: "/henry/habits", disabled: true},
 			{ title: "Blog", url: "/henry/blog", icon: "writing2", disabled: true},
 			{ title: "Instagram", url: "https://www.instagram.com/henrywaill", icon: "instagram", externalLink: true}

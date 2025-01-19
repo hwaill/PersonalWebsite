@@ -2,13 +2,11 @@ import { Metadata } from 'next'
 import React from 'react'
 
 export const metadata : Metadata = {
-	title: "Motivations",
+	title: "My Story",
 }
 
-function Motivations() {
+export default function MyStory() {
 	return (
-		<div>Motivations</div>
+		<div>My Story</div>
 	)
 }
-
-export default Motivations
