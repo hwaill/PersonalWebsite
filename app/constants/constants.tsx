@@ -92,6 +92,17 @@ export const PROJECTS: Project[] = [
 		linkUrl: '/projects/sunclock/',
 		featured: true
 	},{
+		heading: 'Park Bellevue Tower Website',
+		tags: [
+			'nextjs app',
+			'freelance'
+		],
+		description: 'An apartment building portal that connects neighbors and informs residents.',
+		imgUrl: '/img/projects/pbtsite/thumbnail.png',
+		imgAltText: 'The Sun Clock is shown glowing with sunrise colors on a white wall.',
+		linkUrl: '/projects/pbtwebsite/',
+		featured: true
+	},{
 		heading: 'This Website',
 		tags: [
 			'next.js',
@@ -102,7 +113,6 @@ export const PROJECTS: Project[] = [
 		imgUrl: '/img/projects/personalsite/banner.jpg',
 		linkUrl: '/projects/personalsite/',
 		featured: false,
-		disabled: true
 	},{
 		heading: 'Controller Overlays',
 		tags: [

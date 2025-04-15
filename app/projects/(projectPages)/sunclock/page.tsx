@@ -52,7 +52,7 @@ export default function Page() {
 			/>
 			<ProjectSectionContinue>
 				<ProjectSubSection heading="The Circuitry">
-					<ProjectParagraph>At it&apos;s core, the electronics for this project did not need to be very complicated. A WiFi-enabled microcontroller (in this case, <em>Adafruit</em>&apos;s <Link href="https://www.adafruit.com/product/2821" target="_blank" rel="noopener noreferrer">Feather HUZZAH with ESP8266</Link>) needed to control some addressable LEDs. This particular setup added a few complications...: The number of LEDs in use, as well as the brightness at which I wanted to use them, required more power than the HUZZAH was able to provide. Additionally, the HUZZAH operates at a different voltage than the addressable LEDs prefer. These two considerations needed to be addressed.</ProjectParagraph>
+					<ProjectParagraph>At it&apos;s core, the electronics for this project did not need to be very complicated. A WiFi-enabled microcontroller (in this case, <em>Adafruit</em>&apos;s <Link href="https://www.adafruit.com/product/2821" target="_blank" rel="noopener noreferrer">Feather HUZZAH with ESP8266</Link>) was needed to control some addressable LEDs. This particular setup added a few complications...: The number of LEDs in use, as well as the brightness at which I wanted to use them, required more power than the HUZZAH was able to provide. Additionally, the HUZZAH operates at a different voltage than the addressable LEDs prefer. These two considerations needed to be addressed.</ProjectParagraph>
 				</ProjectSubSection>
 			</ProjectSectionContinue>
 			<ProjectImageFull src="/img/projects/thesunclock/circuitry2.jpg" alt="The internal circuitry can be see after the center face of the sun is removed." />

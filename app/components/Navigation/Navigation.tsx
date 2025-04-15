@@ -38,7 +38,7 @@ export default function Navigation() {
 													<Icon icon={ item.icon } />
 												)}
 											</div>
-											<span className={pathname.includes(item.url) && !item.ignoreHighlight ? (style.activeNavLink + ' ' + style.navItemLabel): style.navItemLabel}>
+											<span className={pathname.includes(item.url) && !item.ignoreHighlight ? (style.activeNavLink + ' ' + style.navItemLabel) : style.navItemLabel}>
 												{ item.title }
 											</span>
 										</Link>
