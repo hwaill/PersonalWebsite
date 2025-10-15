@@ -207,8 +207,10 @@
 .bookClubBookSortInput[type="radio"] {
   appearance: none;
 	-webkit-appearance: none;
+	-moz-appearance: none;
   background-color: none;
   margin: 0;
+	padding: 0;
 }
 
 .bookClubBookPage {
