@@ -206,6 +206,7 @@
 
 .bookClubBookSortInput[type="radio"] {
   appearance: none;
+	-webkit-appearance: none;
   background-color: none;
   margin: 0;
 }
