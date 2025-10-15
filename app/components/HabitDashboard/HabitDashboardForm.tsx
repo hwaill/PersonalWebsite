@@ -4,7 +4,7 @@ import { HabitDashboardParameters } from '@/app/types'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
-import style from '../../henry/habits/dashboard/habitsDashboard.module.css'
+import style from '../../(mainSite)/henry/habits/dashboard/habitsDashboard.module.css'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { DASHBOARD_CUSTOM, DASHBOARD_VIEW_NAMES } from '@/app/constants/constants_habitDashboard'
 

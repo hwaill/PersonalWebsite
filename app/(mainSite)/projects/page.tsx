@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import React from 'react'
-import { ProjectDisplayFeatured, ProjectDisplayOther } from '../components/Projects/ProjectPreviewModules/ProjectDisplays';
+import { ProjectDisplayFeatured, ProjectDisplayOther } from '@/app/components/Projects/ProjectPreviewModules/ProjectDisplays';
 
 export const metadata : Metadata = {
 	title: "Projects"

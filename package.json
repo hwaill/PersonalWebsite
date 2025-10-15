@@ -10,11 +10,10 @@
   },
   "dependencies": {
     "@next/third-parties": "^14.2.4",
-    "@prisma/client": "^5.14.0",
+    "@prisma/client": "^6.17.1",
     "framer-motion": "^11.2.10",
     "next": "^14.2.4",
     "nodemailer": "^6.9.14",
-    "prisma": "^5.14.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.52.0",
@@ -27,6 +26,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "prisma": "^6.17.1",
     "typescript": "^5"
   }
 }

@@ -1,11 +1,10 @@
 import { convertDateToPrismaID, convertDateToString, convertPrismaIDToString } from "../HabitDashboardHelperFunctions";
 
-import style from '../../../henry/habits/dashboard/habitsDashboard.module.css'
+import style from '../../../(mainSite)/henry/habits/dashboard/habitsDashboard.module.css'
 
 import React from "react";
 import { PrismaClient, ReportType } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import prisma from "@/lib/prisma"
 
 export default async function HabitDashboardViewDay({
 	view,

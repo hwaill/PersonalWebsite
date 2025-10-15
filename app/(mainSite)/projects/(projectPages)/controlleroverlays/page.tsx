@@ -24,7 +24,7 @@ export default function Page() {
 				<ProjectParagraph>The most popular tool to accomplish this is called <Link href="https://gamepadviewer.com/">Gamepad Viewer</Link>, and pictured here is an example of a default controller overlay. It is plenty functional, but has a generic design. Many streamers have established branding and high-production-value content, so there was an opportunity for designers to create custom overlays for these individuals and groups.</ProjectParagraph>
 				<ProjectParagraph>In December of 2020, I began creating these overlays as a freelance designer. I began with some overlays for friends and acquaintances, and then went on to sell them through Fiverr. The initial attempts left a lot to be desired, but developing my craft and tools soon made me a well-recommended designer in the space. I went on to design hundreds of these controller overlays, some for professional ESports players and ESports organizations.</ProjectParagraph>
 			</ProjectSection>
-			<ProjectSection heading="Project Breakdown">
+			<ProjectSection heading="Gallery">
 				<ProjectParagraph>If I did it right, the details of how this project came to be shouldn&apos;t be as interesting as the end result, but I&apos;ll give a brief summary.</ProjectParagraph>
 				<ProjectSubSection heading="Behind the Scenes">
 					<ProjectParagraph>This website is built on <Link href="https://nextjs.org/">Next.js</Link>, which is built on <Link href="https://react.dev/">React</Link>..., and that is pretty much it! I use raw CSS and spent much of my time googling the same flexbox cheat sheet over and over to make it look the way it does. I may have used an animation library somewhere along the line for my navigation menu on mobile.</ProjectParagraph>

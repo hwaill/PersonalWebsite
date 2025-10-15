@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import LandingNotFound from './components/HomePage/Landing/LandingNotFound';
+import LandingNotFound from '../components/HomePage/Landing/LandingNotFound';
 
 export const metadata : Metadata = {
 	title: "Page not found",

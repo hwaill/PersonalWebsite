@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import React from 'react'
-import Resume from '../components/HomePage/Resume/Resume';
+import Resume from '@/app/components/HomePage/Resume/Resume';
 
 export const metadata : Metadata = {
 	title: "Resume"

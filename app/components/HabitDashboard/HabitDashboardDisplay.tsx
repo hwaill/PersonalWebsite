@@ -1,7 +1,7 @@
 import { HabitDashboardParameters } from '@/app/types'
 import React, { Suspense } from 'react'
 
-import style from '../../henry/habits/dashboard/habitsDashboard.module.css'
+import style from '../../(mainSite)/henry/habits/dashboard/habitsDashboard.module.css'
 import { Prisma, PrismaClient } from '@prisma/client';
 import { DASHBOARD_CUSTOM, DASHBOARD_DAY, DASHBOARD_MONTH, DASHBOARD_WEEK, DAY_NAMES, MONTH_NAMES } from '@/app/constants/constants_habitDashboard';
 import HabitDashboardViewDay from './HabitDashboardViews/HabitDashboardViewDay';
@@ -9,7 +9,6 @@ import HabitDashboardViewWeek from './HabitDashboardViews/HabitDashboardViewWeek
 import HabitDashboardViewMonth from './HabitDashboardViews/HabitDashboardViewMonth';
 import HabitDashboardViewCustom from './HabitDashboardViews/HabitDashboardViewCustom';
 
-export const prisma = new PrismaClient();
 
 export default async function HabitDashboardDisplay({
 	searchParams

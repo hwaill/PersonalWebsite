@@ -1,4 +1,4 @@
-import ProjectContentWrapper from "../../components/Wrappers/ProjectContentWrapper";
+import ProjectContentWrapper from "../../../components/Wrappers/ProjectContentWrapper";
 
 export default function ProjectLayout({
 	children

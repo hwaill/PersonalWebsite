@@ -73,3 +73,37 @@ enum DayType {
   OUT_OF_TOWN
   OFFLINE
 }
+
+model BookClubBook {
+  id Int @id @unique @default(autoincrement())
+  title String @unique
+  author String
+  genre GenreType
+  inProgress Boolean @default(false)
+  ratings BookClubRating[]
+  averageRating Float @default(0)
+  imgUrl String?
+}
+
+enum GenreType {
+  FICTION
+  NONFICTION
+}
+
+model BookClubMember {
+  id Int @id @unique @default(autoincrement())
+  name String @unique
+  ratings BookClubRating[]
+  imgUrl String?
+}
+
+model BookClubRating {
+  id Int @id @unique @default(autoincrement())
+  value Int
+
+  memberName String
+  member BookClubMember @relation(fields: [memberName], references: [name])
+
+  bookTitle String
+  book BookClubBook @relation(fields: [bookTitle], references: [title])
+}

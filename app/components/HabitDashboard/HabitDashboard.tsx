@@ -1,7 +1,7 @@
 import { HabitDashboardParameters } from '@/app/types'
 import React from 'react'
 
-import style from '../../henry/habits/dashboard/habitsDashboard.module.css'
+import style from '../../(mainSite)/henry/habits/dashboard/habitsDashboard.module.css'
 
 import HabitDashboardDisplay from './HabitDashboardDisplay'
 import HabitDashboardForm from './HabitDashboardForm'
