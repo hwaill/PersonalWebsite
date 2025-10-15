@@ -210,7 +210,7 @@
 	-moz-appearance: none;
   background-color: none;
   margin: 0;
-	padding: 0;
+	position: absolute;
 }
 
 .bookClubBookPage {
