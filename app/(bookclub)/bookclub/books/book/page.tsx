@@ -24,7 +24,7 @@ export async function generateMetadata({
 	}
 }
 
-export const getBook = cache(async (bookId: string) => {
+const getBook = cache(async (bookId: string) => {
 	const book = await prisma.bookClubBook.findFirst({
 		where: {
 			id: parseInt(bookId)
