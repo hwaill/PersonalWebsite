@@ -75,6 +75,7 @@ export default async function BookClubBooksContent({
 
 	return (
 		<Suspense>
+			<div className={style.bookClubSubtitle}>Books</div>
 			<BookClubBookSort />
 			<div className={style.bookClubBooks}>
 				{books && books.map((value, index) => {
@@ -117,7 +118,7 @@ async function BookClubBook({
 		<>
 			{book.imgUrl &&
 				<div className={style.bookClubBookImageHolder}>
-					<img  className={style.bookClubBookImage} src={book.imgUrl} />
+					<img className={style.bookClubBookImage} src={book.imgUrl} />
 					<div className={style.bookClubBookTextGenre}>{book.genre == "FICTION" ? "Fiction" : "Nonfiction"}</div>
 				</div>
 			}

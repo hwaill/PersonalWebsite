@@ -9,7 +9,7 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-	font-size: 48px;
+	font-size: 3rem;
 	color: #212D30;
 	margin-bottom: 0.75rem;
 }
@@ -21,6 +21,17 @@
 	flex-flow: row nowrap;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.bookClubSubtitle {
+	font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 2rem;
+	color: #212D30;
+	margin-left: 2.5rem;
+	margin-bottom: 0.75rem;
 }
 
 .bookClubNavigation {
@@ -64,7 +75,7 @@
 }
 
 .bookClubBooks {
-	margin: 1rem 2rem;
+	margin: 1rem 2.5rem;
 	display: grid;
   gap: 1em;
   grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
@@ -77,7 +88,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	height: 12rem;
-	padding: 1rem;
+	padding: 1rem 0;
 	gap: 1.5rem;
 }
 
@@ -213,26 +224,64 @@
 	position: absolute;
 }
 
+@media screen and (max-width: 509px) {
+	.header {
+		padding: 2rem 1.5rem;
+	}
+
+	.bookClubSubtitle {
+		margin-left: 1.5rem;
+	}
+
+	.bookClubBookSortForm {
+		padding: 0 1.5rem;
+	}
+
+	.bookClubBookSortLabel {
+		margin-right: 0;
+	}
+
+	.bookClubBooks {
+		margin: 1rem 1.5rem;
+	}
+}
+
 .bookClubBookPage {
-	margin: 1rem 2rem;
+	margin: 1rem 2.5rem;
+}
+
+@media screen and (max-width: 509px) {
+	.bookClubBookPage {
+		margin: 1rem 1.5rem;
+	}
 }
 
 .bookClubBookPageContent {
 	overflow: hidden;
 	display: flex;
 	flex-flow: row nowrap;
-	padding: 1rem;
-	gap: 1.5rem;
+	padding: 1rem 0rem;
+	gap: 2.5rem;
 }
 
 .bookClubBookPageImageHolder {
 	/* background-color: #212D30; */
 	flex: 0 0 12rem;
+	text-align: center;
+}
+
+@media screen and (max-width: 606px) {
+	.bookClubBookPageContent {
+		flex-flow: row wrap;
+	}
+
+	.bookClubBookPageImageHolder {
+		flex: 0 0 100%;
+	}
 }
 
 .bookClubBookPageImage {
 	width: 12rem;
-	margin: auto;
 }
 
 .bookClubBookPageText {
@@ -369,6 +418,239 @@
 }
 
 .bookClubBookPageTextMemberTextRating > span {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 1.5rem;
+}
+
+.bookClubMembers {
+	padding: 1rem 2.5rem;
+	display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.bookClubMember {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 1.5rem;
+	align-items: center;
+}
+
+.bookClubMemberImageHolder {
+	flex: 0 0 6rem;
+	aspect-ratio: 1;
+}
+
+.bookClubMemberImage {
+	width: 6rem;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	display: block;
+}
+
+.bookClubMemberImageSub {
+	background-color: #212D30;
+	color: var(--bg);
+	width: 6rem;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	position: relative;
+}
+
+.bookClubMemberImageSub > span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+	font-size: 2.25rem;
+}
+
+.bookClubMemberTextName {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 1.75rem;
+	color: #212D30;
+}
+
+.bookClubMemberTextRatings {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 1.25rem;
+}
+
+.bookClubMemberViewProfile {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 0.9rem;
+	color: #6A8E7F;
+	font-style: italic;
+}
+
+.bookClubMemberPage {
+	margin: 1rem 2.5rem;
+}
+
+@media screen and (max-width: 509px) {
+	.bookClubMemberPage {
+		margin: 1rem 1.5rem;
+	}
+}
+
+.bookClubMemberPageContent {
+	overflow: hidden;
+	display: flex;
+	flex-flow: row nowrap;
+	padding: 1rem 0rem;
+	gap: 2.5rem;
+}
+
+.bookClubMemberPageImageHolder {
+	flex: 0 0 12rem;
+	text-align: center;
+}
+
+.bookClubMemberPageImage {
+	width: 12rem;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+
+.bookClubMemberPageImageSub {
+	width: 12rem;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: #212D30;
+	color: var(--bg);
+	position: relative;
+}
+
+.bookClubMemberPageImageSub > span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	font-family: "Figtree", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 4.25rem;
+}
+
+@media screen and (max-width: 606px) {
+	.bookClubMemberPageContent {
+		flex-flow: row wrap;
+	}
+
+	.bookClubMemberPageImageHolder {
+		flex: 0 0 100%;
+	}
+}
+
+.bookClubMemberPageText {
+	flex: 1 1 auto;
+}
+
+.bookClubMemberPageTextName {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 2.5rem;
+	color: #212D30;
+	margin-bottom: 0.25rem;
+}
+
+.bookClubMemberPageTextBooksRead {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.bookClubMemberPageTextNoBooks {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 1.25rem;
+	font-style: italic;
+	margin-bottom: 0.5rem;
+}
+
+.bookClubMemberPageTextBookList {
+	display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.bookClubMemberPageTextBookListTitle {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 1.75rem;
+	color: #212D30;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+.bookClubMemberPageTextBookListing {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 1rem;
+	align-items: center;
+}
+
+.bookClubMemberPageTextBookImageHolder {
+	flex: 0 0 4rem;
+	aspect-ratio: 1;
+}
+
+.bookClubMemberPageTextBookImage {
+	width: 6.5rem;
+	height: 10rem;
+	object-fit: cover;
+	display: block;
+}
+
+.bookClubMemberPageTextBookText {
+	
+}
+
+.bookClubMemberPageTextBookTextTitle {
+	display: block;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 1em;
+}
+
+.bookClubMemberPageTextBookTextRating {
+	display: block;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 1.25rem;
+}
+
+.bookClubMemberPageTextBookTextRating > span {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 300;

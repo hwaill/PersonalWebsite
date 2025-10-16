@@ -1,25 +1,18 @@
 import { Metadata } from 'next'
 import React, { Suspense } from 'react'
-
-import style from "../bookclub.module.css"
-
-import prisma from '@/lib/prisma'
-import Image from 'next/image'
 import BookClubHeading from '../../components/BookClubHeading'
+import BookClubMembersContent from '../../components/BookClubMembers'
 
 export const metadata : Metadata = {
 	title: "Members",
 }
 
-export default async function BookClub({
-	searchParams
-} : {
-	searchParams?: { [key: string]: string | string[] | undefined }
-}) {
+export default function BookClubMembers() {
 	return (
 		<>
 		  <BookClubHeading />
 			<Suspense>
+				<BookClubMembersContent/>
 			</Suspense>
 		</>
 	)
