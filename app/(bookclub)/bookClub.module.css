@@ -535,6 +535,7 @@
 	background-color: #212D30;
 	color: var(--bg);
 	position: relative;
+	margin: 0 auto;
 }
 
 .bookClubMemberPageImageSub > span {
