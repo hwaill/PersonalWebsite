@@ -507,6 +507,10 @@
 	.bookClubMemberPage {
 		margin: 1rem 1.5rem;
 	}
+
+	.bookClubMembers {
+		padding: 1rem 1.5rem;
+	}
 }
 
 .bookClubMemberPageContent {
