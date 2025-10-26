@@ -44,11 +44,12 @@ const getMember = cache(async (memberId: string) => {
 					}
 				},
 				orderBy: {
-					member: {
-						id: "desc"
-					}
+					id: "asc"
 				}
 			}
+		},
+		orderBy: {
+			id: "desc"
 		}
 	});
 
