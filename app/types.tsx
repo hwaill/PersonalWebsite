@@ -114,3 +114,13 @@ export type ResumeSkillsSection = {
 export type ResumeSkillsSectionSubSection = {
 	categories?: ResumeSkillCategory[];
 }
+
+export type BookClubNavItem = {
+	title: string,
+	url: string,
+	icon?: string
+};
+
+export type BookSortParameters = {
+	sortBy: string
+};
