@@ -1,0 +1,9 @@
+.pageContent {
+	width: calc(100vw - 4rem);
+	max-width: 50rem;
+	margin: auto;
+}
+
+.homepageContent {
+	margin-top: 10rem;
+}

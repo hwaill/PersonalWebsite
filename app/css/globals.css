@@ -14,6 +14,30 @@
 	--text: var(--coffee);
 }
 
+.coffee {
+	color: var(--coffee);
+}
+
+.white {
+	color: var(--white);
+}
+
+.red {
+	color: var(--red);
+}
+
+.cream {
+	color: var(--cream);
+}
+
+.whip {
+	color: var(--whip);
+}
+
+.blue {
+	color: var(--blue);
+}
+
 body {
 	background-color: var(--bg);
 	color: var(--text);

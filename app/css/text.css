@@ -7,6 +7,23 @@ p>a {
 	color: var(--blue);
 }
 
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+h1 {
+	margin-top: 0.75rem;
+	font-family: var(--gottak);
+	font-weight: 600;
+	font-size: 4rem;
+}
+
+h2 {
+	font-family: var(--gottak);
+	font-weight: 400;
+	font-size: 2rem;
+}
+
 /* 
  *
  * SPECIFIC RULES

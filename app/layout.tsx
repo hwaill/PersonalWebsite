@@ -1,10 +1,32 @@
 import type { Metadata, Viewport } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Figtree } from 'next/font/google';
+import localFont from 'next/font/local';
 import '@/app/css/main.css';
 
 export const figtree = Figtree({
 	subsets: ['latin'],
+});
+
+const gottakSemiBold = localFont({
+	src: [{
+		path: 'fonts/Gottak-SemiBold.woff',
+		weight: '600',
+		style: 'normal'
+	},{
+		path: 'fonts/Gottak-SemiBoldItalic.woff',
+		weight: '600',
+		style: 'italic'
+	},{
+		path: 'fonts/Gottak-Light.woff',
+		weight: '300',
+		style: 'normal'
+	},{
+		path: 'fonts/Gottak-LightItalic.woff',
+		weight: '300',
+		style: 'italic'
+	}],
+	variable: '--gottak'
 });
 
 export const viewport: Viewport = {
@@ -30,7 +52,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en">
+		<html lang="en" className={figtree.className + " " + gottakSemiBold.variable}>
 			<body>
 				{children}
 			</body>
