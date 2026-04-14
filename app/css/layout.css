@@ -4,6 +4,15 @@
 	margin: auto;
 }
 
-.homepageContent {
-	margin-top: 10rem;
+.landingContent {
+	margin-top: 6rem;
+}
+
+.tybaltContainer {
+	width: 100%;
+	border-bottom: 2.5px solid var(--lightCoffee);
+}
+
+.pageSection {
+	margin: 3rem 0;
 }

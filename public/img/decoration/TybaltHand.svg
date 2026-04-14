@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
-        stroke: #281F15;
+        stroke: #433423;
         stroke-linecap: round;
         stroke-width: 6px;
       }
@@ -33,7 +33,7 @@
       }
 
       .cls-9 {
-        fill: #f0f0f0;
+        fill: #FEFBF2;
       }
 
       .cls-4, .cls-5 {
@@ -41,7 +41,7 @@
       }
 
       .cls-10 {
-        fill: #281F15;
+        fill: #433423;
       }
 
       .cls-5 {

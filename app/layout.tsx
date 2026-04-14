@@ -25,6 +25,38 @@ const gottakSemiBold = localFont({
 		path: 'fonts/Gottak-LightItalic.woff',
 		weight: '300',
 		style: 'italic'
+	},{
+		path: 'fonts/Gottak-Thin.woff',
+		weight: '100',
+		style: 'normal'
+	},{
+		path: 'fonts/Gottak-ThinItalic.woff',
+		weight: '100',
+		style: 'italic'
+	},{
+		path: 'fonts/Gottak-ExtraLight.woff',
+		weight: '200',
+		style: 'normal'
+	},{
+		path: 'fonts/Gottak-ExtraLightItalic.woff',
+		weight: '200',
+		style: 'italic'
+	},{
+		path: 'fonts/Gottak-Bold.woff',
+		weight: '700',
+		style: 'normal'
+	},{
+		path: 'fonts/Gottak-BoldItalic.woff',
+		weight: '700',
+		style: 'italic'
+	},{
+		path: 'fonts/Gottak-Regular.woff',
+		weight: '400',
+		style: 'normal'
+	},{
+		path: 'fonts/Gottak-RegularItalic.woff',
+		weight: '400',
+		style: 'italic'
 	}],
 	variable: '--gottak'
 });
