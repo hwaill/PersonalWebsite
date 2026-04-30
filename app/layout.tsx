@@ -3,6 +3,8 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { Figtree } from 'next/font/google';
 import localFont from 'next/font/local';
 import '@/app/css/main.css';
+import { NavProvider } from '@/app/components/nav/NavContext';
+import NavRail from '@/app/components/nav/NavRail';
 
 export const figtree = Figtree({
 	subsets: ['latin'],
@@ -86,7 +88,10 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={figtree.className + " " + gottakSemiBold.variable}>
 			<body>
-				{children}
+				<NavProvider>
+					<NavRail />
+					{children}
+				</NavProvider>
 			</body>
 			<GoogleAnalytics gaId='G-0T2H3H83B4' />
 		</html>

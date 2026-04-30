@@ -4,12 +4,30 @@
 	margin: auto;
 }
 
+@media (max-width: 65.625rem) {
+	.pageContent {
+		width: auto;
+		max-width: 50rem;
+		margin-left: 125px;
+		margin-right: 2rem;
+	}
+}
+
+@media (max-width: 700px) {
+	.pageContent {
+		width: calc(100vw - 4rem);
+		max-width: 50rem;
+		margin: auto;
+	}
+}
+
 .landingContent {
 	margin-top: 6rem;
 }
 
 .tybaltContainer {
-	width: 100%;
+	margin-right: 0;
+	margin-left: auto;
 	border-bottom: 2.5px solid var(--lightCoffee);
 }
 
@@ -18,6 +36,31 @@
 }
 
 .projectContainer {
-	max-width: 50%;
+	width: 100%;
 	padding: 1rem;
+	display: flex;
+	flex-flow: row nowrap;
+	overflow: hidden;
+}
+
+.projectContainerImage {
+	flex: 1 0 0px;
+}
+
+.projectContainerImage img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.projectContainerNumber {
+	flex: 0 0 4rem;
+	font-family: var(--gottak);
+	font-weight: 200;
+	font-size: 1.25rem;
+	color: var(--placeholder);
+}
+
+.projectContainerText {
+	flex: 1.15 0 0px;
 }

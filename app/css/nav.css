@@ -1,0 +1,134 @@
+html {
+	scroll-behavior: smooth;
+}
+
+/* ── Rail shell (fixed, positioned left of content column by JS) ── */
+#nav-rail {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 72px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 36px 0;
+	z-index: 100;
+}
+
+/* ── Thin vertical rule (height inset 48px each end) ── */
+#nav-rule {
+	position: fixed;
+	top: 48px;
+	bottom: 48px;
+	width: 1px;
+	background: var(--border);
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	z-index: 100;
+}
+
+#nav-rule.visible {
+	opacity: 1;
+}
+
+/* ── Small logo in rail, fades in after hero logo leaves viewport ── */
+#nav-rail-logo {
+	width: 36px;
+	margin-bottom: 24px;
+	opacity: 0;
+	transform: translateY(-8px);
+	transition: opacity 0.35s ease, transform 0.35s ease;
+	cursor: pointer;
+	display: block;
+}
+
+#nav-rail-logo img {
+	width: 100%;
+	display: block;
+}
+
+#nav-rail-logo.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ── Back / Home link on non-home pages ── */
+#nav-back {
+	font-size: 0.72rem;
+	font-weight: 400;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--inactive);
+	text-decoration: none;
+	opacity: 0;
+	margin-bottom: 20px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid var(--border);
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	transform: rotate(180deg);
+	transition: color 0.2s, opacity 0.35s ease;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+#nav-back.visible {
+	opacity: 0.45;
+}
+
+#nav-back:hover {
+	color: var(--coffee);
+	opacity: 1;
+}
+
+/* ── Section link list ── */
+#nav-links {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 20px;
+}
+
+.nav-link {
+	font-size: 0.72rem;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--inactive);
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0.45;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	transform: rotate(180deg);
+	transition: color 0.2s, opacity 0.2s;
+}
+
+.nav-link:hover {
+	color: var(--coffee);
+	opacity: 1;
+}
+
+.nav-link.active {
+	color: var(--muted);
+	opacity: 0.9;
+	font-weight: 600;
+}
+
+/* ── Compact layout: rail pinned to left edge ── */
+@media (max-width: 65.625rem) {
+	#nav-rail {
+		left: 0 !important;
+	}
+	#nav-rule {
+		left: 100px !important;
+	}
+}
+
+/* ── Mobile: hide rail entirely ── */
+@media (max-width: 700px) {
+	#nav-rail,
+	#nav-rule {
+		display: none;
+	}
+}
