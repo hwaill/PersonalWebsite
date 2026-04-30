@@ -9,6 +9,8 @@ export default function NavRail() {
 	const pathname = usePathname();
 	const isHome = pathname === '/';
 
+	if (pathname.startsWith('/studio')) return null;
+
 	const railRef = useRef<HTMLDivElement>(null);
 	const ruleRef = useRef<HTMLDivElement>(null);
 
