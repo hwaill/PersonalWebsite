@@ -6,7 +6,7 @@ import '@/app/css/main.css';
 import { NavProvider } from '@/app/components/nav/NavContext';
 import NavRail from '@/app/components/nav/NavRail';
 
-export const figtree = Figtree({
+const figtree = Figtree({
 	subsets: ['latin'],
 });
 
