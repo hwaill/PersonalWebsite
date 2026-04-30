@@ -1,14 +1,34 @@
 /* Overall Styles */
 
 :root {
-	/* CSS HSL */
-	/* MAIN COLORS */
-	--coffee: #281F15;
-	--lightCoffee: #433423;
-	--white: #FEFBF2;
+	/* --- Backgrounds (warm cream scale) --- */
+	--white:        #FEFBF2;  /* base page bg */
+	--cream:        #F7F1E3;  /* cards, subtle sections */
+	--creamHover:   #EDE4D1;  /* hover on light elements */
+	--border:       #E0D4BC;  /* dividers, subtle borders */
+
+	/* --- Text scale (coffee → cream) --- */
+	--coffee:       #281F15;  /* headings */
+	--lightCoffee:  #433423;  /* body */
+	--muted:        #6B563C;  /* captions, secondary text */
+	--inactive:     #9A8670;  /* disabled text, metadata */
+	--placeholder:  #BCAD94;  /* input placeholders */
+
+	/* --- Primary button (coffee) --- */
+	--btn:          var(--coffee);       /* default */
+	--btnHover:     #3A2D1E;              /* slightly lifted */
+	--btnActive:    #1A1410;              /* pressed, deeper */
+	--btnDisabled:  var(--inactive);     /* flat, muted */
+	--btnText:      var(--white);        /* always cream on coffee */
+
+	/* --- Secondary / ghost button --- */
+	--btnGhostHover:   var(--cream);        /* cream fill on hover */
+	--btnGhostActive:  var(--creamHover);   /* deeper cream on press */
+	--btnGhostBorder:  var(--lightCoffee);  /* lightCoffee border */
+
+	/* Colors */
 	--red: #A4303F;
-	--cream: #F2D0A4;
-	--whip: #FFECCC;
+	--whip: #F2D0A4;
 	--blue: #B0D6C4;
 
 	--bg: var(--white);
