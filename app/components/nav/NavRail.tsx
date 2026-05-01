@@ -76,7 +76,7 @@ export default function NavRail() {
 				const id = href.startsWith('#') ? href.slice(1) : null;
 				if (!id) return;
 				const el = document.getElementById(id);
-				if (el && window.scrollY >= el.offsetTop - 120) current = href;
+				if (el && window.scrollY >= el.offsetTop - 240) current = href;
 			});
 			setActiveLink(current);
 		};

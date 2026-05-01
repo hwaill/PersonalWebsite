@@ -1,7 +1,7 @@
 .pageContent {
 	width: calc(100vw - 4rem);
 	max-width: 50rem;
-	margin: auto;
+	margin: auto auto 8rem auto;
 }
 
 @media (max-width: 65.625rem) {
@@ -17,7 +17,7 @@
 	.pageContent {
 		width: calc(100vw - 4rem);
 		max-width: 50rem;
-		margin: auto;
+	margin: auto auto 8rem auto;
 	}
 }
 
@@ -38,10 +38,29 @@
 .projectContainer {
 	width: 100%;
 	height: 12rem;
-	padding: 1rem;
 	display: flex;
 	flex-flow: row nowrap;
 	overflow: hidden;
+	transition: background-color 0.25s;
+	background-color: var(--white);
+	border-top: 1px solid var(--border);
+}
+
+.projectContainer.last {
+	border-bottom: 1px solid var(--border);
+}
+
+.projectContainer:hover {
+	background-color: var(--cream);
+}
+
+.projectContainerSpacer {
+	flex: 0 0 0px;
+	transition: flex 0.2s;
+}
+
+.projectContainer:hover .projectContainerSpacer {
+	/* flex: 0 0 0.5rem; */
 }
 
 .projectContainerImage {
@@ -55,6 +74,7 @@
 }
 
 .projectContainerNumber {
+	padding: 1rem;
 	flex: 0 0 4rem;
 	font-family: var(--gottak);
 	font-weight: 200;
@@ -64,4 +84,186 @@
 
 .projectContainerText {
 	flex: 1.15 0 0px;
+	padding: 1rem 0;
+}
+
+/* ── Form inputs — Underline style ── */
+
+input::placeholder,
+textarea::placeholder {
+	color: var(--placeholder);
+	opacity: 1;
+}
+
+.underField {
+	display: flex;
+	flex-direction: column;
+}
+
+.underField label {
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--muted);
+	display: block;
+	margin-bottom: 0.35rem;
+	user-select: none;
+	transition: color 0.15s;
+}
+
+.underField:focus-within label {
+	color: var(--coffee);
+}
+
+.underField.hasError label {
+	color: var(--red);
+}
+
+.underField.hasError input,
+.underField.hasError textarea {
+	border-bottom-color: var(--red);
+}
+
+.fieldError {
+	font-size: 0.72rem;
+	margin-top: 0.35rem;
+	letter-spacing: 0.01em;
+	line-height: 1.4;
+	color: var(--red);
+}
+
+.fieldHint {
+	font-size: 0.72rem;
+	margin-top: 0.35rem;
+	letter-spacing: 0.01em;
+	line-height: 1.4;
+	color: var(--muted);
+}
+
+.underField input,
+.underField textarea {
+	font-size: 0.95rem;
+	font-family: inherit;
+	color: var(--coffee);
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid var(--border);
+	border-radius: 0;
+	padding: 0.45rem 0;
+	outline: none;
+	width: 100%;
+	line-height: 1.5;
+	transition: border-color 0.15s;
+}
+
+.underField textarea {
+	resize: none;
+	min-height: 90px;
+}
+
+.underField input:focus,
+.underField textarea:focus {
+	border-bottom-color: var(--coffee);
+}
+
+.underField input:disabled,
+.underField textarea:disabled {
+	color: var(--inactive);
+	opacity: 0.55;
+	cursor: not-allowed;
+}
+
+/* ── Contact section ── */
+
+.contactGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: start;
+}
+
+.contactSocials {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1.2rem;
+}
+
+.contactSocials a {
+	display: flex;
+}
+
+.contactSocials a:hover .socialIcon {
+	background-color: var(--coffee);
+}
+
+.socialIcon {
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: var(--muted);
+	transition: background-color 0.15s;
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-position: center;
+	-webkit-mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+}
+
+.socialIcon--linkedin {
+	mask-image: url('/img/flaticon/fi-brands-linkedin.svg');
+	-webkit-mask-image: url('/img/flaticon/fi-brands-linkedin.svg');
+}
+
+.socialIcon--instagram {
+	mask-image: url('/img/flaticon/fi-brands-instagram.svg');
+	-webkit-mask-image: url('/img/flaticon/fi-brands-instagram.svg');
+}
+
+.contactForm {
+	display: flex;
+	flex-direction: column;
+	gap: 1.4rem;
+}
+
+.contactFormFields {
+	display: flex;
+	flex-direction: column;
+	gap: 1.4rem;
+}
+
+.contactSubmitBtn {
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	background: var(--coffee);
+	color: var(--white);
+	border: 1.5px solid var(--coffee);
+	border-radius: 0;
+	padding: 0.7rem 1.6rem;
+	cursor: pointer;
+	transition: background 0.15s, border-color 0.15s;
+	align-self: flex-start;
+}
+
+.contactSubmitBtn:hover {
+	background: var(--btnHover);
+	border-color: var(--btnHover);
+}
+
+@keyframes contactFadeUp {
+	from { opacity: 0; transform: translateY(10px); }
+	to   { opacity: 1; transform: translateY(0); }
+}
+
+.contactFadeUp {
+	animation: contactFadeUp 0.35s ease forwards;
+}
+
+@media (max-width: 700px) {
+	.contactGrid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
 }

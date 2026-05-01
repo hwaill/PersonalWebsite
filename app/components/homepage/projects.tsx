@@ -4,6 +4,8 @@ export default function Projects() {
 			<h1>Some of My Work</h1>
 			<p>I think I&apos;m a really likable guy! On the rare occasion, I&apos;ve even been told I&apos;m funny and intelligent... but you will learn none of that from the following paragraphs.</p>
 			<Project />
+			<Project />
+			<Project />
 		</div>
 	);
 };
@@ -11,6 +13,7 @@ export default function Projects() {
 function Project() {
 	return (
 		<div className="projectContainer">
+			<div className="projectContainerSpacer"></div>
 			<div className="projectContainerNumber">01</div>
 			<div className="projectContainerText">
 				<h3>The Sun Clock</h3>
