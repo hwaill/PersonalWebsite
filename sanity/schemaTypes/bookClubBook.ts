@@ -13,6 +13,7 @@ export const bookClubBookSchema = defineType({
       options: { list: [{ title: 'Fiction', value: 'fiction' }, { title: 'Nonfiction', value: 'nonfiction' }], layout: 'radio' },
     }),
     defineField({ name: 'inProgress', type: 'boolean', initialValue: false }),
+    defineField({ name: 'dateCompleted', type: 'date'}),
     defineField({ name: 'coverImage', type: 'image', options: { hotspot: true } }),
     defineField({
       name: 'mvp',

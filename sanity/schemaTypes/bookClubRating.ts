@@ -10,8 +10,8 @@ export const bookClubRatingSchema = defineType({
     defineField({
       name: 'value',
       type: 'number',
-      validation: r => r.required().min(0).max(10),
-      description: 'Rating out of 10',
+      validation: r => r.required().min(0).max(7),
+      description: 'Rating out of 7',
     }),
   ],
   preview: {

@@ -14,10 +14,16 @@
 }
 
 @media (max-width: 700px) {
+	body {
+		padding-top: 52px;
+	}
 	.pageContent {
-		width: calc(100vw - 4rem);
+		width: calc(100vw - 2.5rem);
 		max-width: 50rem;
-	margin: auto auto 8rem auto;
+		margin: auto auto 8rem auto;
+	}
+	.landingContent {
+		margin-top: 2.5rem;
 	}
 }
 
@@ -37,7 +43,7 @@
 
 .projectContainer {
 	width: 100%;
-	height: 12rem;
+	min-height: 10rem;
 	display: flex;
 	flex-flow: row nowrap;
 	overflow: hidden;
@@ -65,9 +71,13 @@
 
 .projectContainerImage {
 	flex: 1 0 0px;
+	position: relative;
+	overflow: hidden;
 }
 
 .projectContainerImage img {
+	position: absolute;
+	inset: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;

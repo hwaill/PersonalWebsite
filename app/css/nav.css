@@ -54,31 +54,26 @@ html {
 
 /* ── Back / Home link on non-home pages ── */
 #nav-back {
-	font-size: 0.72rem;
-	font-weight: 400;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
+	display: flex;
 	color: var(--inactive);
+	opacity: 0.55;
 	text-decoration: none;
-	opacity: 0;
 	margin-bottom: 20px;
-	padding-bottom: 16px;
-	border-bottom: 1px solid var(--border);
-	writing-mode: vertical-rl;
-	text-orientation: mixed;
-	transform: rotate(180deg);
-	transition: color 0.2s, opacity 0.35s ease;
+	transition: color 0.2s, opacity 0.2s;
 	cursor: pointer;
-	white-space: nowrap;
-}
-
-#nav-back.visible {
-	opacity: 0.45;
 }
 
 #nav-back:hover {
 	color: var(--coffee);
 	opacity: 1;
+}
+
+button#nav-back,
+button#mobile-back {
+	background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
 }
 
 /* ── Section link list ── */
@@ -130,5 +125,139 @@ html {
 	#nav-rail,
 	#nav-rule {
 		display: none;
+	}
+}
+
+/* ── Mobile top bar ── */
+#mobile-nav {
+	display: none;
+}
+
+#mobile-drawer {
+	display: none;
+}
+
+@media (max-width: 700px) {
+	#mobile-nav {
+		display: flex;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 52px;
+		background: var(--white);
+		border-bottom: 1px solid var(--border);
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 16px;
+		z-index: 200;
+	}
+
+	.mobile-nav-side {
+		width: 36px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#mobile-back {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--inactive);
+		text-decoration: none;
+		opacity: 0.6;
+		transition: color 0.2s, opacity 0.2s;
+	}
+
+	#mobile-back:hover {
+		color: var(--coffee);
+		opacity: 1;
+	}
+
+	.mobile-nav-logo {
+		display: flex;
+		align-items: center;
+	}
+
+	.mobile-nav-logo img {
+		height: 30px;
+		display: block;
+	}
+
+	.mobile-menu-btn {
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 6px;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		align-items: center;
+	}
+
+	.mobile-menu-btn span {
+		display: block;
+		width: 20px;
+		height: 1.5px;
+		background: var(--coffee);
+		transition: transform 0.2s, opacity 0.2s;
+		transform-origin: center;
+	}
+
+	.mobile-menu-btn.open span:nth-child(1) {
+		transform: translateY(6.5px) rotate(45deg);
+	}
+	.mobile-menu-btn.open span:nth-child(2) {
+		opacity: 0;
+		transform: scaleX(0);
+	}
+	.mobile-menu-btn.open span:nth-child(3) {
+		transform: translateY(-6.5px) rotate(-45deg);
+	}
+
+	#mobile-drawer {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 52px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: var(--white);
+		z-index: 199;
+		padding: 20px 0;
+		overflow-y: auto;
+		opacity: 0;
+		pointer-events: none;
+		transform: translateY(-6px);
+		transition: opacity 0.18s ease, transform 0.18s ease;
+	}
+
+	#mobile-drawer.open {
+		opacity: 1;
+		pointer-events: auto;
+		transform: translateY(0);
+	}
+
+	.mobile-drawer-link {
+		display: block;
+		padding: 16px 24px;
+		font-family: var(--gottak);
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: var(--muted);
+		text-decoration: none;
+		border-bottom: 1px solid var(--border);
+		transition: color 0.15s;
+	}
+
+	.mobile-drawer-link:first-child {
+		border-top: 1px solid var(--border);
+	}
+
+	.mobile-drawer-link:hover,
+	.mobile-drawer-link.active {
+		color: var(--coffee);
 	}
 }

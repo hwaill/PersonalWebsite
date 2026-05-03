@@ -1,0 +1,535 @@
+/* ══════════════════════════════════════════
+   Project page — hero
+══════════════════════════════════════════ */
+
+.projectHero {
+  padding-top: 72px;
+  padding-bottom: 40px;
+}
+
+.projectHeroLogo {
+  height: 5.5rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.projectLabel {
+  font-family: var(--figtree, sans-serif);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--inactive);
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+h2.projectHook {
+  font-family: var(--gottak);
+  font-weight: 200;
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--muted);
+  margin-top: 8px;
+  line-height: 1.2;
+}
+
+.projectMeta {
+  display: flex;
+  gap: 28px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.metaLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--inactive);
+}
+
+.metaValue {
+  font-size: 0.95rem;
+  color: var(--lightCoffee);
+  font-weight: 400;
+}
+
+/* ══════════════════════════════════════════
+   Highlights strip
+══════════════════════════════════════════ */
+
+.projectHighlights {
+  background: var(--coffee);
+  border-radius: 10px;
+  padding: 36px 40px;
+}
+
+.highlightsLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--inactive);
+  margin-bottom: 20px;
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 24px;
+}
+
+.highlightItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.highlightNumber {
+  font-family: var(--gottak);
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: var(--whip);
+  line-height: 1;
+}
+
+.highlightTitle {
+  font-family: var(--gottak);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.highlightDesc {
+  font-size: 0.88rem;
+  color: var(--inactive);
+  line-height: 1.45;
+}
+
+/* ══════════════════════════════════════════
+   Page sections
+══════════════════════════════════════════ */
+
+.projectSection {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.projectSection:last-child {
+  border-bottom: none;
+}
+
+/* Section headings (h1) and subsection headings (h2) use global styles — only override spacing */
+.projectSection h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+.projectSection h2:not(.projectHook) {
+  margin-top: 40px;
+  margin-bottom: 14px;
+  clear: both;
+}
+
+/* No extra gap when subsection immediately follows section heading */
+.projectSection h1 + h2 {
+  margin-top: 8px;
+}
+
+.projectSection p {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--lightCoffee);
+  text-wrap: pretty;
+  margin-bottom: 16px;
+}
+
+.projectSection p:last-child {
+  margin-bottom: 0;
+}
+
+.projectSection p a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Clearfix for the section content wrapper */
+.sectionContent::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ══════════════════════════════════════════
+   Image blocks
+══════════════════════════════════════════ */
+
+.imgFull {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  background: var(--cream);
+  overflow: hidden;
+  margin: 32px 0 8px;
+  clear: both;
+  aspect-ratio: 16 / 9;
+}
+
+.imgFull img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Float layouts */
+.imgPartialLeft {
+  float: left;
+  width: 46%;
+  margin: 4px 24px 16px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.imgPartialRight {
+  float: right;
+  width: 46%;
+  margin: 4px 0 16px 24px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.imgPartialLeft img,
+.imgPartialRight img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.imgPartialLeft.third { width: 30%; }
+.imgPartialRight.third { width: 30%; }
+
+/* Image caption */
+.imgCaption {
+  font-size: 0.82rem;
+  color: var(--inactive);
+  margin-top: 0;
+  margin-bottom: 28px;
+  padding: 0 4px;
+  line-height: 1.4;
+  clear: both;
+}
+
+/* Image grid — flex row, each item flex-grows by its aspect ratio so widths are proportional */
+.imgGrid {
+  display: flex;
+  gap: 10px;
+  margin: 28px 0 8px;
+  height: 260px;
+  align-items: stretch;
+}
+
+.imgGridItem {
+  flex-grow: var(--ar, 1);
+  flex-shrink: 1;
+  flex-basis: 0;
+  min-width: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.imgGridItem img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ══════════════════════════════════════════
+   Video blocks
+══════════════════════════════════════════ */
+
+.videoBlock {
+  margin: 28px 0 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--coffee);
+  clear: both;
+}
+
+.videoInner {
+  position: relative;
+  padding-bottom: 56.25%;
+  width: 100%;
+}
+
+.videoInner video,
+.videoInner iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+/* ══════════════════════════════════════════
+   Pull quote
+══════════════════════════════════════════ */
+
+.pullQuote {
+  border-left: 3px solid var(--whip);
+  margin: 36px 0;
+  padding: 4px 0 4px 28px;
+}
+
+.pullQuote blockquote {
+  font-family: var(--gottak);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.65rem;
+  color: var(--coffee);
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.pullQuote cite {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--inactive);
+  font-style: normal;
+}
+
+/* ══════════════════════════════════════════
+   Aside / Callout blocks
+══════════════════════════════════════════ */
+
+.asideGrid {
+  display: grid;
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.asideGrid.count1 { grid-template-columns: 1fr; }
+.asideGrid.count2 { grid-template-columns: 1fr 1fr; }
+.asideGrid.count3 { grid-template-columns: 1fr 1fr 1fr; }
+.asideGrid.count4 { grid-template-columns: 1fr 1fr; }
+
+.asideCard {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;
+}
+
+.asideCard h4 {
+  font-family: var(--gottak);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--coffee);
+  margin-bottom: 6px;
+  font-style: normal;
+}
+
+.asideCard p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+/* ══════════════════════════════════════════
+   Team cards
+══════════════════════════════════════════ */
+
+.teamGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.teamCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.teamAvatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.teamAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.teamAvatarInitials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--gottak);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.teamInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.teamName {
+  font-family: var(--gottak);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--coffee);
+}
+
+.teamRole {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.teamLink {
+  font-size: 0.78rem;
+  color: var(--blue);
+  text-decoration: none;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+.teamLink:hover {
+  text-decoration: underline;
+}
+
+/* ══════════════════════════════════════════
+   Project hero main image
+══════════════════════════════════════════ */
+
+.projectMainImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--cream);
+  margin: 0px 0 8px;
+  border-radius: 10px;
+}
+
+.projectMainImage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ══════════════════════════════════════════
+   Projects list page
+══════════════════════════════════════════ */
+
+.projectsPage {
+  padding-top: 72px;
+  padding-bottom: 140px;
+}
+
+.projectsPage h1 {
+  margin-bottom: 8px;
+}
+
+.projectsPageSection {
+  margin-top: 48px;
+}
+
+.projectsPageSection h2 {
+  color: var(--muted);
+  margin-bottom: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ══════════════════════════════════════════
+   View all button (homepage)
+══════════════════════════════════════════ */
+
+.viewAllBtn {
+  display: inline-block;
+  margin-top: 24px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--coffee);
+  border: 1.5px solid var(--coffee);
+  padding: 0.65rem 1.4rem;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.viewAllBtn:hover {
+  background: var(--coffee);
+  color: var(--white);
+}
+
+/* ══════════════════════════════════════════
+   Responsive
+══════════════════════════════════════════ */
+
+@media (max-width: 700px) {
+  h2.projectHook { font-size: 1.5rem; }
+
+  .projectHero { padding-top: 32px; }
+  .projectsPage { padding-top: 32px; }
+
+  .projectHighlights { padding: 28px 20px; }
+  .highlightsGrid { grid-template-columns: 1fr; }
+
+  .imgPartialLeft,
+  .imgPartialRight {
+    float: none;
+    width: 100% !important;
+    margin: 16px 0;
+  }
+
+  .imgGrid {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .imgGridItem {
+    flex-grow: 1;
+    flex-basis: calc(50% - 5px);
+    height: 130px;
+  }
+
+  .asideGrid.count3 { grid-template-columns: 1fr 1fr; }
+}

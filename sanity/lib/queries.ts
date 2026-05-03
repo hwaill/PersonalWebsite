@@ -3,18 +3,14 @@ import { groq } from 'next-sanity'
 // Projects
 
 export const projectsQuery = groq`
-  *[_type == "project" && disabled != true] | order(featuredIndex asc, year desc) {
+  *[_type == "project" && disabled != true] | order(featuredIndex asc) {
     _id,
     title,
     slug,
     hook,
     description,
-    year,
-    role,
-    stack,
-    skills,
-    previewImage,
-    mainImage,
+    previewImage { sanityImage { ..., asset-> }, externalUrl, alt },
+    mainImage { sanityImage { ..., asset-> }, externalUrl, alt },
     featured,
     featuredIndex,
   }
@@ -25,13 +21,25 @@ export const featuredProjectsQuery = groq`
     _id,
     title,
     slug,
+    label,
     hook,
     description,
-    year,
-    role,
-    stack,
-    previewImage,
-    mainImage,
+    previewImage { sanityImage { ..., asset-> }, externalUrl, alt },
+    featuredIndex,
+  }
+`
+
+export const allProjectsQuery = groq`
+  *[_type == "project" && disabled != true] | order(featured desc, featuredIndex asc) {
+    _id,
+    title,
+    slug,
+    label,
+    hook,
+    description,
+    tags,
+    previewImage { sanityImage { ..., asset-> }, externalUrl, alt },
+    featured,
     featuredIndex,
   }
 `
@@ -41,29 +49,63 @@ export const projectBySlugQuery = groq`
     _id,
     title,
     slug,
+    label,
     hook,
     description,
-    year,
-    role,
-    stack,
-    skills,
-    previewImage,
-    mainImage,
+    tags,
+    highlights,
+    previewImage { sanityImage { ..., asset-> }, externalUrl, alt },
+    mainImage { sanityImage { ..., asset-> }, externalUrl, alt },
     featured,
     body[] {
-      ...,
-      _type == "projectSection" => {
-        heading,
-        anchor,
-        content[] {
+      _type,
+      heading,
+      anchor,
+      navLabel,
+      content[] {
+        ...,
+        _type == "imageBlock" => {
           ...,
-          _type == "projectSubsection" => {
-            heading,
-            content
-          }
-        }
-      }
-    }
+          sanityImage { ..., asset-> },
+        },
+        _type == "imageGrid" => {
+          ...,
+          images[] { ..., sanityImage { ..., asset-> } },
+        },
+        _type == "videoEmbed" => {
+          ...,
+          sanityFile { ..., asset-> },
+          thumbnail { ..., asset-> },
+        },
+        _type == "teamBlock" => {
+          ...,
+          members[] { ..., sanityPhoto { ..., asset-> } },
+        },
+        _type == "projectSubsection" => {
+          heading,
+          content[] {
+            ...,
+            _type == "imageBlock" => {
+              ...,
+              sanityImage { ..., asset-> },
+            },
+            _type == "imageGrid" => {
+              ...,
+              images[] { ..., sanityImage { ..., asset-> } },
+            },
+            _type == "videoEmbed" => {
+              ...,
+              sanityFile { ..., asset-> },
+              thumbnail { ..., asset-> },
+            },
+            _type == "teamBlock" => {
+              ...,
+              members[] { ..., sanityPhoto { ..., asset-> } },
+            },
+          },
+        },
+      },
+    },
   }
 `
 
