@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { client } from '@/sanity/lib/client';
 import { memberByIdQuery, allMemberIdsQuery } from '@/sanity/lib/queries';
-import { urlFor } from '@/sanity/lib/image';
+import { urlFor, resolveCoverImage } from '@/sanity/lib/image';
 import { NavLinksRegistrar } from '@/app/components/nav/NavLinksRegistrar';
 import MemberRatingsClient from '@/app/bookclub/components/MemberRatingsClient';
 import type { BCMemberDetail, BCMemberRating, BCMvpBook } from '@/app/types';
@@ -50,12 +50,12 @@ export default async function MemberPage({ params }: { params: Promise<{ id: str
   type RatingWithCover = BCMemberRating & { coverUrl: string | null };
   const ratingsWithCovers: RatingWithCover[] = ratings.map((r: BCMemberRating) => ({
     ...r,
-    coverUrl: getUrl(r.book.coverImage, 200),
+    coverUrl: resolveCoverImage(r.book.coverImage, 200),
   }));
 
   const mvpBooksWithCovers = mvpBooks.map((b: BCMvpBook) => ({
     ...b,
-    coverUrl: getUrl(b.coverImage, 160),
+    coverUrl: resolveCoverImage(b.coverImage, 160),
   }));
 
   const navLinks = [

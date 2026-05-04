@@ -133,6 +133,13 @@ export type BCImage = {
 	hotspot?: { x: number; y: number; height: number; width: number }
 }
 
+// Dual-source cover image: Sanity upload OR external/internal URL
+export type BCCoverImage = {
+	sanityImage?: BCImage
+	externalUrl?: string
+	alt?: string
+}
+
 export type BCMemberSummary = {
 	_id: string
 	name: string
@@ -158,7 +165,7 @@ export type BCMemberRating = {
 		title: string
 		author: string
 		genre?: string
-		coverImage?: BCImage
+		coverImage?: BCCoverImage
 		yearPublished?: number
 		pages?: number
 		dateCompleted?: string
@@ -175,7 +182,7 @@ export type BCBook = {
 	yearPublished?: number
 	inProgress?: boolean
 	dateCompleted?: string
-	coverImage?: BCImage
+	coverImage?: BCCoverImage
 	ratingValues: number[]
 	avgRating: number | null
 	coverUrl: string | null
@@ -190,7 +197,7 @@ export type BCBookDetail = {
 	yearPublished?: number
 	inProgress?: boolean
 	dateCompleted?: string
-	coverImage?: BCImage
+	coverImage?: BCCoverImage
 	mvp?: BCMemberSummary
 	ratings: BCRating[]
 }
@@ -199,7 +206,7 @@ export type BCMvpBook = {
 	_id: string
 	title: string
 	author: string
-	coverImage?: BCImage
+	coverImage?: BCCoverImage
 }
 
 export type BCMember = {

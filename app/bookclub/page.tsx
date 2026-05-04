@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { client } from '@/sanity/lib/client';
 import { booksWithRatingsQuery, membersQuery } from '@/sanity/lib/queries';
-import { urlFor } from '@/sanity/lib/image';
+import { urlFor, resolveCoverImage } from '@/sanity/lib/image';
 import { NavLinksRegistrar } from '@/app/components/nav/NavLinksRegistrar';
 import BookListClient from '@/app/bookclub/components/BookListClient';
 import type { BCBook, BCMember } from '@/app/types';
@@ -44,7 +44,7 @@ export default async function BookClubPage() {
     coverImage: b.coverImage as BCBook['coverImage'],
     ratingValues: b.ratingValues ?? [],
     avgRating: computeAvg(b.ratingValues ?? []),
-    coverUrl: getUrl(b.coverImage, 400),
+    coverUrl: resolveCoverImage(b.coverImage, 400),
   })) satisfies BCBook[];
 
   return (

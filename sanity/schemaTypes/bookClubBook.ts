@@ -16,7 +16,16 @@ export const bookClubBookSchema = defineType({
     }),
     defineField({ name: 'inProgress', type: 'boolean', initialValue: false }),
     defineField({ name: 'dateCompleted', type: 'date'}),
-    defineField({ name: 'coverImage', type: 'image', options: { hotspot: true } }),
+    defineField({
+      name: 'coverImage',
+      title: 'Cover image',
+      type: 'object',
+      fields: [
+        defineField({ name: 'sanityImage', type: 'image', title: 'Upload', options: { hotspot: true } }),
+        defineField({ name: 'externalUrl', type: 'string', title: 'External or internal URL', description: 'Overrides upload if set. Use https://… or /img/…' }),
+        defineField({ name: 'alt', type: 'string', title: 'Alt text' }),
+      ],
+    }),
     defineField({
       name: 'mvp',
       title: 'MVP',
@@ -26,7 +35,7 @@ export const bookClubBookSchema = defineType({
     }),
   ],
   preview: {
-    select: { title: 'title', subtitle: 'author', media: 'coverImage' },
+    select: { title: 'title', subtitle: 'author', media: 'coverImage.sanityImage' },
   },
   orderings: [
     { title: 'Title A–Z', name: 'titleAsc', by: [{ field: 'title', direction: 'asc' }] },

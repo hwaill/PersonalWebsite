@@ -20,3 +20,19 @@ export function resolveImage(image: ProjectImageField, width = 1200): string | n
   }
   return null
 }
+
+// Resolves book cover images — handles both the new { sanityImage, externalUrl }
+// object format and old direct Sanity image references (backward compat).
+export function resolveCoverImage(coverImage: unknown, width = 400): string | null {
+  if (!coverImage || typeof coverImage !== 'object') return null
+  const ci = coverImage as Record<string, unknown>
+  if ('sanityImage' in ci || 'externalUrl' in ci) {
+    if (ci.externalUrl && typeof ci.externalUrl === 'string') return ci.externalUrl
+    if (ci.sanityImage) {
+      try { return urlFor(ci.sanityImage as Parameters<typeof urlFor>[0]).width(width).url() } catch { return null }
+    }
+    return null
+  }
+  // Old format: direct Sanity image asset reference
+  try { return urlFor(ci as Parameters<typeof urlFor>[0]).width(width).url() } catch { return null }
+}

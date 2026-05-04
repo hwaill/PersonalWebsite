@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { client } from '@/sanity/lib/client';
 import { bookByIdQuery, allBookIdsQuery } from '@/sanity/lib/queries';
-import { urlFor } from '@/sanity/lib/image';
+import { resolveCoverImage } from '@/sanity/lib/image';
 import { NavLinksRegistrar } from '@/app/components/nav/NavLinksRegistrar';
 import type { BCBookDetail, BCRating } from '@/app/types';
 
@@ -21,11 +21,6 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return { title: `${book.title} | Book Club` };
 }
 
-function getUrl(image: unknown, width = 600): string | null {
-  if (!image) return null;
-  try { return urlFor(image as Parameters<typeof urlFor>[0]).width(width).url(); }
-  catch { return null; }
-}
 
 function formatDate(dateStr: string): string {
   const [year, month, day] = dateStr.split('-').map(Number);
@@ -45,7 +40,7 @@ export default async function BookPage({ params }: { params: Promise<{ id: strin
   const book: BCBookDetail | null = await client.fetch(bookByIdQuery, { id });
   if (!book) notFound();
 
-  const coverUrl = getUrl(book.coverImage, 400);
+  const coverUrl = resolveCoverImage(book.coverImage, 400);
   const ratings = book.ratings ?? [];
 
   const avgRating = ratings.length > 0
