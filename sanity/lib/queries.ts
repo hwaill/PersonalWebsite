@@ -111,16 +111,18 @@ export const projectBySlugQuery = groq`
 
 // Book Club — Books
 
-export const booksQuery = groq`
+export const booksWithRatingsQuery = groq`
   *[_type == "bookClubBook"] | order(title asc) {
     _id,
     title,
     author,
     genre,
+    pages,
+    yearPublished,
     inProgress,
+    dateCompleted,
     coverImage,
-    mvp->{ _id, name, photo },
-    review,
+    "ratingValues": *[_type == "bookClubRating" && book._ref == ^._id].value
   }
 `
 
@@ -130,28 +132,19 @@ export const bookByIdQuery = groq`
     title,
     author,
     genre,
+    pages,
+    yearPublished,
     inProgress,
+    dateCompleted,
     coverImage,
     mvp->{ _id, name, photo },
-    review,
-  }
-`
-
-// Book Club — Ratings
-
-export const ratingsByBookQuery = groq`
-  *[_type == "bookClubRating" && book._ref == $bookId] {
-    _id,
-    value,
-    member->{ _id, name, photo }
-  }
-`
-
-export const ratingsByMemberQuery = groq`
-  *[_type == "bookClubRating" && member._ref == $memberId] {
-    _id,
-    value,
-    book->{ _id, title, author, coverImage }
+    "ratings": *[_type == "bookClubRating" && book._ref == ^._id] | order(_createdAt asc) {
+      _id,
+      _createdAt,
+      value,
+      review,
+      member->{ _id, name, photo, tagline }
+    }
   }
 `
 
@@ -161,7 +154,10 @@ export const membersQuery = groq`
   *[_type == "bookClubMember"] | order(name asc) {
     _id,
     name,
+    tagline,
     photo,
+    "ratingCount": count(*[_type == "bookClubRating" && member._ref == ^._id]),
+    "mvpWins": count(*[_type == "bookClubBook" && mvp._ref == ^._id])
   }
 `
 
@@ -169,8 +165,20 @@ export const memberByIdQuery = groq`
   *[_type == "bookClubMember" && _id == $memberId][0] {
     _id,
     name,
+    tagline,
     photo,
-    "ratings": *[_type == "bookClubRating" && member._ref == ^._id]{ value, book->{ _id, title, author } },
-    "mvpBooks": *[_type == "bookClubBook" && mvp._ref == ^._id]{ _id, title, author, coverImage },
+    "mvpBooks": *[_type == "bookClubBook" && mvp._ref == ^._id] {
+      _id, title, author, coverImage
+    },
+    "ratings": *[_type == "bookClubRating" && member._ref == ^._id] | order(book->dateCompleted desc) {
+      _id,
+      _createdAt,
+      value,
+      review,
+      book->{ _id, title, author, genre, coverImage, yearPublished, pages, dateCompleted, inProgress }
+    }
   }
 `
+
+export const allBookIdsQuery = groq`*[_type == "bookClubBook"]{ _id }`
+export const allMemberIdsQuery = groq`*[_type == "bookClubMember"]{ _id }`

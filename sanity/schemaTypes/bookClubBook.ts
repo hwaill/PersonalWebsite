@@ -7,6 +7,8 @@ export const bookClubBookSchema = defineType({
   fields: [
     defineField({ name: 'title', type: 'string', validation: r => r.required() }),
     defineField({ name: 'author', type: 'string', validation: r => r.required() }),
+    defineField({ name: 'pages', type: 'number', title: 'Pages' }),
+    defineField({ name: 'yearPublished', type: 'number', title: 'Year Published' }),
     defineField({
       name: 'genre',
       type: 'string',
@@ -21,13 +23,6 @@ export const bookClubBookSchema = defineType({
       type: 'reference',
       to: [{ type: 'bookClubMember' }],
       description: 'Most Valuable Player for this book',
-    }),
-    defineField({
-      name: 'review',
-      type: 'array',
-      title: 'My Review',
-      description: 'Personal review (not per-member)',
-      of: [{ type: 'block' }],
     }),
   ],
   preview: {

@@ -13,6 +13,13 @@ export const bookClubRatingSchema = defineType({
       validation: r => r.required().min(0).max(7),
       description: 'Rating out of 7',
     }),
+    defineField({
+      name: 'review',
+      type: 'text',
+      title: 'Review',
+      description: 'Optional short review for this rating',
+      rows: 4,
+    }),
   ],
   preview: {
     select: { bookTitle: 'book.title', memberName: 'member.name', value: 'value' },

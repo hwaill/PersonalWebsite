@@ -27,6 +27,9 @@ export default function NavRail() {
 	const pathname = usePathname();
 	const isHome = pathname === '/';
 	const isStudio = pathname.startsWith('/studio');
+	const isBookclub = pathname.startsWith('/bookclub');
+	const bookclubBackHref = pathname === '/bookclub' ? '/' : '/bookclub';
+	const bookclubBackLabel = pathname === '/bookclub' ? 'Home' : 'Book Club';
 
 	const railRef = useRef<HTMLDivElement>(null);
 	const ruleRef = useRef<HTMLDivElement>(null);
@@ -118,7 +121,11 @@ export default function NavRail() {
 					<img src="/img/logos/logoFlatTight.svg" alt="HW" />
 				</a>
 				{!isHome && (
-					cameFromSite ? (
+					isBookclub ? (
+						<a href={bookclubBackHref} id="nav-back" aria-label={bookclubBackLabel}>
+							<BackArrow />
+						</a>
+					) : cameFromSite ? (
 						<button id="nav-back" onClick={() => history.back()} aria-label="Back">
 							<BackArrow />
 						</button>
@@ -145,7 +152,11 @@ export default function NavRail() {
 			<div id="mobile-nav">
 				<div className="mobile-nav-side">
 					{!isHome && (
-						cameFromSite ? (
+						isBookclub ? (
+							<a href={bookclubBackHref} id="mobile-back" aria-label={bookclubBackLabel}>
+								<BackArrow />
+							</a>
+						) : cameFromSite ? (
 							<button id="mobile-back" onClick={() => history.back()} aria-label="Back">
 								<BackArrow />
 							</button>
