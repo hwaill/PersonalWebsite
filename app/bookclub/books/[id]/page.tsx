@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { client } from '@/sanity/lib/client';
 import { bookByIdQuery, allBookIdsQuery } from '@/sanity/lib/queries';
-import { resolveCoverImage } from '@/sanity/lib/image';
+import { resolveCoverImage, urlFor } from '@/sanity/lib/image';
 import { NavLinksRegistrar } from '@/app/components/nav/NavLinksRegistrar';
 import type { BCBookDetail, BCRating } from '@/app/types';
 
@@ -151,9 +151,6 @@ export default async function BookPage({ params }: { params: Promise<{ id: strin
                       {formatRating(rating.value)}<span className="scoreDenom">/7</span>
                     </div>
                   </Link>
-                  {rating.review && (
-                    <div className="scoreReview">{rating.review}</div>
-                  )}
                 </div>
               );
             })}
@@ -163,19 +160,21 @@ export default async function BookPage({ params }: { params: Promise<{ id: strin
 
       {hasReview && (
         <section id="review" className="pageSection">
+          <h2 className="pageSectionHeading">Reviews</h2>
           {ratings.filter(r => r.review).map(rating => (
-            <div key={rating._id}>
-              <h2 className="pageSectionHeading">{rating.member.name}&apos;s review</h2>
-              <div className="reviewBlock">
-                <div className="reviewByline">
-                  <div className="reviewAvatar">{initials(rating.member.name)}</div>
-                  <div>
-                    <div className="reviewName">{rating.member.name}</div>
-                    <div className="reviewScore">{formatRating(rating.value)} / 7</div>
-                  </div>
+            <div key={rating._id} className="reviewBlock">
+              <div className="reviewByline">
+                <div className="reviewAvatar">
+                  {rating.member.photo
+                    ? <img src={urlFor(rating.member.photo).width(68).url()} alt={rating.member.name} className="reviewAvatarImg" />
+                    : initials(rating.member.name)}
                 </div>
-                <div className="reviewText">{rating.review}</div>
+                <div>
+                  <div className="reviewName">{rating.member.name}</div>
+                  <div className="reviewScore">{formatRating(rating.value)} / 7</div>
+                </div>
               </div>
+              <div className="reviewText">{rating.review}</div>
             </div>
           ))}
         </section>

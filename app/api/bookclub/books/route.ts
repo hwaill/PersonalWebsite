@@ -24,6 +24,7 @@ export async function POST(req: NextRequest) {
   const inProgress = formData.get('inProgress') === 'true';
   const dateCompleted = (formData.get('dateCompleted') as string | null) || undefined;
   const coverFile = formData.get('cover') as File | null;
+  const coverUrl = (formData.get('coverUrl') as string | null)?.trim() || undefined;
 
   let coverImage: object | undefined;
   if (coverFile && coverFile.size > 0) {
@@ -33,6 +34,8 @@ export async function POST(req: NextRequest) {
       contentType: coverFile.type,
     });
     coverImage = { _type: 'image', asset: { _type: 'reference', _ref: asset._id } };
+  } else if (coverUrl) {
+    coverImage = { externalUrl: coverUrl };
   }
 
   const doc = await writeClient.create({

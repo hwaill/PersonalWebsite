@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { urlFor } from '@/sanity/lib/image';
-import type { BCImage } from '@/app/types';
+import { resolveCoverImage, urlFor } from '@/sanity/lib/image';
+import type { BCImage, BCCoverImage } from '@/app/types';
 
 type Session = { memberId: string; isAdmin: boolean };
 
@@ -11,12 +11,12 @@ type ManageProfile = { _id: string; name: string; tagline?: string; photo?: BCIm
 type ManageBook = {
   _id: string; title: string; author: string; genre?: string;
   pages?: number; yearPublished?: number; inProgress?: boolean;
-  dateCompleted?: string; coverImage?: BCImage;
+  dateCompleted?: string; coverImage?: BCCoverImage;
   mvp?: { _id: string; name: string };
 };
 type ManageRating = {
   _id: string; value: number; review?: string;
-  book: { _id: string; title: string; author: string; genre?: string; coverImage?: BCImage; inProgress?: boolean };
+  book: { _id: string; title: string; author: string; genre?: string; coverImage?: BCCoverImage; inProgress?: boolean };
 };
 type ManageMember = { _id: string; name: string };
 type ManageData = {
@@ -28,9 +28,11 @@ type ManageData = {
 
 type Tab = 'profile' | 'ratings' | 'books';
 
-function getImgUrl(image: BCImage | undefined, w = 200): string | null {
+function getImgUrl(image: BCCoverImage | BCImage | undefined, w = 200): string | null {
   if (!image) return null;
-  try { return urlFor(image).width(w).url(); } catch { return null; }
+  const resolved = resolveCoverImage(image, w);
+  if (resolved) return resolved;
+  try { return urlFor(image as Parameters<typeof urlFor>[0]).width(w).url(); } catch { return null; }
 }
 
 function initials(name: string): string {
@@ -506,7 +508,7 @@ function BookRow({
   onDeleted: () => void;
   onError: (e: string) => void;
 }) {
-  const coverUrl = getImgUrl(book.coverImage, 80);
+  const coverDisplayUrl = getImgUrl(book.coverImage, 80);
   const [title, setTitle] = useState(book.title);
   const [author, setAuthor] = useState(book.author);
   const [genre, setGenre] = useState(book.genre ?? '');
@@ -515,6 +517,9 @@ function BookRow({
   const [inProgress, setInProgress] = useState(book.inProgress ?? false);
   const [dateCompleted, setDateCompleted] = useState(book.dateCompleted ?? '');
   const [mvpId, setMvpId] = useState<string | null>(book.mvp?._id ?? null);
+  const existingExternalUrl = (book.coverImage as { externalUrl?: string } | undefined)?.externalUrl ?? '';
+  const [coverType, setCoverType] = useState<'upload' | 'url'>(existingExternalUrl ? 'url' : 'upload');
+  const [coverUrl, setCoverUrl] = useState(existingExternalUrl);
   const [loading, setLoading] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [coverMsg, setCoverMsg] = useState<{ type: 'error' | 'success'; text: string } | null>(null);
@@ -535,6 +540,7 @@ function BookRow({
           inProgress,
           dateCompleted: dateCompleted || null,
           mvpId,
+          ...(coverType === 'url' ? { coverExternalUrl: coverUrl.trim() } : {}),
         }),
       });
       onSaved();
@@ -569,9 +575,9 @@ function BookRow({
     <div className="manageBookItem">
       <div className="manageBookTop">
         <div className="manageBookCover">
-          {coverUrl
+          {coverDisplayUrl
             // eslint-disable-next-line @next/next/no-img-element
-            ? <img src={coverUrl} alt={book.title} />
+            ? <img src={coverDisplayUrl} alt={book.title} />
             : null}
         </div>
         <div className="manageBookInfo">
@@ -653,16 +659,40 @@ function BookRow({
 
           <div className="manageField" style={{ marginBottom: 0 }}>
             <label className="manageLabel">Cover image</label>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              {coverUrl && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={coverUrl} alt={book.title} style={{ width: 36, height: 54, objectFit: 'cover', borderRadius: 3 }} />
-              )}
-              <button type="button" className="manageBtnGhost" onClick={() => coverRef.current?.click()} disabled={loading}>
-                {loading ? 'Uploading…' : 'Upload cover'}
-              </button>
-              <input ref={coverRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={uploadCover} />
+            <div style={{ display: 'flex', gap: 6, marginBottom: 8 }}>
+              <button
+                type="button"
+                className="manageBtnSmall"
+                style={coverType === 'upload' ? { background: 'var(--coffee)', color: 'var(--white)', borderColor: 'var(--coffee)' } : {}}
+                onClick={() => setCoverType('upload')}
+              >Upload</button>
+              <button
+                type="button"
+                className="manageBtnSmall"
+                style={coverType === 'url' ? { background: 'var(--coffee)', color: 'var(--white)', borderColor: 'var(--coffee)' } : {}}
+                onClick={() => setCoverType('url')}
+              >Link</button>
             </div>
+            {coverType === 'upload' ? (
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                {coverDisplayUrl && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={coverDisplayUrl} alt={book.title} style={{ width: 36, height: 54, objectFit: 'cover', borderRadius: 3 }} />
+                )}
+                <button type="button" className="manageBtnGhost" onClick={() => coverRef.current?.click()} disabled={loading}>
+                  {loading ? 'Uploading…' : 'Upload cover'}
+                </button>
+                <input ref={coverRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={uploadCover} />
+              </div>
+            ) : (
+              <input
+                className="manageInput"
+                type="url"
+                placeholder="https://example.com/cover.jpg or /img/cover.jpg"
+                value={coverUrl}
+                onChange={e => setCoverUrl(e.target.value)}
+              />
+            )}
           </div>
 
           <div className="manageFormActions">
@@ -687,6 +717,9 @@ function AddBookForm({ onSave, onCancel, onError }: {
   const [yearPublished, setYearPublished] = useState('');
   const [inProgress, setInProgress] = useState(false);
   const [dateCompleted, setDateCompleted] = useState('');
+  const [coverType, setCoverType] = useState<'upload' | 'url'>('upload');
+  const [coverUrl, setCoverUrl] = useState('');
+  const [selectedFileName, setSelectedFileName] = useState('');
   const [loading, setLoading] = useState(false);
   const coverRef = useRef<HTMLInputElement>(null);
 
@@ -702,8 +735,12 @@ function AddBookForm({ onSave, onCancel, onError }: {
       if (yearPublished) fd.append('yearPublished', yearPublished);
       fd.append('inProgress', String(inProgress));
       if (dateCompleted) fd.append('dateCompleted', dateCompleted);
-      const coverFile = coverRef.current?.files?.[0];
-      if (coverFile) fd.append('cover', coverFile);
+      if (coverType === 'upload') {
+        const coverFile = coverRef.current?.files?.[0];
+        if (coverFile) fd.append('cover', coverFile);
+      } else if (coverUrl.trim()) {
+        fd.append('coverUrl', coverUrl.trim());
+      }
       await apiFetch('/api/bookclub/books', { method: 'POST', body: fd });
       onSave();
     } catch (err) { onError(err instanceof Error ? err.message : 'Failed to add book'); }
@@ -751,10 +788,42 @@ function AddBookForm({ onSave, onCancel, onError }: {
       </div>
       <div className="manageField" style={{ marginBottom: 0 }}>
         <label className="manageLabel">Cover image</label>
-        <button type="button" className="manageBtnGhost" onClick={() => coverRef.current?.click()}>
-          Choose file
-        </button>
-        <input ref={coverRef} type="file" accept="image/*" style={{ display: 'none' }} />
+        <div style={{ display: 'flex', gap: 6, marginBottom: 8 }}>
+          <button
+            type="button"
+            className={coverType === 'upload' ? 'manageBtnSmall active' : 'manageBtnSmall'}
+            style={coverType === 'upload' ? { background: 'var(--coffee)', color: 'var(--white)', borderColor: 'var(--coffee)' } : {}}
+            onClick={() => setCoverType('upload')}
+          >Upload</button>
+          <button
+            type="button"
+            className={coverType === 'url' ? 'manageBtnSmall active' : 'manageBtnSmall'}
+            style={coverType === 'url' ? { background: 'var(--coffee)', color: 'var(--white)', borderColor: 'var(--coffee)' } : {}}
+            onClick={() => setCoverType('url')}
+          >Link</button>
+        </div>
+        {coverType === 'upload' ? (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <button type="button" className="manageBtnGhost" onClick={() => coverRef.current?.click()}>
+              Choose file
+            </button>
+            {selectedFileName && (
+              <span style={{ fontSize: '0.78rem', color: 'var(--inactive)' }}>{selectedFileName}</span>
+            )}
+            <input
+              ref={coverRef} type="file" accept="image/*" style={{ display: 'none' }}
+              onChange={e => setSelectedFileName(e.target.files?.[0]?.name ?? '')}
+            />
+          </div>
+        ) : (
+          <input
+            className="manageInput"
+            type="url"
+            placeholder="https://example.com/cover.jpg or /img/cover.jpg"
+            value={coverUrl}
+            onChange={e => setCoverUrl(e.target.value)}
+          />
+        )}
       </div>
       <div className="manageFormActions">
         <button className="manageBtn" type="submit" disabled={loading}>

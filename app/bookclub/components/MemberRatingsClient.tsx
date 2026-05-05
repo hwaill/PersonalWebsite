@@ -86,10 +86,10 @@ export default function MemberRatingsClient({ ratings, mvpBookIds }: Props) {
                     <div className="scoreMiniBarFill" style={{ width: `${pct}%` }} />
                   </div>
                 </div>
+                {rating.review && (
+                  <div className="bookRowReview">{rating.review}</div>
+                )}
               </Link>
-              {rating.review && (
-                <div className="bookRowReview">{rating.review}</div>
-              )}
             </div>
           );
         })}

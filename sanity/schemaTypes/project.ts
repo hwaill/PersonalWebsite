@@ -75,7 +75,8 @@ const videoEmbed = defineArrayMember({
   fields: [
     defineField({ name: 'url', type: 'string', title: 'YouTube / Vimeo URL or internal path', description: 'e.g. https://youtu.be/… or /video/demo.mp4' }),
     defineField({ name: 'sanityFile', type: 'file', title: 'Upload video to Sanity', options: { accept: 'video/*' } }),
-    defineField({ name: 'thumbnail', type: 'image', title: 'Thumbnail / poster image (optional)', options: { hotspot: true } }),
+    defineField({ name: 'thumbnail', type: 'image', title: 'Thumbnail (upload)', options: { hotspot: true } }),
+    defineField({ name: 'thumbnailUrl', type: 'string', title: 'Thumbnail URL (link)', description: 'External or internal URL. Overrides upload if set.' }),
     defineField({ name: 'caption', type: 'string' }),
   ],
   preview: { select: { subtitle: 'url', media: 'thumbnail' }, prepare: ({ subtitle, media }) => ({ title: 'Video', subtitle, media }) },

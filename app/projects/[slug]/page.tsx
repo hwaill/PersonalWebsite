@@ -299,6 +299,7 @@ function VideoBlock({ block }: { block: ContentBlock }) {
     url?: string
     sanityFile?: { asset?: { url?: string } }
     thumbnail?: SanityImageSource
+    thumbnailUrl?: string
     caption?: string
   }
 
@@ -309,7 +310,9 @@ function VideoBlock({ block }: { block: ContentBlock }) {
   const embed = isSanityFile ? { type: 'video' as const, src } : getVideoEmbed(src)
 
   let poster: string | undefined
-  if (b.thumbnail) {
+  if (b.thumbnailUrl) {
+    poster = b.thumbnailUrl
+  } else if (b.thumbnail) {
     try { poster = urlFor(b.thumbnail).width(1200).url() } catch { /* no poster */ }
   }
 

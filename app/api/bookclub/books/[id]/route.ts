@@ -49,6 +49,14 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     patchBuilder = patchBuilder.set({ mvp: { _type: 'reference', _ref: body.mvpId } });
   }
 
+  if (typeof body.coverExternalUrl === 'string') {
+    if (body.coverExternalUrl.trim()) {
+      patchBuilder = patchBuilder.set({ coverImage: { externalUrl: body.coverExternalUrl.trim() } });
+    } else {
+      patchBuilder = patchBuilder.unset(['coverImage']);
+    }
+  }
+
   await patchBuilder.commit();
   revalidatePath('/bookclub', 'layout');
   return NextResponse.json({ ok: true });
