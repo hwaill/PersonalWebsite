@@ -20,7 +20,8 @@ export default async function Projects() {
   return (
     <div className="pageSection">
       <h1>Some of my work</h1>
-      <p>I think I&apos;m a really likable guy! On the rare occasion, I&apos;ve even been told I&apos;m funny and intelligent... but you will learn none of that from the following paragraphs.</p>
+      <p>Here are a few of the projects that I&apos;m most proud of. Most started as a problem I wanted to solve or a skill I wanted to hone, and they run the gamut from design to engineering, and from hardware to software; There's even some weaving-related content! (Pretty much just various rectangles if that&apos;s your scene.)</p>
+      <p>Come take a look!</p>
 
       {projects.length === 0 ? (
         <p style={{ color: 'var(--inactive)', marginTop: '1rem' }}>No featured projects yet.</p>
