@@ -109,6 +109,21 @@ export const projectBySlugQuery = groq`
   }
 `
 
+// Hijinks
+
+export const hijinksQuery = groq`
+  *[_type == "hijink" && disabled != true] | order(displayIndex asc) {
+    _id,
+    title,
+    label,
+    hook,
+    description,
+    previewImage { sanityImage { ..., asset-> }, externalUrl, alt },
+    destinationLink,
+    displayIndex,
+  }
+`
+
 // Book Club — Books
 
 export const booksWithRatingsQuery = groq`

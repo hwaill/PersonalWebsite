@@ -5,6 +5,7 @@ export const structure: StructureResolver = (S) =>
     .title('Content')
     .items([
       S.documentTypeListItem('project').title('Projects'),
+      S.documentTypeListItem('hijink').title('Other Hijinks'),
       S.divider(),
       S.listItem()
         .title('Book Club')
