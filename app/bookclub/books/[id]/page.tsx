@@ -49,6 +49,7 @@ export default async function BookPage({ params }: { params: Promise<{ id: strin
 
   const hasReview = ratings.some(r => r.review);
   const readDate = book.dateCompleted ? formatDate(book.dateCompleted) : null;
+  const yearPublished = book.yearPublished;
   const genreLabel = book.genre === 'fiction' ? 'Fiction' : book.genre === 'nonfiction' ? 'Nonfiction' : null;
 
   const navLinks = [
@@ -90,6 +91,12 @@ export default async function BookPage({ params }: { params: Promise<{ id: strin
                 <div className="metaItem">
                   <div className="metaLabel">Pages</div>
                   <div className="metaValue">{book.pages.toLocaleString()}</div>
+                </div>
+              )}
+              {yearPublished && (
+                <div className="metaItem">
+                  <div className="metaLabel">Published</div>
+                  <div className="metaValue">{yearPublished}</div>
                 </div>
               )}
               {readDate && (

@@ -112,7 +112,7 @@ export default function NavRail() {
 			{/* Desktop rail */}
 			<div id="nav-rail" ref={railRef}>
 				<a
-					href={isHome ? '#' : '/'}
+					href={isHome ? '#' : isBookclub ? bookclubBackHref : '/'}
 					id="nav-rail-logo"
 					className={visible ? 'visible' : ''}
 					aria-label="Henry Waill"
@@ -167,7 +167,7 @@ export default function NavRail() {
 						)
 					)}
 				</div>
-				<a href={isHome ? '#' : '/'} className="mobile-nav-logo" aria-label="Henry Waill">
+				<a href={isHome ? '#' : isBookclub ? bookclubBackHref : '/'} className="mobile-nav-logo" aria-label="Henry Waill">
 					{/* eslint-disable-next-line @next/next/no-img-element */}
 					<img src="/img/logos/logoFlatTight.svg" alt="HW" />
 				</a>
