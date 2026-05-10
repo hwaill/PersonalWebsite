@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 998.5 998.5">
+  <!-- Generator: Adobe Illustrator 30.4.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 226)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        mask: url(#mask);
+      }
+
+      .st2 {
+        filter: url(#luminosity-invert);
+      }
+
+      .st3 {
+        fill: url(#White_Black);
+      }
+
+      .st4 {
+        fill: url(#White_Black4);
+      }
+
+      .st5 {
+        fill: url(#White_Black6);
+      }
+
+      .st6 {
+        fill: url(#White_Black3);
+      }
+
+      .st7 {
+        fill: url(#White_Black5);
+      }
+
+      .st8 {
+        fill: url(#White_Black2);
+      }
+
+      .st9 {
+        fill: url(#White_Black1);
+      }
+
+      .st10 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st11 {
+        clip-path: url(#clippath-3);
+      }
+
+      .st12 {
+        clip-path: url(#clippath-4);
+      }
+
+      .st13 {
+        clip-path: url(#clippath-2);
+      }
+
+      .st14 {
+        clip-path: url(#clippath-6);
+      }
+
+      .st15 {
+        clip-path: url(#clippath-5);
+      }
+
+      .st16 {
+        fill: #281f15;
+      }
+
+      .st17 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <filter id="luminosity-invert" x="-220.4" y="-189.2" width="1439.2" height="1376.9" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feColorMatrix result="cm" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
+    </filter>
+    <clipPath id="clippath">
+      <polygon class="st0" points="194 135.4 31.6 581.7 336.8 945.5 499.2 499.2 397.5 378 289.2 675.5 187.5 554.2 295.7 256.7 194 135.4"/>
+    </clipPath>
+    <linearGradient id="White_Black" data-name="White, Black" x1="779.3" y1="453" x2="1738.9" y2="453" gradientTransform="translate(-759.9 46.2)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <clipPath id="clippath-1">
+      <polygon class="st0" points="187.5 554.2 655.1 471.7 756.9 593 289.2 675.5 187.5 554.2"/>
+    </clipPath>
+    <linearGradient id="White_Black1" data-name="White, Black" x1="253.9" y1="1477" x2="1213.4" y2="1477" gradientTransform="translate(-234.4 -977.7)" xlink:href="#White_Black"/>
+    <clipPath id="clippath-2">
+      <polygon class="st0" points="187.5 554.2 655.1 471.7 763.4 174.2 295.7 256.7 187.5 554.2"/>
+    </clipPath>
+    <linearGradient id="White_Black2" data-name="White, Black" x1="-141.5" y1="1085.3" x2="818.1" y2="1085.3" gradientTransform="translate(160.9 -586)" xlink:href="#White_Black"/>
+    <clipPath id="clippath-3">
+      <polyline class="st0" points="336.8 945.5 235.1 824.2 397.5 378 499.2 499.2 339.7 937.5"/>
+    </clipPath>
+    <linearGradient id="White_Black3" data-name="White, Black" x1="779.3" y1="453" x2="1738.9" y2="453" gradientTransform="translate(-759.9 46.2)" xlink:href="#White_Black"/>
+    <clipPath id="clippath-4">
+      <polygon class="st0" points="336.8 945.5 804.5 863 966.9 416.8 499.2 499.2 336.8 945.5"/>
+    </clipPath>
+    <linearGradient id="White_Black4" data-name="White, Black" x1="-141.5" y1="1085.3" x2="818.1" y2="1085.3" gradientTransform="translate(160.9 -586)" xlink:href="#White_Black"/>
+    <clipPath id="clippath-5">
+      <polygon class="st0" points="397.5 378 865.1 295.5 966.9 416.8 499.2 499.2 397.5 378"/>
+    </clipPath>
+    <linearGradient id="White_Black5" data-name="White, Black" x1="253.9" y1="1477" x2="1213.4" y2="1477" gradientTransform="translate(-234.4 -977.7)" xlink:href="#White_Black"/>
+    <clipPath id="clippath-6">
+      <polygon class="st0" points="661.7 53 194 135.4 295.7 256.7 763.4 174.2 661.7 53"/>
+    </clipPath>
+    <linearGradient id="White_Black6" data-name="White, Black" x1="253.9" y1="1477" x2="1213.4" y2="1477" gradientTransform="translate(-234.4 -977.7)" xlink:href="#White_Black"/>
+    <mask id="mask" x="-220.4" y="-189.2" width="1439.2" height="1376.9" maskUnits="userSpaceOnUse">
+      <g class="st2">
+        <g>
+          <g class="st17">
+            <rect class="st3" x="19.4" y="-58.7" width="959.6" height="1115.9" transform="translate(-57.5 933.4) rotate(-82.9)"/>
+          </g>
+          <g class="st10">
+            <rect class="st9" x="19.4" y="-58.7" width="959.6" height="1115.9" transform="translate(1176.5988 300.1381) rotate(118.6207)"/>
+          </g>
+          <g class="st13">
+            <rect class="st8" x="19.4" y="-58.7" width="959.6" height="1115.9" transform="translate(704.5 -176.3) rotate(61.9)"/>
+          </g>
+          <g class="st11">
+            <rect class="st6" x="19.4" y="-58.7" width="959.6" height="1115.9" transform="translate(-57.5 933.4) rotate(-82.9)"/>
+          </g>
+          <g class="st12">
+            <rect class="st4" x="19.4" y="-58.7" width="959.6" height="1115.9" transform="translate(704.5 -176.3) rotate(61.9)"/>
+          </g>
+          <g class="st15">
+            <rect class="st7" x="19.4" y="-58.7" width="959.6" height="1115.9" transform="translate(1176.5988 300.1381) rotate(118.6207)"/>
+          </g>
+          <g class="st14">
+            <rect class="st5" x="19.4" y="-58.7" width="959.6" height="1115.9" transform="translate(1176.5988 300.1381) rotate(118.6207)"/>
+          </g>
+        </g>
+      </g>
+    </mask>
+  </defs>
+  <g class="st1">
+    <rect class="st16" width="998.5" height="998.5"/>
+  </g>
+</svg>
