@@ -6,7 +6,7 @@ export default function Landing() {
 			<h2 className="subtitle">My name is Henry Waill.</h2>
 			<h2 className="subtitle">I like to make things that help people.</h2>
 			<div className="tybaltContainer">
-				<img className="tybalt" src="/img/decoration/TybaltHand.svg" alt="" />
+				<img fetchPriority="high" className="tybalt" src="/img/decoration/TybaltHand.svg" alt="" />
 			</div>
 		</div>
 	);
