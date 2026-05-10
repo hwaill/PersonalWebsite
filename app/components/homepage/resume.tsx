@@ -1,6 +1,7 @@
 import { client } from '@/sanity/lib/client'
 import { resumeQuery } from '@/sanity/lib/queries'
 import { resolveImage } from '@/sanity/lib/image'
+import { ExperienceItem } from './resumeExpItem'
 
 type LogoField = { sanityImage?: unknown; externalUrl?: string }
 
@@ -110,7 +111,13 @@ export default async function Resume() {
 						<div key={i} className="resumeSection">
 							<div className="resumeSectionHeading">{section.heading}</div>
 							{section.items?.map((item, j) => (
-								<ExperienceItem key={j} data={item} />
+								<ExperienceItem
+									key={j}
+									data={item}
+									isLast={j === (section.items?.length ?? 0) - 1}
+									logoSrc={resolveImage(item.logo, 80)}
+									logo2Src={resolveImage(item.logo2, 80)}
+								/>
 							))}
 						</div>
 					))}
@@ -129,52 +136,6 @@ export default async function Resume() {
 	)
 }
 
-function ExperienceItem({ data }: { data: ExperienceData }) {
-	const logoSrc  = resolveImage(data.logo,  80)
-	const logo2Src = resolveImage(data.logo2, 80)
-
-	return (
-		<div className="resumeExp">
-			<div className="resumeExpLogos">
-				{logoSrc ? (
-					<div className="resumeExpLogo">
-						{/* eslint-disable-next-line @next/next/no-img-element */}
-						<img src={logoSrc} alt={data.org} loading="lazy" />
-					</div>
-				) : (
-					<div className="resumeExpLogo" />
-				)}
-				{logo2Src && (
-					<div className="resumeExpLogo">
-						{/* eslint-disable-next-line @next/next/no-img-element */}
-						<img src={logo2Src} alt="" loading="lazy" />
-					</div>
-				)}
-			</div>
-
-			<div className="resumeExpContent">
-				<div className="resumeExpHeading">
-					<div className="resumeExpTitleRow">
-						<span className="resumeExpPosition">{data.position}</span>
-						<br />
-						{data.org && <span className="resumeExpOrg">{data.org}</span>}
-						{data.org && data.location && <span className="resumeExpSep">,</span>}
-						{data.location && <span className="resumeExpLocation">{data.location}</span>}
-					</div>
-					{data.date && <span className="resumeExpDate">{data.date}</span>}
-				</div>
-
-				{data.descriptions && data.descriptions.length > 0 && (
-					<ul className="resumeExpBullets">
-						{data.descriptions.map((desc, i) => (
-							<li key={i} className="resumeExpBullet">{desc}</li>
-						))}
-					</ul>
-				)}
-			</div>
-		</div>
-	)
-}
 
 function SkillsContent({ subSections }: { subSections: SubSectionData[] }) {
 	return (
