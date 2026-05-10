@@ -56,7 +56,7 @@ export default function NavRail() {
 			const contentLeft = content.getBoundingClientRect().left;
 			const ruleX = contentLeft - 24;
 			ruleRef.current.style.left = `${ruleX}px`;
-			railRef.current.style.left = `${ruleX - 72 - 28}px`;
+			railRef.current.style.left = `${ruleX - 72}px`;
 		};
 		position();
 		window.addEventListener('resize', position);

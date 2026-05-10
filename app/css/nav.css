@@ -11,7 +11,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	padding: 36px 0;
+	padding: 36px 28px 36px 0;
 	z-index: 100;
 }
 
@@ -99,12 +99,18 @@ button#mobile-back {
 	transition: color 0.2s, opacity 0.2s;
 }
 
-.nav-link:hover {
+#nav-rail:hover .nav-link,
+#nav-rail:focus-within .nav-link {
+	color: var(--muted);
+	opacity: 0.6;
+}
+
+#nav-rail .nav-link:hover {
 	color: var(--coffee);
 	opacity: 1;
 }
 
-.nav-link.active {
+#nav-rail .nav-link.active {
 	color: var(--muted);
 	opacity: 0.9;
 	font-weight: 600;
