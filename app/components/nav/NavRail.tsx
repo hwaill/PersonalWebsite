@@ -116,6 +116,8 @@ export default function NavRail() {
 					id="nav-rail-logo"
 					className={visible ? 'visible' : ''}
 					aria-label="Henry Waill"
+					tabIndex={visible ? undefined : -1}
+					aria-hidden={visible ? undefined : true}
 				>
 					{/* eslint-disable-next-line @next/next/no-img-element */}
 					<img src="/img/logos/logoFlatTight.svg" alt="HW" />

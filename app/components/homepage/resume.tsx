@@ -139,7 +139,7 @@ function ExperienceItem({ data }: { data: ExperienceData }) {
 				{logoSrc ? (
 					<div className="resumeExpLogo">
 						{/* eslint-disable-next-line @next/next/no-img-element */}
-						<img src={logoSrc} alt={data.org} />
+						<img src={logoSrc} alt={data.org} loading="lazy" />
 					</div>
 				) : (
 					<div className="resumeExpLogo" />
@@ -147,7 +147,7 @@ function ExperienceItem({ data }: { data: ExperienceData }) {
 				{logo2Src && (
 					<div className="resumeExpLogo">
 						{/* eslint-disable-next-line @next/next/no-img-element */}
-						<img src={logo2Src} alt="" />
+						<img src={logo2Src} alt="" loading="lazy" />
 					</div>
 				)}
 			</div>

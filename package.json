@@ -11,18 +11,16 @@
   "dependencies": {
     "@next/third-parties": "^16.2.4",
     "@sanity/image-url": "^2.1.1",
-    "@sanity/vision": "^5.23.0",
-    "framer-motion": "^12.38.0",
     "next": "^16.2.4",
     "next-sanity": "^12.3.2",
     "nodemailer": "^6.9.14",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-hook-form": "^7.52.0",
-    "sanity": "^5.23.0",
-    "styled-components": "^6.4.1"
+    "sanity": "^5.23.0"
   },
   "devDependencies": {
+    "@sanity/vision": "^5.23.0",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^18",

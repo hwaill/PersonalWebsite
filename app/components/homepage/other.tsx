@@ -41,14 +41,14 @@ function HijinkCard({ hijink, index, isLast }: { hijink: Hijink; index: number; 
 
   if (isExternal) {
     return (
-      <a key={hijink._id} href={hijink.destinationLink} target="_blank" rel="noopener noreferrer">
+      <a key={hijink._id} href={hijink.destinationLink} target="_blank" rel="noopener noreferrer" aria-label={hijink.title}>
         {inner}
       </a>
     )
   }
 
   return (
-    <Link key={hijink._id} href={hijink.destinationLink}>
+    <Link key={hijink._id} href={hijink.destinationLink} aria-label={hijink.title} prefetch={false}>
       {inner}
     </Link>
   )

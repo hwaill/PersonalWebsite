@@ -69,7 +69,7 @@ function ProjectCard({ project: p, index, isLast }: { project: ProjectSummary; i
   const num = String(index + 1).padStart(2, '0')
 
   return (
-    <Link href={`/projects/${p.slug.current}`}>
+    <Link href={`/projects/${p.slug.current}`} aria-label={p.title}>
       <div className={`projectContainer${isLast ? ' last' : ''}`}>
         <div className="projectContainerNumber">{num}</div>
         <div className="projectContainerText">

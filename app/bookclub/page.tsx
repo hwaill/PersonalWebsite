@@ -85,11 +85,11 @@ export default async function BookClubPage() {
               {members.map(member => {
                 const photoUrl = getUrl(member.photo, 200);
                 return (
-                  <Link key={member._id} href={`/bookclub/members/${member._id}`} className="memberCard">
+                  <Link key={member._id} href={`/bookclub/members/${member._id}`} className="memberCard" aria-label={member.name}>
                     <div className="memberCardPhoto">
                       {photoUrl ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={photoUrl} alt={member.name} />
+                        <img src={photoUrl} alt={member.name} loading="lazy" />
                       ) : (
                         <div className="memberCardInitials">{initials(member.name)}</div>
                       )}

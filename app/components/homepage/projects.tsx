@@ -32,7 +32,7 @@ export default async function Projects() {
           const isLast = i === projects.length - 1
 
           return (
-            <Link key={p._id} href={`/projects/${p.slug.current}`}>
+            <Link key={p._id} href={`/projects/${p.slug.current}`} aria-label={p.title} prefetch={false}>
               <div className={`projectContainer${isLast ? ' last' : ''}`}>
                 <div className="projectContainerNumber">{num}</div>
                 <div className="projectContainerText">

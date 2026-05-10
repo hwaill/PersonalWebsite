@@ -213,7 +213,7 @@ function ImageBlock({ block }: { block: ContentBlock }) {
       <>
         <div className={`imgPartialLeft${sizeClass}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={src} alt={b.alt ?? ''} />
+          <img src={src} alt={b.alt ?? ''} loading="lazy" />
         </div>
         {b.caption && <p className="imgCaption" style={{ clear: 'none' }}>{b.caption}</p>}
       </>
@@ -225,7 +225,7 @@ function ImageBlock({ block }: { block: ContentBlock }) {
       <>
         <div className={`imgPartialRight${sizeClass}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={src} alt={b.alt ?? ''} />
+          <img src={src} alt={b.alt ?? ''} loading="lazy" />
         </div>
         {b.caption && <p className="imgCaption" style={{ clear: 'none' }}>{b.caption}</p>}
       </>
@@ -237,7 +237,7 @@ function ImageBlock({ block }: { block: ContentBlock }) {
     <>
       <div className="imgFull">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={src} alt={b.alt ?? ''} />
+        <img src={src} alt={b.alt ?? ''} loading="lazy" />
       </div>
       {b.caption && <p className="imgCaption">{b.caption}</p>}
     </>
@@ -270,7 +270,7 @@ function ImageGridBlock({ block }: { block: ContentBlock }) {
           return (
             <div key={img._key} className="imgGridItem" style={{ '--ar': ar } as React.CSSProperties}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={src} alt={img.alt ?? ''} />
+              <img src={src} alt={img.alt ?? ''} loading="lazy" />
             </div>
           )
         })}
@@ -395,7 +395,7 @@ function TeamBlock({ block }: { block: ContentBlock }) {
           <div key={m._key} className="teamCard">
             <div className="teamAvatar">
               {photoSrc
-                ? <img src={photoSrc} alt={m.name} />
+                ? <img src={photoSrc} alt={m.name} loading="lazy" />
                 : <div className="teamAvatarInitials">{initials}</div>
               }
             </div>

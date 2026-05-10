@@ -16,7 +16,7 @@ export function resolveImage(image: ProjectImageField, width = 1200): string | n
   if (!image) return null
   if (image.externalUrl) return image.externalUrl
   if (image.sanityImage) {
-    try { return urlFor(image.sanityImage).width(width).url() } catch { return null }
+    try { return urlFor(image.sanityImage).width(width).auto('format').quality(85).url() } catch { return null }
   }
   return null
 }
@@ -29,10 +29,10 @@ export function resolveCoverImage(coverImage: unknown, width = 400): string | nu
   if ('sanityImage' in ci || 'externalUrl' in ci) {
     if (ci.externalUrl && typeof ci.externalUrl === 'string') return ci.externalUrl
     if (ci.sanityImage) {
-      try { return urlFor(ci.sanityImage as Parameters<typeof urlFor>[0]).width(width).url() } catch { return null }
+      try { return urlFor(ci.sanityImage as Parameters<typeof urlFor>[0]).width(width).auto('format').quality(85).url() } catch { return null }
     }
     return null
   }
   // Old format: direct Sanity image asset reference
-  try { return urlFor(ci as Parameters<typeof urlFor>[0]).width(width).url() } catch { return null }
+  try { return urlFor(ci as Parameters<typeof urlFor>[0]).width(width).auto('format').quality(85).url() } catch { return null }
 }
