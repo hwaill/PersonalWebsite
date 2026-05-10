@@ -56,12 +56,14 @@ export default async function BookClubPage() {
       <div className="bookclubPage">
         <div className="bookclubHero">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/img/logos/logoFlatTight.svg"
-            alt="Henry Waill"
-            className="bookclubHeroLogo"
-            data-nav-hero=""
-          />
+          <Link href="/">
+            <img
+              src="/img/logos/logoFlatTight.svg"
+              alt="Henry Waill"
+              className="bookclubHeroLogo"
+              data-nav-hero=""
+            />
+          </Link>
           <p className="pageLabel">Henry Waill · Book Club</p>
           <h1 className="bookclubHeroTitle">The Archive.</h1>
           <h2 className="bookclubHeroHook">Reading together since 2025.</h2>

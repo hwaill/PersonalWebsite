@@ -34,7 +34,6 @@ export default async function Projects() {
           return (
             <Link key={p._id} href={`/projects/${p.slug.current}`}>
               <div className={`projectContainer${isLast ? ' last' : ''}`}>
-                <div className="projectContainerSpacer" />
                 <div className="projectContainerNumber">{num}</div>
                 <div className="projectContainerText">
                   {p.label && <p className="projectLabel">{p.label}</p>}
@@ -50,7 +49,6 @@ export default async function Projects() {
                 ) : (
                   <div className="projectContainerImage" />
                 )}
-                <div className="projectContainerArrow" />
               </div>
             </Link>
           )

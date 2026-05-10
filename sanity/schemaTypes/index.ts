@@ -3,6 +3,7 @@ import { hijinkSchema } from './hijink'
 import { bookClubBookSchema } from './bookClubBook'
 import { bookClubMemberSchema } from './bookClubMember'
 import { bookClubRatingSchema } from './bookClubRating'
+import { resumeSchema } from './resume'
 
 export const schemaTypes = [
   projectSchema,
@@ -10,4 +11,5 @@ export const schemaTypes = [
   bookClubMemberSchema,
   bookClubBookSchema,
   bookClubRatingSchema,
+  resumeSchema,
 ]

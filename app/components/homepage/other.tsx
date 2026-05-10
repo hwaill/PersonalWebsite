@@ -21,7 +21,6 @@ function HijinkCard({ hijink, index, isLast }: { hijink: Hijink; index: number; 
 
   const inner = (
     <div className={`projectContainer${isLast ? ' last' : ''}`}>
-      <div className="projectContainerSpacer" />
       <div className="projectContainerNumber">{num}</div>
       <div className="projectContainerText">
         {hijink.label && <p className="projectLabel">{hijink.label}</p>}
@@ -37,7 +36,6 @@ function HijinkCard({ hijink, index, isLast }: { hijink: Hijink; index: number; 
       ) : (
         <div className="projectContainerImage" />
       )}
-      <div className="projectContainerArrow" />
     </div>
   )
 

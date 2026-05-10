@@ -71,7 +71,6 @@ function ProjectCard({ project: p, index, isLast }: { project: ProjectSummary; i
   return (
     <Link href={`/projects/${p.slug.current}`}>
       <div className={`projectContainer${isLast ? ' last' : ''}`}>
-        <div className="projectContainerSpacer" />
         <div className="projectContainerNumber">{num}</div>
         <div className="projectContainerText">
           {p.label && <p className="projectLabel">{p.label}</p>}
@@ -85,7 +84,6 @@ function ProjectCard({ project: p, index, isLast }: { project: ProjectSummary; i
             <img src={imgSrc} alt={p.previewImage?.alt ?? p.title} />
           </div>
         )}
-        <div className="projectContainerArrow" />
       </div>
     </Link>
   )
