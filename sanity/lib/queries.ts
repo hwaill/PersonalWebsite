@@ -197,3 +197,45 @@ export const memberByIdQuery = groq`
 
 export const allBookIdsQuery = groq`*[_type == "bookClubBook"]{ _id }`
 export const allMemberIdsQuery = groq`*[_type == "bookClubMember"]{ _id }`
+
+// Resume
+
+export const resumeQuery = groq`
+  *[_type == "resume"][0] {
+    fullName,
+    headline,
+    email,
+    phone,
+    website,
+    location,
+    sections[] {
+      heading,
+      items[] {
+        org,
+        position,
+        location,
+        date,
+        logo { sanityImage { ..., asset-> }, externalUrl },
+        logo2 { sanityImage { ..., asset-> }, externalUrl },
+        descriptions,
+      },
+    },
+    skillsSection {
+      heading,
+      subSections[] {
+        categories[] {
+          name,
+          type,
+          phraseValue,
+          skills[] {
+            name,
+            type,
+            numberValue,
+            wordValue,
+            description,
+          },
+        },
+      },
+    },
+  }
+`

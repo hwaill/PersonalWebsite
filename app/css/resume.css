@@ -1,0 +1,374 @@
+/* ── Resume Section ── */
+
+.resumeBody {
+	display: grid;
+	grid-template-columns: 10rem 1fr;
+	gap: 0 2.5rem;
+	margin-top: 1.5rem;
+}
+
+/* ── Sidebar ── */
+
+.resumeSidebar {
+	position: sticky;
+	top: 2rem;
+	align-self: start;
+}
+
+.resumeSidebarTop {
+	margin-bottom: 1.25rem;
+}
+
+.resumeSidebarLogo {
+	width: 5.5rem;
+	height: 5.5rem;
+	background-image: url('/img/logos/logoFlatTight.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-bottom: 0.75rem;
+}
+
+.resumeSidebarName {
+	font-family: var(--gottak);
+	font-weight: 600;
+	font-size: 1.25rem;
+	line-height: 1.15;
+	color: var(--coffee);
+}
+
+.resumeSidebarTagline {
+	font-family: var(--gottak);
+	font-weight: 200;
+	font-style: italic;
+	font-size: 0.9rem;
+	color: var(--muted);
+	line-height: 1.3;
+	margin-top: 0.1rem;
+}
+
+.resumeContactList {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.65rem;
+	border-top: 1px solid var(--border);
+	padding-top: 1rem;
+}
+
+.resumeContactItem {
+	font-size: 0.8rem;
+	color: var(--lightCoffee);
+	line-height: 1.4;
+	overflow-wrap: break-word;
+}
+
+.resumeContactItem a {
+	color: var(--lightCoffee);
+	transition: color 0.15s;
+}
+
+.resumeContactItem a:hover {
+	color: var(--coffee);
+}
+
+.resumeContactLabel {
+	font-size: 0.62rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--inactive);
+	display: block;
+	margin-bottom: 0.1rem;
+}
+
+/* ── Main Content ── */
+
+.resumeMain {
+	min-width: 0;
+}
+
+.resumeSection {
+	margin-bottom: 1.75rem;
+}
+
+.resumeSectionHeading {
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--inactive);
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid var(--border);
+	margin-bottom: 0;
+}
+
+/* ── Experience Item ── */
+
+.resumeExp {
+	display: flex;
+	gap: 0.75rem;
+	padding: 0.75rem 0;
+	border-bottom: 1px solid var(--border);
+}
+
+.resumeExpLogos {
+	flex: 0 0 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	padding-top: 0.1rem;
+}
+
+.resumeExpLogo {
+	width: 2rem;
+	height: 2rem;
+}
+
+.resumeExpLogo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.resumeExpContent {
+	flex: 1 1 0;
+	min-width: 0;
+}
+
+.resumeExpHeading {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 0.5rem;
+	margin-bottom: 0.1rem;
+	flex-wrap: wrap;
+}
+
+.resumeExpTitleRow {
+	flex: 1 1 0;
+	min-width: 0;
+	line-height: 1.3;
+}
+
+.resumeExpPosition {
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: var(--coffee);
+	margin-right: 0.3rem;
+}
+
+.resumeExpOrg {
+	font-size: 0.875rem;
+	color: var(--muted);
+}
+
+.resumeExpSep {
+	font-size: 0.875rem;
+	color: var(--inactive);
+	margin: 0 0.2rem 0 0;
+}
+
+.resumeExpLocation {
+	font-size: 0.875rem;
+	font-style: italic;
+	color: var(--inactive);
+}
+
+.resumeExpDate {
+	font-size: 0.78rem;
+	color: var(--inactive);
+	white-space: nowrap;
+	flex-shrink: 0;
+	padding-top: 0.15rem;
+}
+
+.resumeExpBullets {
+	margin: 0.4rem 0 0;
+	padding-left: 1rem;
+}
+
+.resumeExpBullet {
+	font-size: 0.875rem;
+	color: var(--lightCoffee);
+	line-height: 1.45;
+	margin-bottom: 0.2rem;
+	list-style: disc;
+}
+
+/* ── Skills ── */
+
+.resumeSkillsGrid {
+	display: flex;
+	gap: 0.25rem 2rem;
+	flex-wrap: wrap;
+	padding-top: 0.5rem;
+}
+
+.resumeSkillSubSection {
+	flex: 1 1 10rem;
+}
+
+.resumeSkillCategory {
+	margin-bottom: 1rem;
+}
+
+.resumeSkillCategoryName {
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--muted);
+	margin-bottom: 0.3rem;
+}
+
+.resumeSkillCategoryPhrase {
+	font-size: 0.875rem;
+	color: var(--lightCoffee);
+}
+
+.resumeSkillEntry {
+	margin-bottom: 0.2rem;
+}
+
+.resumeSkillItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.resumeSkillName {
+	font-size: 0.875rem;
+	color: var(--lightCoffee);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	flex: 1 1 0;
+	min-width: 0;
+}
+
+.resumeSkillDots {
+	display: flex;
+	gap: 0.2rem;
+	flex-shrink: 0;
+}
+
+.resumeSkillDot {
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 50%;
+	border: 1.5px solid var(--lightCoffee);
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.resumeSkillDot.filled {
+	background-color: var(--lightCoffee);
+}
+
+.resumeSkillWord {
+	font-size: 0.72rem;
+	font-weight: 600;
+	background-color: var(--lightCoffee);
+	color: var(--white);
+	border-radius: 1000px;
+	padding: 0.05rem 0.55rem 0.12rem;
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+.resumeSkillDesc {
+	font-size: 0.78rem;
+	color: var(--inactive);
+	line-height: 1.35;
+	margin-top: 0.05rem;
+}
+
+/* ── Responsive: tablet (≤ 820px) ── */
+
+@media (max-width: 820px) {
+	.resumeBody {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+
+	.resumeSidebar {
+		position: static;
+		display: flex;
+		align-items: flex-end;
+		gap: 1.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid var(--border);
+		margin-bottom: 1.5rem;
+	}
+
+	.resumeSidebarTop {
+		display: flex;
+		align-items: flex-end;
+		gap: 0.875rem;
+		flex: 1 1 auto;
+		margin-bottom: 0;
+	}
+
+	.resumeSidebarLogo {
+		flex: 0 0 4rem;
+		height: 4rem;
+		margin-bottom: 0;
+		background-position: center;
+	}
+
+	.resumeContactList {
+		flex-direction: column;
+		border-top: none;
+		border-left: 1px solid var(--border);
+		padding-top: 0;
+		padding-left: 1.25rem;
+		flex: 0 0 auto;
+		max-width: 13rem;
+		gap: 0.5rem;
+	}
+}
+
+/* ── Responsive: mobile (≤ 520px) ── */
+
+@media (max-width: 520px) {
+	.resumeSidebar {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.875rem;
+	}
+
+	.resumeSidebarLogo {
+		flex: 0 0 3rem;
+		height: 3rem;
+		background-position: left center;
+	}
+
+	.resumeContactList {
+		border-left: none;
+		border-top: 1px solid var(--border);
+		padding-left: 0;
+		padding-top: 0.75rem;
+		max-width: none;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.25rem;
+	}
+
+	.resumeExpHeading {
+		flex-direction: column;
+		gap: 0.05rem;
+	}
+
+	.resumeExpDate {
+		padding-top: 0;
+	}
+
+	.resumeSkillSubSection {
+		flex: 0 0 100%;
+	}
+}
