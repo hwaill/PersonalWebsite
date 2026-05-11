@@ -78,16 +78,18 @@ export default function BookListClient({ books }: Props) {
 
       <div className="sortBar">
         <span className="sortLabelText">Sort</span>
-        {SORT_OPTIONS.map(opt => (
-          <button
-            key={opt.value}
-            className={`sortBtn${sort === opt.value ? ' active' : ''}`}
-            onClick={() => handleSort(opt.value)}
-          >
-            <span className="sortBtnFull">{opt.value}</span>
-            <span className="sortBtnShort">{opt.short}</span>
-          </button>
-        ))}
+        <div className="sortBtnGroup">
+          {SORT_OPTIONS.map(opt => (
+            <button
+              key={opt.value}
+              className={`sortBtn${sort === opt.value ? ' active' : ''}`}
+              onClick={() => handleSort(opt.value)}
+            >
+              <span className="sortBtnFull">{opt.value}</span>
+              <span className="sortBtnShort">{opt.short}</span>
+            </button>
+          ))}
+        </div>
       </div>
 
       {currentPage.length === 0 ? (

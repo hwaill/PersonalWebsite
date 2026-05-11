@@ -35,21 +35,23 @@ export default function MemberRatingsClient({ ratings, mvpBookIds }: Props) {
     <>
       <div className="sortBar">
         <span className="sortLabelText">Ratings</span>
-        <button
-          className={`sortBtn${filter === null ? ' active' : ''}`}
-          onClick={() => handleFilter(null)}
-        >
-          All
-        </button>
-        {uniqueRatings.map(val => (
+        <div className="sortBtnGroup">
           <button
-            key={val}
-            className={`sortBtn${filter === val ? ' active' : ''}`}
-            onClick={() => handleFilter(val)}
+            className={`sortBtn${filter === null ? ' active' : ''}`}
+            onClick={() => handleFilter(null)}
           >
-            {val % 1 === 0 ? `${val}.0` : val}
+            All
           </button>
-        ))}
+          {uniqueRatings.map(val => (
+            <button
+              key={val}
+              className={`sortBtn${filter === val ? ' active' : ''}`}
+              onClick={() => handleFilter(val)}
+            >
+              {val % 1 === 0 ? `${val}.0` : val}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="booksList">

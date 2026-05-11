@@ -94,9 +94,20 @@
 
 .sortBtnShort { display: none; }
 
+.sortBtnGroup {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 519px) {
   .sortBtnFull { display: none; }
   .sortBtnShort { display: inline; }
+  .sortBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }
 
 /* ══════════════════════════════════════════

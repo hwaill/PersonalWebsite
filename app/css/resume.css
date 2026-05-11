@@ -269,14 +269,14 @@
 /* ── Skills ── */
 
 .resumeSkillsGrid {
-	display: flex;
-	gap: 0.25rem 2rem;
-	flex-wrap: wrap;
+	columns: 2;
+	column-gap: 2rem;
 	padding-top: 0.5rem;
 }
 
 .resumeSkillSubSection {
-	flex: 1 1 10rem;
+	break-inside: avoid;
+	margin-bottom: 0.25rem;
 }
 
 .resumeSkillCategory {
@@ -439,7 +439,7 @@
 		padding-top: 0;
 	}
 
-	.resumeSkillSubSection {
-		flex: 0 0 100%;
+	.resumeSkillsGrid {
+		columns: 1;
 	}
 }
