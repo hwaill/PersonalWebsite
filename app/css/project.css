@@ -155,7 +155,7 @@ h2.projectHook {
 }
 
 .projectSection p a {
-  color: var(--blue);
+  color: var(--red);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -422,7 +422,7 @@ h2.projectHook {
 
 .teamLink {
   font-size: 0.78rem;
-  color: var(--blue);
+  color: var(--red);
   text-decoration: none;
   margin-top: 2px;
   display: inline-block;
