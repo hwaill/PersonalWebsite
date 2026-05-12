@@ -56,14 +56,20 @@ html {
 #nav-back {
 	display: flex;
 	color: var(--inactive);
-	opacity: 0.55;
+	opacity: 0.45;
 	text-decoration: none;
 	margin-bottom: 20px;
 	transition: color 0.2s, opacity 0.2s;
 	cursor: pointer;
 }
 
-#nav-back:hover {
+#nav-rail:hover #nav-back,
+#nav-rail:focus-within #nav-back {
+	color: var(--muted);
+	opacity: 0.6;
+}
+
+#nav-rail #nav-back:hover {
 	color: var(--coffee);
 	opacity: 1;
 }
