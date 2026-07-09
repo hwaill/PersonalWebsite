@@ -1,0 +1,25 @@
+/* ══════════════════════════════════════════
+   Loading skeletons
+══════════════════════════════════════════ */
+
+@keyframes skeletonPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.skel {
+  background: var(--cream);
+  border-radius: 0.35rem;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+.skelCircle {
+  border-radius: 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skel {
+    animation: none;
+    opacity: 0.65;
+  }
+}
